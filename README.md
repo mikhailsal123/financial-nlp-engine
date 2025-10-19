@@ -13,7 +13,6 @@ financial-nlp-engine/
 │   ├── integration/      # Market data integration
 │   └── utils/            # Helper functions
 ├── models/               # Trained models, weights
-├── notebooks/            # Jupyter notebooks for exploration
 ├── tests/                # Unit tests
 ├── config.py             # Configuration
 └── main.py              # Entry point

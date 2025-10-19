@@ -1,5 +1,5 @@
 """
-Text parsing utilities for financial documents
+Simple PDF parser
 """
 
 import os
