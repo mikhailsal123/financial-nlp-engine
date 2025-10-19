@@ -14,5 +14,4 @@ financial-nlp-engine/
 │   └── utils/            # Helper functions
 ├── models/               # Trained models, weights
 ├── tests/                # Unit tests
-├── config.py             # Configuration
 └── main.py              # Entry point

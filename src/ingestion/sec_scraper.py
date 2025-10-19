@@ -461,7 +461,7 @@ class SECScraper:
 
 def get_company_name(cik: str) -> str:
     """
-    Get company name from CIK
+    Get company name from CIK using SEC company tickers API
     
     Args:
         cik: Company CIK
@@ -469,9 +469,42 @@ def get_company_name(cik: str) -> str:
     Returns:
         Company name
     """
-    scraper = SECScraper()
-    company_info = scraper.get_company_tickers(cik)
-    return company_info.get('name', f'Company_{cik}')
+    try:
+        # Use the more reliable SEC company tickers API
+        import requests
+        import time
+        
+        session = requests.Session()
+        session.headers.update({
+            'User-Agent': 'Financial Analysis Tool (msaleev@nd.edu)',
+            'Accept': 'application/json',
+        })
+        
+        time.sleep(0.5)  # Rate limiting
+        url = "https://www.sec.gov/files/company_tickers.json"
+        response = session.get(url, timeout=30)
+        
+        if response.status_code == 200:
+            data = response.json()
+            cik_padded = cik.zfill(10)
+            
+            # Search for the CIK in the API data
+            for entry in data.values():
+                cik_raw = entry.get('cik_str', '')
+                if isinstance(cik_raw, (int, str)) and str(cik_raw).zfill(10) == cik_padded:
+                    return entry.get('title', f'Company_{cik}')
+        
+        # Fallback to original method if API fails
+        scraper = SECScraper()
+        company_info = scraper.get_company_tickers(cik)
+        return company_info.get('name', f'Company_{cik}')
+        
+    except Exception as e:
+        print(f"Error getting company name for CIK {cik}: {e}")
+        # Fallback to original method
+        scraper = SECScraper()
+        company_info = scraper.get_company_tickers(cik)
+        return company_info.get('name', f'Company_{cik}')
 
 
 def execute_scraping(cik: str, company_name: str, form_types: List[str] = ['10-Q'], 
