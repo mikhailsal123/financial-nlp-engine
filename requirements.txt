@@ -1,3 +1,13 @@
+# Core ML/NLP libraries (used in main.py)
 transformers>=4.30.0
 torch>=2.0.0
+
+# PDF processing (used in pdf_parser.py)
 PyPDF2>=3.0.0
+
+# Web scraping (used in sec_scraper.py)
+requests>=2.31.0
+
+# XBRL parsing (used in src/parsing/xbrl_converter.py)
+beautifulsoup4>=4.12.0
+lxml>=4.9.0

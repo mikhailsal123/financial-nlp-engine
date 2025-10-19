@@ -1,0 +1,4 @@
+This is a sample financial document for testing sentiment analysis.
+The company has shown strong performance this quarter with significant revenue growth.
+However, there are some concerns about market volatility and competitive pressures.
+Overall, the outlook remains positive despite some challenges.

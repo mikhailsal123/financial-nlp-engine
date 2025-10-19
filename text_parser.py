@@ -1,8 +1,14 @@
+"""
+Text parsing utilities for financial documents
+"""
+
+import os
+import re
 import PyPDF2
 
-""" Parse PDF files and extract relevant text """
 
 def extract_text_from_pdf(pdf_path):
+    """Extract text from PDF files"""
     with open(pdf_path, 'rb') as file:
         reader = PyPDF2.PdfReader(file)
         text = ""

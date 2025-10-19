@@ -1,7 +1,7 @@
 from transformers import BertTokenizer, BertForSequenceClassification
 import torch
-from pdf_parser import *
 import os
+from text_parser import *
 
 # Load model when script starts
 print("Loading FinBERT model...")
@@ -30,8 +30,9 @@ def analyze_text_file(file_path):
 
 
 def main():
+    
     # Analyze individual sentences
-    texts = [
+    '''texts = [
         "The company reported strong quarterly earnings growth.",
         "Terrible losses this quarter.",
         "Revenue remained flat compared to last year."
@@ -45,12 +46,36 @@ def main():
     # Analyze a text file
     analyze_text_file("text.txt")
     
-    # Analyze a PDF file
-    # pdf_text = extract_text_from_pdf("financial_text_files/NVDA-F2Q26-Quarterly-Presentation-FINAL.pdf")
-    # sentiment = classify_sentiment(pdf_text)
-    # print(f"PDF Sentiment: {sentiment}")
+    # Analyze a PDF file (if it exists)
+    pdf_path = "data/raw/NVDA-F2Q26-Quarterly-Presentation-FINAL.pdf"
+    if os.path.exists(pdf_path):
+        pdf_text = extract_text_from_pdf(pdf_path)
+        sentiment = classify_sentiment(pdf_text)
+        print(f"PDF Sentiment: {sentiment}")
+    else:
+        print("PDF file not found, skipping PDF analysis")'''
     
-
+    # Analyze financial reports
+    reports_dir = "data/processed/earnings_reports"
+    
+    # Get all converted files
+    converted_files = []
+    for filename in os.listdir(reports_dir):
+        converted_files.append(os.path.join(reports_dir, filename))
+    
+    print(f"Analyzing {len(converted_files)} financial reports...")
+    
+    for file_path in sorted(converted_files):
+        print(f"\nAnalyzing: {os.path.basename(file_path)}")
+        
+        with open(file_path, 'r', encoding='utf-8') as file:
+            content = file.read()
+            
+        # Analyze overall document sentiment
+        sentiment = classify_sentiment(content)
+        print(f"Document Sentiment: {sentiment}")
+            
+        # Show preview of content
 
 if __name__ == "__main__":
     main()
