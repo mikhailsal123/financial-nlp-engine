@@ -12,7 +12,7 @@ from typing import List, Optional
 sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
 
 from ingestion.sec_scraper import execute_scraping, get_company_name
-from ingestion.company_lookup import get_cik_by_name_or_ticker, search_companies, COMMON_COMPANIES
+from ingestion.company_lookup import get_cik_by_name_or_ticker, search_companies
 
 
 def main():
@@ -48,8 +48,8 @@ Examples:
     # Output options
     parser.add_argument('--max-filings', type=int, default=5,
                        help='Maximum number of 10-Q filings to download (default: 5)')
-    parser.add_argument('--output-dir', default='data/processed/earnings_reports',
-                       help='Output directory for downloaded filings (default: data/processed/earnings_reports)')
+    parser.add_argument('--output-dir', default='data/raw/earnings_reports',
+                       help='Output directory for downloaded filings (default: data/raw/earnings_reports)')
     parser.add_argument('--forms', nargs='+', default=['10-Q'],
                        help='Form types to download (default: 10-Q)')
     
@@ -60,14 +60,6 @@ Examples:
                        help='Enable verbose output')
     
     args = parser.parse_args()
-    
-    # Handle list common companies
-    if args.list_common:
-        print("Common Company Tickers and CIKs:")
-        print("=" * 40)
-        for ticker, cik in sorted(COMMON_COMPANIES.items()):
-            print(f"{ticker:8} -> {cik}")
-        return
     
     # Handle search
     if args.search:

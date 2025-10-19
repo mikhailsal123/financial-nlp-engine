@@ -47,18 +47,13 @@ def main():
     
     # Analyze downloaded 10-Q files
     print("Analyzing downloaded 10-Q files:")
-    earnings_dir = "data/processed/earnings_reports"
+    earnings_dir = "data/raw/earnings_reports"
     if os.path.exists(earnings_dir):
         for filename in os.listdir(earnings_dir):
             if filename.endswith('.txt'):
                 filepath = os.path.join(earnings_dir, filename)
                 print(f"\nAnalyzing {filename}:")
-                try:
-                    analyze_text_file(filepath)
-                except Exception as e:
-                    print(f"Error analyzing {filename}: {e}")
-    else:
-        print("No earnings reports directory found")
-    
+                analyze_text_file(filepath)
+
 if __name__ == "__main__":
     main()

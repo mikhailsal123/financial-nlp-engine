@@ -1,17 +1,15 @@
 #!/usr/bin/env python3
 """
-Company lookup utilities for mapping company names/tickers to CIKs
+Company lookup utilities for mapping company names/tickers to CIKs using SEC EDGAR database
 """
 
 import requests
-import json
-import re
-from typing import Dict, List, Optional, Tuple
 import time
+from typing import Dict, List, Optional
 
 
 class CompanyLookup:
-    """Utility class for looking up company information and CIKs"""
+    """Utility class for looking up company information and CIKs from SEC EDGAR database"""
     
     def __init__(self):
         self.base_url = "https://www.sec.gov"
@@ -27,7 +25,7 @@ class CompanyLookup:
     
     def search_company(self, query: str) -> List[Dict]:
         """
-        Search for companies by name or ticker using SEC EDGAR
+        Search for companies by name or ticker using SEC EDGAR database
         
         Args:
             query: Company name or ticker symbol
@@ -37,7 +35,6 @@ class CompanyLookup:
         """
         companies = []
         
-        # Try using SEC's company tickers JSON API
         try:
             time.sleep(0.5)  # Rate limiting
             url = "https://www.sec.gov/files/company_tickers.json"
@@ -50,25 +47,25 @@ class CompanyLookup:
                 for entry in data.values():
                     company_name = entry.get('title', '').upper()
                     ticker = entry.get('ticker', '').upper()
-                    cik_raw = entry.get('cik', '')
-                    
-                    # Handle different CIK formats
-                    if isinstance(cik_raw, (int, str)) and cik_raw and str(cik_raw) != '0':
-                        cik = str(cik_raw).zfill(10)
-                    else:
-                        # Use ticker lookup for CIK if not available
-                        cik = COMMON_COMPANIES.get(ticker, '0000000000')
+                    cik_raw = entry.get('cik_str', '')
                     
                     # Check if query matches company name or ticker
                     if (query.upper() in company_name or 
                         query.upper() in ticker or 
                         ticker == query.upper()):
                         
-                        companies.append({
-                            'cik': cik,
-                            'ticker': ticker,
-                            'name': entry.get('title', '')
-                        })
+                        # Extract CIK from the API response
+                        cik = None
+                        if isinstance(cik_raw, (int, str)) and cik_raw and str(cik_raw) != '0':
+                            cik = str(cik_raw).zfill(10)
+                        
+                        # Only add if we have a valid CIK from SEC database
+                        if cik and cik != '0000000000':
+                            companies.append({
+                                'cik': cik,
+                                'ticker': ticker,
+                                'name': entry.get('title', '')
+                            })
                         
                         if len(companies) >= 10:  # Limit results
                             break
@@ -146,47 +143,9 @@ class CompanyLookup:
         return company['cik'] if company else None
 
 
-# Common company CIKs for quick reference
-COMMON_COMPANIES = {
-    'AAPL': '0000320193',  # Apple Inc.
-    'MSFT': '0000789019',  # Microsoft Corporation
-    'GOOGL': '0001652044', # Alphabet Inc.
-    'AMZN': '0001018724',  # Amazon.com Inc.
-    'TSLA': '0001318605',  # Tesla Inc.
-    'NVDA': '0001045810',  # NVIDIA Corporation
-    'META': '0001326801',  # Meta Platforms Inc.
-    'NFLX': '0001067983',  # Netflix Inc.
-    'AMD': '0000002488',   # Advanced Micro Devices Inc.
-    'INTC': '0000050863',  # Intel Corporation
-    'IBM': '0000051143',   # International Business Machines Corporation
-    'ORCL': '0001341439',  # Oracle Corporation
-    'CRM': '0001108524',   # Salesforce Inc.
-    'ADBE': '0000796343',  # Adobe Inc.
-    'PYPL': '0001633917',  # PayPal Holdings Inc.
-    'UBER': '0001543151',  # Uber Technologies Inc.
-    'LYFT': '0001759509',  # Lyft Inc.
-    'SNAP': '0001564408',  # Snap Inc.
-    'TWTR': '0001418091',  # Twitter Inc. (now X Corp)
-    'SQ': '0001512673',    # Block Inc. (formerly Square)
-}
-
-
-def get_cik_by_ticker(ticker: str) -> Optional[str]:
-    """
-    Quick lookup for common companies by ticker
-    
-    Args:
-        ticker: Stock ticker symbol
-        
-    Returns:
-        CIK string or None if not found
-    """
-    return COMMON_COMPANIES.get(ticker.upper())
-
-
 def get_cik_by_name_or_ticker(identifier: str) -> Optional[str]:
     """
-    Get CIK by company name or ticker
+    Get CIK by company name or ticker using SEC EDGAR database
     
     Args:
         identifier: Company name or ticker symbol
@@ -194,12 +153,6 @@ def get_cik_by_name_or_ticker(identifier: str) -> Optional[str]:
     Returns:
         CIK string or None if not found
     """
-    # First try common companies
-    cik = get_cik_by_ticker(identifier)
-    if cik:
-        return cik
-    
-    # Then try online lookup
     lookup = CompanyLookup()
     cik = lookup.get_cik_by_ticker(identifier)
     if cik:
@@ -211,7 +164,7 @@ def get_cik_by_name_or_ticker(identifier: str) -> Optional[str]:
 
 def search_companies(query: str, limit: int = 10) -> List[Dict]:
     """
-    Search for companies by name or ticker using SEC EDGAR
+    Search for companies by name or ticker using SEC EDGAR database
     
     Args:
         query: Search query
@@ -239,5 +192,5 @@ if __name__ == "__main__":
     print(f"Result: {company}")
     
     # Quick lookup
-    print(f"\nQuick lookup for AAPL: {get_cik_by_ticker('AAPL')}")
+    print(f"\nQuick lookup for AAPL: {get_cik_by_name_or_ticker('AAPL')}")
     print(f"Quick lookup for Microsoft: {get_cik_by_name_or_ticker('Microsoft')}")

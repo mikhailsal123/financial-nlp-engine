@@ -343,7 +343,7 @@ class SECScraper:
     
     def scrape_10q_filings(self, cik: str, company_name: str, 
                           max_filings: int = 5, 
-                          output_dir: str = 'data/processed/earnings_reports',
+                          output_dir: str = 'data/raw/earnings_reports',
                           ticker: str = None) -> List[str]:
         """
         Main method to scrape 10-Q filings for a company
@@ -429,7 +429,7 @@ def get_company_name(cik: str) -> str:
 
 
 def execute_scraping(cik: str, company_name: str, form_types: List[str] = ['10-Q'], 
-                    max_filings: int = 5, output_dir: str = 'data/processed/earnings_reports',
+                    max_filings: int = 5, output_dir: str = 'data/raw/earnings_reports',
                     ticker: str = None) -> List[str]:
     """
     Execute scraping for specified parameters
