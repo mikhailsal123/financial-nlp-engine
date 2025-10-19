@@ -1,6 +1,3 @@
-# Core ML/NLP libraries (used in main.py)
 transformers>=4.30.0
 torch>=2.0.0
-
-# PDF processing (used in pdf_parser.py)
 PyPDF2>=3.0.0
