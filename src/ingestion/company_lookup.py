@@ -15,7 +15,7 @@ class CompanyLookup:
         self.base_url = "https://www.sec.gov"
         self.session = requests.Session()
         self.session.headers.update({
-            'User-Agent': 'Financial Analysis Tool (contact@example.com)',
+            'User-Agent': 'Financial Analysis Tool (msaleev@nd.edu)',
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
             'Accept-Language': 'en-US,en;q=0.5',
             'Accept-Encoding': 'gzip, deflate',

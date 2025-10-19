@@ -317,13 +317,13 @@ class SECScraper:
     
     def extract_text_from_html(self, html_content: str) -> str:
         """
-        Extract clean text from HTML content
+        Extract clean text from HTML content, filtering out XBRL data
         
         Args:
             html_content: HTML content as string
             
         Returns:
-            Clean text content
+            Clean text content with XBRL data removed
         """
         soup = BeautifulSoup(html_content, 'html.parser')
         
@@ -334,10 +334,56 @@ class SECScraper:
         # Get text
         text = soup.get_text()
         
-        # Clean up whitespace
-        lines = (line.strip() for line in text.splitlines())
-        chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
-        text = ' '.join(chunk for chunk in chunks if chunk)
+        # Filter out XBRL data - look for the pattern that indicates start of actual content
+        # XBRL data typically ends and real content begins with "UNITED STATES" or "FORM"
+        xbrl_end_markers = [
+            "UNITED STATES",
+            "SECURITIES AND EXCHANGE COMMISSION", 
+            "FORM 10-Q",
+            "FORM 10-K",
+            "FORM 8-K",
+            "QUARTERLY REPORT",
+            "ANNUAL REPORT",
+            "CURRENT REPORT"
+        ]
+        
+        # Find the first occurrence of any of these markers
+        for marker in xbrl_end_markers:
+            marker_pos = text.find(marker)
+            if marker_pos != -1:
+                # Keep everything from the marker onwards
+                text = text[marker_pos:]
+                break
+        
+        # Clean up whitespace and add logical line breaks
+        # First, add line breaks at common sentence/paragraph boundaries
+        text = text.replace('. ', '.\n')
+        text = text.replace('? ', '?\n')
+        text = text.replace('! ', '!\n')
+        text = text.replace(') ', ')\n')
+        text = text.replace('] ', ']\n')
+        text = text.replace('} ', '}\n')
+        
+        # Add line breaks before common section headers
+        section_headers = [
+            'Item ', 'FORM ', 'Pursuant to', 'Check the appropriate', 
+            'Securities registered', 'Indicate by check', 'UNITED STATES',
+            'Date of Report', 'Apple Inc.', 'California', 'One Apple Park',
+            'Not applicable', 'Emerging growth company', 'SIGNATURE',
+            'ExhibitNumber', 'Exhibit Description'
+        ]
+        
+        for header in section_headers:
+            text = text.replace(header, f'\n{header}')
+        
+        # Clean up the text
+        lines = []
+        for line in text.splitlines():
+            line = line.strip()
+            if line:  # Only keep non-empty lines
+                lines.append(line)
+        
+        text = '\n'.join(lines)
         
         return text
     
@@ -451,30 +497,58 @@ def execute_scraping(cik: str, company_name: str, form_types: List[str] = ['10-Q
         if form_type == '10-Q':
             saved_files = scraper.scrape_10q_filings(cik, company_name, max_filings, output_dir, ticker)
         else:
-            # For other form types, use the general method
-            filings = scraper.get_filings(cik, form_type, max_filings=max_filings)
+            # For other form types, use API method first, fallback to web scraping
+            filings = scraper.get_filings_api(cik, form_type, max_filings=max_filings)
+            
+            if not filings:
+                filings = scraper.get_filings(cik, form_type, max_filings=max_filings)
+            
+            if not filings:
+                print(f"No {form_type} filings found")
+                continue
+                
             saved_files = []
             
             for i, filing in enumerate(filings, 1):
-                if not filing['filing_url']:
+                if not filing.get('filing_url'):
                     continue
                 
-                documents = scraper.get_filing_documents(filing['filing_url'])
+                # Use provided ticker or get from company info
+                if not ticker:
+                    company_info = scraper.get_company_tickers(cik)
+                    ticker = company_info.get('ticker', 'UNKNOWN')
                 
-                for doc in documents:
-                    if doc['name'].endswith('.html'):
-                        accession_number = filing.get('accession_number', f'filing_{i}')
-                        safe_company_name = re.sub(r'[^\w\s-]', '', company_name).strip()
-                        safe_company_name = re.sub(r'[-\s]+', '_', safe_company_name)
+                # Create simple filename: TICKER_FORMTYPE_NUMBER.txt
+                temp_html_filename = f"{ticker}_{form_type}_{i}.html"
+                temp_html_path = os.path.join(output_dir, temp_html_filename)
+                
+                # Download the document to temporary file
+                if scraper.download_document(filing['filing_url'], temp_html_path):
+                    # Extract and save as text
+                    try:
+                        with open(temp_html_path, 'r', encoding='utf-8', errors='ignore') as f:
+                            html_content = f.read()
                         
-                        filing_date = filing['filing_date'].replace('-', '')
-                        filename = f"{safe_company_name}_{accession_number}_{filing_date}_{form_type}.html"
-                        filepath = os.path.join(output_dir, filename)
+                        text_content = scraper.extract_text_from_html(html_content)
                         
-                        if scraper.download_document(doc['url'], filepath):
-                            saved_files.append(filepath)
-                            print(f"Downloaded: {filename}")
-                        break
+                        # Save as text file
+                        text_filename = temp_html_filename.replace('.html', '.txt')
+                        text_filepath = os.path.join(output_dir, text_filename)
+                        
+                        with open(text_filepath, 'w', encoding='utf-8') as f:
+                            f.write(text_content)
+                        
+                        print(f"✓ {text_filename}")
+                        saved_files.append(text_filepath)
+                        
+                        # Remove the temporary HTML file
+                        os.remove(temp_html_path)
+                        
+                    except Exception as e:
+                        print(f"✗ Error extracting text: {e}")
+                        # Clean up temp file even if extraction fails
+                        if os.path.exists(temp_html_path):
+                            os.remove(temp_html_path)
         
         all_saved_files.extend(saved_files)
     

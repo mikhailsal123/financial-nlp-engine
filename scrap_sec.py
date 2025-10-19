@@ -38,7 +38,7 @@ Examples:
         """
     )
     
-    # Input options (mutually exclusive, but not required if --list-common is used)
+    # Input options (mutually exclusive)
     input_group = parser.add_mutually_exclusive_group(required=False)
     input_group.add_argument('--cik', help='Company CIK (10-digit number)')
     input_group.add_argument('--ticker', help='Stock ticker symbol (e.g., AAPL, MSFT)')
@@ -52,12 +52,6 @@ Examples:
                        help='Output directory for downloaded filings (default: data/raw/earnings_reports)')
     parser.add_argument('--forms', nargs='+', default=['10-Q'],
                        help='Form types to download (default: 10-Q)')
-    
-    # Additional options
-    parser.add_argument('--list-common', action='store_true',
-                       help='List common company tickers and CIKs')
-    parser.add_argument('--verbose', '-v', action='store_true',
-                       help='Enable verbose output')
     
     args = parser.parse_args()
     
@@ -94,13 +88,9 @@ Examples:
     
     if args.cik:
         cik = args.cik.zfill(10)  # Ensure 10-digit format
-        if args.verbose:
-            print(f"Using provided CIK: {cik}")
         company_name = get_company_name(cik)
         
     elif args.ticker:
-        if args.verbose:
-            print(f"Looking up CIK for ticker: {args.ticker}")
         cik = get_cik_by_name_or_ticker(args.ticker)
         if not cik:
             print(f"Error: Could not find CIK for ticker '{args.ticker}'")
@@ -110,8 +100,6 @@ Examples:
         ticker = args.ticker.upper()
         
     elif args.company:
-        if args.verbose:
-            print(f"Looking up CIK for company: {args.company}")
         cik = get_cik_by_name_or_ticker(args.company)
         if not cik:
             print(f"Error: Could not find CIK for company '{args.company}'")
@@ -144,9 +132,6 @@ Examples:
             
     except Exception as e:
         print(f"Error during scraping: {e}")
-        if args.verbose:
-            import traceback
-            traceback.print_exc()
         sys.exit(1)
 
 

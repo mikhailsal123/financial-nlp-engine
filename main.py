@@ -26,7 +26,6 @@ def analyze_text_file(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         text = file.read()
         
-     # Analyze text as one document
     sentiment = classify_sentiment(text)
         
     print(f"Document sentiment: {sentiment}")
@@ -46,7 +45,7 @@ def main():
         print(f"Sentiment: {sentiment}\n")
     
     # Analyze downloaded 10-Q files
-    print("Analyzing downloaded 10-Q files:")
+    print("Analyzing downloaded files:")
     earnings_dir = "data/raw/earnings_reports"
     if os.path.exists(earnings_dir):
         for filename in os.listdir(earnings_dir):
