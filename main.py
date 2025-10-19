@@ -1,7 +1,11 @@
 from transformers import BertTokenizer, BertForSequenceClassification
 import torch
 import os
+import sys
 from text_parser import *
+
+# Add src to path for imports
+sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
 
 # Load model when script starts
 print("Loading FinBERT model...")
@@ -28,11 +32,9 @@ def analyze_text_file(file_path):
     print(f"Document sentiment: {sentiment}")
     print(f"Text preview: {text[:200]}...")
 
-
 def main():
-    
     # Analyze individual sentences
-    '''texts = [
+    texts = [
         "The company reported strong quarterly earnings growth.",
         "Terrible losses this quarter.",
         "Revenue remained flat compared to last year."
@@ -43,39 +45,20 @@ def main():
         print(f"Text: {text}")
         print(f"Sentiment: {sentiment}\n")
     
-    # Analyze a text file
-    analyze_text_file("text.txt")
-    
-    # Analyze a PDF file (if it exists)
-    pdf_path = "data/raw/NVDA-F2Q26-Quarterly-Presentation-FINAL.pdf"
-    if os.path.exists(pdf_path):
-        pdf_text = extract_text_from_pdf(pdf_path)
-        sentiment = classify_sentiment(pdf_text)
-        print(f"PDF Sentiment: {sentiment}")
+    # Analyze downloaded 10-Q files
+    print("Analyzing downloaded 10-Q files:")
+    earnings_dir = "data/processed/earnings_reports"
+    if os.path.exists(earnings_dir):
+        for filename in os.listdir(earnings_dir):
+            if filename.endswith('.txt'):
+                filepath = os.path.join(earnings_dir, filename)
+                print(f"\nAnalyzing {filename}:")
+                try:
+                    analyze_text_file(filepath)
+                except Exception as e:
+                    print(f"Error analyzing {filename}: {e}")
     else:
-        print("PDF file not found, skipping PDF analysis")'''
+        print("No earnings reports directory found")
     
-    # Analyze financial reports
-    reports_dir = "data/processed/earnings_reports"
-    
-    # Get all converted files
-    converted_files = []
-    for filename in os.listdir(reports_dir):
-        converted_files.append(os.path.join(reports_dir, filename))
-    
-    print(f"Analyzing {len(converted_files)} financial reports...")
-    
-    for file_path in sorted(converted_files):
-        print(f"\nAnalyzing: {os.path.basename(file_path)}")
-        
-        with open(file_path, 'r', encoding='utf-8') as file:
-            content = file.read()
-            
-        # Analyze overall document sentiment
-        sentiment = classify_sentiment(content)
-        print(f"Document Sentiment: {sentiment}")
-            
-        # Show preview of content
-
 if __name__ == "__main__":
     main()

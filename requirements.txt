@@ -5,9 +5,14 @@ torch>=2.0.0
 # PDF processing (used in pdf_parser.py)
 PyPDF2>=3.0.0
 
-# Web scraping (used in sec_scraper.py)
+# Web scraping and HTTP requests
 requests>=2.31.0
-
-# XBRL parsing (used in src/parsing/xbrl_converter.py)
 beautifulsoup4>=4.12.0
 lxml>=4.9.0
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Date/time handling
+python-dateutil>=2.8.0
