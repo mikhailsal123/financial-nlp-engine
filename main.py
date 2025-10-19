@@ -1,9 +1,9 @@
 from transformers import BertTokenizer, BertForSequenceClassification
 import torch
-from pdf_parser import extract_text_from_pdf
+from pdf_parser import *
 import os
 
-# Load model ONCE when script starts (outside any function)
+# Load model when script starts
 print("Loading FinBERT model...")
 tokenizer = BertTokenizer.from_pretrained('ProsusAI/finbert')
 model = BertForSequenceClassification.from_pretrained('ProsusAI/finbert')
@@ -22,7 +22,7 @@ def analyze_text_file(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
         text = file.read()
         
-     # Analyze entire text as one document
+     # Analyze text as one document
     sentiment = classify_sentiment(text)
         
     print(f"Document sentiment: {sentiment}")
@@ -30,8 +30,7 @@ def analyze_text_file(file_path):
 
 
 def main():
-    # Example 1: Analyze individual sentences
-    print("=== INDIVIDUAL SENTENCE ANALYSIS ===")
+    # Analyze individual sentences
     texts = [
         "The company reported strong quarterly earnings growth.",
         "Terrible losses this quarter.",
@@ -43,13 +42,11 @@ def main():
         print(f"Text: {text}")
         print(f"Sentiment: {sentiment}\n")
     
-    # Example 2: Analyze text file
-    print("=== TEXT FILE ANALYSIS ===")
+    # Analyze a text file
     analyze_text_file("text.txt")
     
-    # Example 3: Analyze PDF (uncomment to use)
-    # print("=== PDF ANALYSIS ===")
-    # pdf_text = extract_text_from_pdf("report_files/NVDA-F2Q26-Quarterly-Presentation-FINAL.pdf")
+    # Analyze a PDF file
+    # pdf_text = extract_text_from_pdf("financial_text_files/NVDA-F2Q26-Quarterly-Presentation-FINAL.pdf")
     # sentiment = classify_sentiment(pdf_text)
     # print(f"PDF Sentiment: {sentiment}")
     
