@@ -1,4 +1,4 @@
-Authors: Mikhail Saleev, Jordan Boskovich, Peter Ryan, Jackson Vonderhorst, Caden Chuang, Marco Basile
+**Authors:** Mikhail Saleev, Jordan Boskovich, Peter Ryan, Jackson Vonderhorst, Caden Chuang, Marco Basile
 
 financial-nlp-engine/
 ├── data/
