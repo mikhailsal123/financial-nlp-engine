@@ -1,0 +1,21 @@
+# Core ML/NLP libraries (used in main.py)
+transformers>=4.30.0
+torch>=2.0.0
+
+# PDF processing (used in pdf_parser.py)
+PyPDF2>=3.0.0
+
+# Web scraping and HTTP requests
+requests>=2.31.0  # Required as the code uses it to call the FRED API
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Date/time handling
+python-dateutil>=2.8.0
+
+# Environment variable management
+python-dotenv>=1.0.0  # optional, only if you want to load API keys from .env automatically
