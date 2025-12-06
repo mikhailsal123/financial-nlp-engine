@@ -10,13 +10,40 @@ sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
 from src.parsing.report_cleaner import ReportCleaner
 from src.parsing.section_extractor import SectionExtractor
 
-# Load model when script starts
+# Load model when script starts (prefer fine-tuned model)
+def load_sentiment_model():
+    """Load FinBERT model, preferring fine-tuned version if available."""
+    # Check for fine-tuned model first
+    finetuned_path = 'models/finbert_finetuned'
+    if os.path.exists(finetuned_path) and os.path.exists(os.path.join(finetuned_path, 'config.json')):
+        print("📦 Loading fine-tuned FinBERT model...")
+        tokenizer = BertTokenizer.from_pretrained(finetuned_path)
+        model = BertForSequenceClassification.from_pretrained(finetuned_path)
+        print("✅ Using fine-tuned model (trained on macroeconomic data)")
+    else:
+        print("📦 Loading base FinBERT model...")
+        tokenizer = BertTokenizer.from_pretrained('ProsusAI/finbert')
+        model = BertForSequenceClassification.from_pretrained('ProsusAI/finbert')
+        print("✅ Using base FinBERT model")
+    return model, tokenizer
+
 print("Loading FinBERT model...")
-tokenizer = BertTokenizer.from_pretrained('ProsusAI/finbert')
-model = BertForSequenceClassification.from_pretrained('ProsusAI/finbert')
+model, tokenizer = load_sentiment_model()
 
 def classify_sentiment(text):
-    inputs = tokenizer(text, return_tensors="pt", padding=True, truncation=True)
+    """Classify sentiment of text using the loaded model."""
+    # Determine device
+    if torch.backends.mps.is_available():
+        device = 'mps'
+    elif torch.cuda.is_available():
+        device = 'cuda'
+    else:
+        device = 'cpu'
+    
+    inputs = tokenizer(text, return_tensors="pt", padding=True, truncation=True, max_length=512)
+    inputs = {k: v.to(device) for k, v in inputs.items()}
+    model.to(device)
+    
     with torch.no_grad():
         outputs = model(**inputs)
         predictions = outputs.logits.argmax(dim=1)

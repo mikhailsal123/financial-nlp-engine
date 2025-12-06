@@ -1,0 +1,59 @@
+date,text,sentiment,value,change,series_id,indicator_name
+2020-12-01,Unemployment Rate remained unchanged at 6.70 Percent in 2020-12-01.,neutral,6.7,0.0,UNRATE,Unemployment Rate
+2021-01-01,Unemployment Rate decreased by 0.30 Percent to 6.40 Percent in 2021-01-01.,positive,6.4,-0.2999999999999998,UNRATE,Unemployment Rate
+2021-02-01,Unemployment Rate decreased by 0.20 Percent to 6.20 Percent in 2021-02-01.,positive,6.2,-0.2000000000000001,UNRATE,Unemployment Rate
+2021-03-01,Unemployment Rate decreased by 0.10 Percent to 6.10 Percent in 2021-03-01.,neutral,6.1,-0.1000000000000005,UNRATE,Unemployment Rate
+2021-04-01,Unemployment Rate remained unchanged at 6.10 Percent in 2021-04-01.,neutral,6.1,0.0,UNRATE,Unemployment Rate
+2021-05-01,Unemployment Rate decreased by 0.30 Percent to 5.80 Percent in 2021-05-01.,positive,5.8,-0.2999999999999998,UNRATE,Unemployment Rate
+2021-06-01,Unemployment Rate increased by 0.10 Percent to 5.90 Percent in 2021-06-01.,neutral,5.9,0.1000000000000005,UNRATE,Unemployment Rate
+2021-07-01,Unemployment Rate decreased by 0.50 Percent to 5.40 Percent in 2021-07-01.,positive,5.4,-0.5,UNRATE,Unemployment Rate
+2021-08-01,Unemployment Rate decreased by 0.30 Percent to 5.10 Percent in 2021-08-01.,positive,5.1,-0.3000000000000007,UNRATE,Unemployment Rate
+2021-09-01,Unemployment Rate decreased by 0.40 Percent to 4.70 Percent in 2021-09-01.,positive,4.7,-0.3999999999999994,UNRATE,Unemployment Rate
+2021-10-01,Unemployment Rate decreased by 0.20 Percent to 4.50 Percent in 2021-10-01.,positive,4.5,-0.2000000000000001,UNRATE,Unemployment Rate
+2021-11-01,Unemployment Rate decreased by 0.30 Percent to 4.20 Percent in 2021-11-01.,positive,4.2,-0.2999999999999998,UNRATE,Unemployment Rate
+2021-12-01,Unemployment Rate decreased by 0.30 Percent to 3.90 Percent in 2021-12-01.,positive,3.9,-0.3000000000000002,UNRATE,Unemployment Rate
+2022-01-01,Unemployment Rate increased by 0.10 Percent to 4.00 Percent in 2022-01-01.,neutral,4.0,0.1,UNRATE,Unemployment Rate
+2022-02-01,Unemployment Rate decreased by 0.20 Percent to 3.80 Percent in 2022-02-01.,positive,3.8,-0.2000000000000001,UNRATE,Unemployment Rate
+2022-03-01,Unemployment Rate decreased by 0.10 Percent to 3.70 Percent in 2022-03-01.,neutral,3.7,-0.0999999999999996,UNRATE,Unemployment Rate
+2022-04-01,Unemployment Rate remained unchanged at 3.70 Percent in 2022-04-01.,neutral,3.7,0.0,UNRATE,Unemployment Rate
+2022-05-01,Unemployment Rate decreased by 0.10 Percent to 3.60 Percent in 2022-05-01.,neutral,3.6,-0.1,UNRATE,Unemployment Rate
+2022-06-01,Unemployment Rate remained unchanged at 3.60 Percent in 2022-06-01.,neutral,3.6,0.0,UNRATE,Unemployment Rate
+2022-07-01,Unemployment Rate decreased by 0.10 Percent to 3.50 Percent in 2022-07-01.,neutral,3.5,-0.1,UNRATE,Unemployment Rate
+2022-08-01,Unemployment Rate increased by 0.10 Percent to 3.60 Percent in 2022-08-01.,neutral,3.6,0.1,UNRATE,Unemployment Rate
+2022-09-01,Unemployment Rate decreased by 0.10 Percent to 3.50 Percent in 2022-09-01.,neutral,3.5,-0.1,UNRATE,Unemployment Rate
+2022-10-01,Unemployment Rate increased by 0.10 Percent to 3.60 Percent in 2022-10-01.,neutral,3.6,0.1,UNRATE,Unemployment Rate
+2022-11-01,Unemployment Rate remained unchanged at 3.60 Percent in 2022-11-01.,neutral,3.6,0.0,UNRATE,Unemployment Rate
+2022-12-01,Unemployment Rate decreased by 0.10 Percent to 3.50 Percent in 2022-12-01.,neutral,3.5,-0.1,UNRATE,Unemployment Rate
+2023-01-01,Unemployment Rate remained unchanged at 3.50 Percent in 2023-01-01.,neutral,3.5,0.0,UNRATE,Unemployment Rate
+2023-02-01,Unemployment Rate increased by 0.10 Percent to 3.60 Percent in 2023-02-01.,neutral,3.6,0.1,UNRATE,Unemployment Rate
+2023-03-01,Unemployment Rate decreased by 0.10 Percent to 3.50 Percent in 2023-03-01.,neutral,3.5,-0.1,UNRATE,Unemployment Rate
+2023-04-01,Unemployment Rate decreased by 0.10 Percent to 3.40 Percent in 2023-04-01.,neutral,3.4,-0.1,UNRATE,Unemployment Rate
+2023-05-01,Unemployment Rate increased by 0.20 Percent to 3.60 Percent in 2023-05-01.,negative,3.6,0.2000000000000001,UNRATE,Unemployment Rate
+2023-06-01,Unemployment Rate remained unchanged at 3.60 Percent in 2023-06-01.,neutral,3.6,0.0,UNRATE,Unemployment Rate
+2023-07-01,Unemployment Rate decreased by 0.10 Percent to 3.50 Percent in 2023-07-01.,neutral,3.5,-0.1,UNRATE,Unemployment Rate
+2023-08-01,Unemployment Rate increased by 0.20 Percent to 3.70 Percent in 2023-08-01.,negative,3.7,0.2000000000000001,UNRATE,Unemployment Rate
+2023-09-01,Unemployment Rate increased by 0.10 Percent to 3.80 Percent in 2023-09-01.,neutral,3.8,0.0999999999999996,UNRATE,Unemployment Rate
+2023-10-01,Unemployment Rate increased by 0.10 Percent to 3.90 Percent in 2023-10-01.,neutral,3.9,0.1,UNRATE,Unemployment Rate
+2023-11-01,Unemployment Rate decreased by 0.20 Percent to 3.70 Percent in 2023-11-01.,neutral,3.7,-0.1999999999999997,UNRATE,Unemployment Rate
+2023-12-01,Unemployment Rate increased by 0.10 Percent to 3.80 Percent in 2023-12-01.,neutral,3.8,0.0999999999999996,UNRATE,Unemployment Rate
+2024-01-01,Unemployment Rate decreased by 0.10 Percent to 3.70 Percent in 2024-01-01.,neutral,3.7,-0.0999999999999996,UNRATE,Unemployment Rate
+2024-02-01,Unemployment Rate increased by 0.20 Percent to 3.90 Percent in 2024-02-01.,neutral,3.9,0.1999999999999997,UNRATE,Unemployment Rate
+2024-03-01,Unemployment Rate remained unchanged at 3.90 Percent in 2024-03-01.,neutral,3.9,0.0,UNRATE,Unemployment Rate
+2024-04-01,Unemployment Rate remained unchanged at 3.90 Percent in 2024-04-01.,neutral,3.9,0.0,UNRATE,Unemployment Rate
+2024-05-01,Unemployment Rate increased by 0.10 Percent to 4.00 Percent in 2024-05-01.,neutral,4.0,0.1,UNRATE,Unemployment Rate
+2024-06-01,Unemployment Rate increased by 0.10 Percent to 4.10 Percent in 2024-06-01.,neutral,4.1,0.0999999999999996,UNRATE,Unemployment Rate
+2024-07-01,Unemployment Rate increased by 0.10 Percent to 4.20 Percent in 2024-07-01.,neutral,4.2,0.1000000000000005,UNRATE,Unemployment Rate
+2024-08-01,Unemployment Rate remained unchanged at 4.20 Percent in 2024-08-01.,neutral,4.2,0.0,UNRATE,Unemployment Rate
+2024-09-01,Unemployment Rate decreased by 0.10 Percent to 4.10 Percent in 2024-09-01.,neutral,4.1,-0.1000000000000005,UNRATE,Unemployment Rate
+2024-10-01,Unemployment Rate remained unchanged at 4.10 Percent in 2024-10-01.,neutral,4.1,0.0,UNRATE,Unemployment Rate
+2024-11-01,Unemployment Rate increased by 0.10 Percent to 4.20 Percent in 2024-11-01.,neutral,4.2,0.1000000000000005,UNRATE,Unemployment Rate
+2024-12-01,Unemployment Rate decreased by 0.10 Percent to 4.10 Percent in 2024-12-01.,neutral,4.1,-0.1000000000000005,UNRATE,Unemployment Rate
+2025-01-01,Unemployment Rate decreased by 0.10 Percent to 4.00 Percent in 2025-01-01.,neutral,4.0,-0.0999999999999996,UNRATE,Unemployment Rate
+2025-02-01,Unemployment Rate increased by 0.10 Percent to 4.10 Percent in 2025-02-01.,neutral,4.1,0.0999999999999996,UNRATE,Unemployment Rate
+2025-03-01,Unemployment Rate increased by 0.10 Percent to 4.20 Percent in 2025-03-01.,neutral,4.2,0.1000000000000005,UNRATE,Unemployment Rate
+2025-04-01,Unemployment Rate remained unchanged at 4.20 Percent in 2025-04-01.,neutral,4.2,0.0,UNRATE,Unemployment Rate
+2025-05-01,Unemployment Rate remained unchanged at 4.20 Percent in 2025-05-01.,neutral,4.2,0.0,UNRATE,Unemployment Rate
+2025-06-01,Unemployment Rate decreased by 0.10 Percent to 4.10 Percent in 2025-06-01.,neutral,4.1,-0.1000000000000005,UNRATE,Unemployment Rate
+2025-07-01,Unemployment Rate increased by 0.10 Percent to 4.20 Percent in 2025-07-01.,neutral,4.2,0.1000000000000005,UNRATE,Unemployment Rate
+2025-08-01,Unemployment Rate increased by 0.10 Percent to 4.30 Percent in 2025-08-01.,neutral,4.3,0.0999999999999996,UNRATE,Unemployment Rate
+2025-09-01,Unemployment Rate increased by 0.10 Percent to 4.40 Percent in 2025-09-01.,neutral,4.4,0.1000000000000005,UNRATE,Unemployment Rate

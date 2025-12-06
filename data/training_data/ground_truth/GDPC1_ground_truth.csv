@@ -1,0 +1,20 @@
+date,text,sentiment,value,change,series_id,indicator_name
+2020-10-01,Real Gross Domestic Product remained unchanged at $20.79 million Billions in 2020-10-01.,neutral,20791.917,0.0,GDPC1,Real Gross Domestic Product
+2021-01-01,Real Gross Domestic Product increased by 290.22 Billions to $21.08 million Billions in 2021-01-01.,positive,21082.134,290.2169999999969,GDPC1,Real Gross Domestic Product
+2021-04-01,Real Gross Domestic Product increased by 358.80 Billions to $21.44 million Billions in 2021-04-01.,positive,21440.929,358.7950000000019,GDPC1,Real Gross Domestic Product
+2021-07-01,Real Gross Domestic Product increased by 176.90 Billions to $21.62 million Billions in 2021-07-01.,positive,21617.828,176.89900000000125,GDPC1,Real Gross Domestic Product
+2021-10-01,Real Gross Domestic Product increased by 370.91 Billions to $21.99 million Billions in 2021-10-01.,positive,21988.737,370.9089999999997,GDPC1,Real Gross Domestic Product
+2022-01-01,Real Gross Domestic Product decreased by 56.03 Billions to $21.93 million Billions in 2022-01-01.,negative,21932.71,-56.02700000000186,GDPC1,Real Gross Domestic Product
+2022-04-01,Real Gross Domestic Product increased by 34.33 Billions to $21.97 million Billions in 2022-04-01.,positive,21967.045,34.33499999999913,GDPC1,Real Gross Domestic Product
+2022-07-01,Real Gross Domestic Product increased by 158.58 Billions to $22.13 million Billions in 2022-07-01.,positive,22125.625,158.58000000000175,GDPC1,Real Gross Domestic Product
+2022-10-01,Real Gross Domestic Product increased by 152.72 Billions to $22.28 million Billions in 2022-10-01.,positive,22278.345,152.72000000000116,GDPC1,Real Gross Domestic Product
+2023-01-01,Real Gross Domestic Product increased by 161.26 Billions to $22.44 million Billions in 2023-01-01.,positive,22439.607,161.2619999999988,GDPC1,Real Gross Domestic Product
+2023-04-01,Real Gross Domestic Product increased by 140.89 Billions to $22.58 million Billions in 2023-04-01.,positive,22580.499,140.89199999999985,GDPC1,Real Gross Domestic Product
+2023-07-01,Real Gross Domestic Product increased by 260.49 Billions to $22.84 million Billions in 2023-07-01.,positive,22840.989,260.4900000000016,GDPC1,Real Gross Domestic Product
+2023-10-01,Real Gross Domestic Product increased by 192.79 Billions to $23.03 million Billions in 2023-10-01.,positive,23033.78,192.79099999999744,GDPC1,Real Gross Domestic Product
+2024-01-01,Real Gross Domestic Product increased by 48.34 Billions to $23.08 million Billions in 2024-01-01.,positive,23082.119,48.33899999999994,GDPC1,Real Gross Domestic Product
+2024-04-01,Real Gross Domestic Product increased by 204.39 Billions to $23.29 million Billions in 2024-04-01.,positive,23286.508,204.38900000000285,GDPC1,Real Gross Domestic Product
+2024-07-01,Real Gross Domestic Product increased by 192.06 Billions to $23.48 million Billions in 2024-07-01.,positive,23478.57,192.06199999999808,GDPC1,Real Gross Domestic Product
+2024-10-01,Real Gross Domestic Product increased by 107.97 Billions to $23.59 million Billions in 2024-10-01.,positive,23586.542,107.97200000000156,GDPC1,Real Gross Domestic Product
+2025-01-01,Real Gross Domestic Product decreased by 38.33 Billions to $23.55 million Billions in 2025-01-01.,negative,23548.21,-38.332000000002154,GDPC1,Real Gross Domestic Product
+2025-04-01,Real Gross Domestic Product increased by 222.77 Billions to $23.77 million Billions in 2025-04-01.,positive,23770.976,222.7659999999996,GDPC1,Real Gross Domestic Product

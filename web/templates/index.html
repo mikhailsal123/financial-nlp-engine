@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FinBERT Sentiment Analysis - AI-powered financial text analysis using advanced NLP">
+    <meta name="theme-color" content="#00d9ff">
+    <title>FinBERT Sentiment Analysis - AI-Powered Financial Text Analysis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>FinBERT Sentiment Analysis</h1>
+            <p class="subtitle">AI-Powered Financial Text Analysis with Advanced NLP</p>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="value">86.83%</span>
+                    <span class="label">Accuracy</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="value">463</span>
+                    <span class="label">Training Examples</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="value">Fine-Tuned</span>
+                    <span class="label">Model Type</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="main-content">
+
+        <nav class="tabs">
+            <button class="tab-btn active" onclick="showTab('test')">Test Model</button>
+            <button class="tab-btn" onclick="showTab('performance')">Performance</button>
+            <button class="tab-btn" onclick="showTab('results')">Analysis Results</button>
+            <button class="tab-btn" onclick="showTab('data')">Data Downloads</button>
+        </nav>
+
+        <!-- Test Model Tab -->
+        <div id="test-tab" class="tab-content active">
+            <div class="card">
+                <h2>Single Text Analysis</h2>
+                <div class="input-group">
+                    <label for="test-text">Enter financial text to analyze:</label>
+                    <textarea id="test-text" rows="6" placeholder="Enter financial text here...&#10;&#10;Example: Revenue increased 25% year-over-year driven by strong demand in our core markets. The company expects continued growth throughout the fiscal year."></textarea>
+                </div>
+                <div style="text-align: center;">
+                    <button onclick="testSentiment()" class="btn btn-primary">Analyze Sentiment</button>
+                </div>
+                <div id="test-result" class="result-box" style="display: none;">
+                    <h3>Analysis Result:</h3>
+                    <div id="sentiment-display"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Batch Analysis</h2>
+                <div class="input-group">
+                    <label for="batch-text">Enter multiple texts (one per line):</label>
+                    <textarea id="batch-text" rows="8" placeholder="Enter multiple texts, one per line...&#10;&#10;Example:&#10;Revenue increased 25% year-over-year.&#10;The company faces significant supply chain disruptions.&#10;Operating expenses remained consistent with previous quarters.&#10;Market conditions are favorable for expansion."></textarea>
+                </div>
+                <div style="text-align: center;">
+                    <button onclick="batchTest()" class="btn btn-primary">Analyze All Texts</button>
+                </div>
+                <div id="batch-result" class="result-box" style="display: none;">
+                    <h3>Batch Analysis Results:</h3>
+                    <div id="batch-display"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Performance Tab -->
+        <div id="performance-tab" class="tab-content">
+            <div class="card">
+                <h2>Model Performance Metrics</h2>
+                <div id="performance-content">
+                    <div class="loading">Loading performance data...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Tab -->
+        <div id="results-tab" class="tab-content">
+            <div class="card">
+                <h2>Analysis Results</h2>
+                <div id="results-content">
+                    <div class="loading">Loading results...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Downloads Tab -->
+        <div id="data-tab" class="tab-content">
+            <div class="card">
+                <h2>Upload File for Analysis</h2>
+                <div class="input-group">
+                    <label for="file-upload">Select a text file to analyze:</label>
+                    <input type="file" id="file-upload" accept=".txt,.text" style="width: 100%; padding: 12px; border: 2px solid rgba(0, 217, 255, 0.3); border-radius: 8px; background: rgba(15, 23, 42, 0.6); color: #e2e8f0; cursor: pointer; position: relative; z-index: 10;">
+                    <p style="margin-top: 10px; color: #cbd5e1; font-size: 0.9em;">Supported formats: .txt, .text</p>
+                </div>
+                <div style="text-align: center;">
+                    <button onclick="analyzeUploadedFile()" class="btn btn-primary">Analyze File</button>
+                </div>
+                <div id="file-analysis-result" style="margin-top: 30px; display: none;">
+                    <div class="result-box">
+                        <h3>Analysis Results</h3>
+                        <div id="file-analysis-content"></div>
+                    </div>
+                </div>
+                <div id="file-analysis-loading" style="margin-top: 20px; text-align: center; display: none;">
+                    <div class="loading">Analyzing file...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 FinBERT Sentiment Analysis. All rights reserved.</p>
+            <p class="footer-subtitle">Powered by FinBERT - Financial Sentiment Analysis Model</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
+

@@ -1,0 +1,4169 @@
+[
+  {
+    "text": "Real GDP Growth Rate remained unchanged at 4.60 Percent in 2020-10-01.",
+    "label": "neutral",
+    "date": "2020-10-01",
+    "indicator": "Real GDP Growth Rate",
+    "series_id": "A191RL1Q225SBEA",
+    "value": 4.6,
+    "change": 0.0
+  },
+  {
+    "text": "Real GDP Growth Rate increased by 1.10 Percent to 5.70 Percent in 2021-01-01.",
+    "label": "neutral",
+    "date": "2021-01-01",
+    "indicator": "Real GDP Growth Rate",
+    "series_id": "A191RL1Q225SBEA",
+    "value": 5.7,
+    "change": 1.1000000000000003
+  },
+  {
+    "text": "Real GDP Growth Rate increased by 1.30 Percent to 7.00 Percent in 2021-04-01.",
+    "label": "neutral",
+    "date": "2021-04-01",
+    "indicator": "Real GDP Growth Rate",
+    "series_id": "A191RL1Q225SBEA",
+    "value": 7.0,
+    "change": 1.2999999999999998
+  },
+  {
+    "text": "Real GDP Growth Rate decreased by 3.70 Percent to 3.30 Percent in 2021-07-01.",
+    "label": "negative",
+    "date": "2021-07-01",
+    "indicator": "Real GDP Growth Rate",
+    "series_id": "A191RL1Q225SBEA",
+    "value": 3.3,
+    "change": -3.7
+  },
+  {
+    "text": "Real GDP Growth Rate increased by 3.70 Percent to 7.00 Percent in 2021-10-01.",
+    "label": "positive",
+    "date": "2021-10-01",
+    "indicator": "Real GDP Growth Rate",
+    "series_id": "A191RL1Q225SBEA",
+    "value": 7.0,
+    "change": 3.7
+  },
+  {
+    "text": "Real GDP Growth Rate decreased by 8.00 Percent to -1.00 Percent in 2022-01-01.",
+    "label": "negative",
+    "date": "2022-01-01",
+    "indicator": "Real GDP Growth Rate",
+    "series_id": "A191RL1Q225SBEA",
+    "value": -1.0,
+    "change": -8.0
+  },
+  {
+    "text": "Real GDP Growth Rate increased by 1.60 Percent to 0.60 Percent in 2022-04-01.",
+    "label": "neutral",
+    "date": "2022-04-01",
+    "indicator": "Real GDP Growth Rate",
+    "series_id": "A191RL1Q225SBEA",
+    "value": 0.6,
+    "change": 1.6
+  },
+  {
+    "text": "Real GDP Growth Rate increased by 2.30 Percent to 2.90 Percent in 2022-07-01.",
+    "label": "neutral",
+    "date": "2022-07-01",
+    "indicator": "Real GDP Growth Rate",
+    "series_id": "A191RL1Q225SBEA",
+    "value": 2.9,
+    "change": 2.3
+  },
+  {
+    "text": "Real GDP Growth Rate decreased by 0.10 Percent to 2.80 Percent in 2022-10-01.",
+    "label": "negative",
+    "date": "2022-10-01",
+    "indicator": "Real GDP Growth Rate",
+    "series_id": "A191RL1Q225SBEA",
+    "value": 2.8,
+    "change": -0.1
+  },
+  {
+    "text": "Real GDP Growth Rate increased by 0.10 Percent to 2.90 Percent in 2023-01-01.",
+    "label": "neutral",
+    "date": "2023-01-01",
+    "indicator": "Real GDP Growth Rate",
+    "series_id": "A191RL1Q225SBEA",
+    "value": 2.9,
+    "change": 0.1
+  },
+  {
+    "text": "Real GDP Growth Rate decreased by 0.40 Percent to 2.50 Percent in 2023-04-01.",
+    "label": "negative",
+    "date": "2023-04-01",
+    "indicator": "Real GDP Growth Rate",
+    "series_id": "A191RL1Q225SBEA",
+    "value": 2.5,
+    "change": -0.3999999999999999
+  },
+  {
+    "text": "Real GDP Growth Rate increased by 2.20 Percent to 4.70 Percent in 2023-07-01.",
+    "label": "neutral",
+    "date": "2023-07-01",
+    "indicator": "Real GDP Growth Rate",
+    "series_id": "A191RL1Q225SBEA",
+    "value": 4.7,
+    "change": 2.2
+  },
+  {
+    "text": "Real GDP Growth Rate decreased by 1.30 Percent to 3.40 Percent in 2023-10-01.",
+    "label": "negative",
+    "date": "2023-10-01",
+    "indicator": "Real GDP Growth Rate",
+    "series_id": "A191RL1Q225SBEA",
+    "value": 3.4,
+    "change": -1.3000000000000005
+  },
+  {
+    "text": "Real GDP Growth Rate decreased by 2.60 Percent to 0.80 Percent in 2024-01-01.",
+    "label": "negative",
+    "date": "2024-01-01",
+    "indicator": "Real GDP Growth Rate",
+    "series_id": "A191RL1Q225SBEA",
+    "value": 0.8,
+    "change": -2.5999999999999996
+  },
+  {
+    "text": "Real GDP Growth Rate increased by 2.80 Percent to 3.60 Percent in 2024-04-01.",
+    "label": "positive",
+    "date": "2024-04-01",
+    "indicator": "Real GDP Growth Rate",
+    "series_id": "A191RL1Q225SBEA",
+    "value": 3.6,
+    "change": 2.8
+  },
+  {
+    "text": "Real GDP Growth Rate decreased by 0.30 Percent to 3.30 Percent in 2024-07-01.",
+    "label": "negative",
+    "date": "2024-07-01",
+    "indicator": "Real GDP Growth Rate",
+    "series_id": "A191RL1Q225SBEA",
+    "value": 3.3,
+    "change": -0.3000000000000002
+  },
+  {
+    "text": "Real GDP Growth Rate decreased by 1.40 Percent to 1.90 Percent in 2024-10-01.",
+    "label": "negative",
+    "date": "2024-10-01",
+    "indicator": "Real GDP Growth Rate",
+    "series_id": "A191RL1Q225SBEA",
+    "value": 1.9,
+    "change": -1.4
+  },
+  {
+    "text": "Real GDP Growth Rate decreased by 2.50 Percent to -0.60 Percent in 2025-01-01.",
+    "label": "negative",
+    "date": "2025-01-01",
+    "indicator": "Real GDP Growth Rate",
+    "series_id": "A191RL1Q225SBEA",
+    "value": -0.6,
+    "change": -2.5
+  },
+  {
+    "text": "Real GDP Growth Rate increased by 4.40 Percent to 3.80 Percent in 2025-04-01.",
+    "label": "positive",
+    "date": "2025-04-01",
+    "indicator": "Real GDP Growth Rate",
+    "series_id": "A191RL1Q225SBEA",
+    "value": 3.8,
+    "change": 4.3999999999999995
+  },
+  {
+    "text": "Real Gross Domestic Product remained unchanged at $20.79 million Billions in 2020-10-01.",
+    "label": "neutral",
+    "date": "2020-10-01",
+    "indicator": "Real Gross Domestic Product",
+    "series_id": "GDPC1",
+    "value": 20791.917,
+    "change": 0.0
+  },
+  {
+    "text": "Real Gross Domestic Product increased by 290.22 Billions to $21.08 million Billions in 2021-01-01.",
+    "label": "positive",
+    "date": "2021-01-01",
+    "indicator": "Real Gross Domestic Product",
+    "series_id": "GDPC1",
+    "value": 21082.134,
+    "change": 290.2169999999969
+  },
+  {
+    "text": "Real Gross Domestic Product increased by 358.80 Billions to $21.44 million Billions in 2021-04-01.",
+    "label": "positive",
+    "date": "2021-04-01",
+    "indicator": "Real Gross Domestic Product",
+    "series_id": "GDPC1",
+    "value": 21440.929,
+    "change": 358.7950000000019
+  },
+  {
+    "text": "Real Gross Domestic Product increased by 176.90 Billions to $21.62 million Billions in 2021-07-01.",
+    "label": "positive",
+    "date": "2021-07-01",
+    "indicator": "Real Gross Domestic Product",
+    "series_id": "GDPC1",
+    "value": 21617.828,
+    "change": 176.89900000000125
+  },
+  {
+    "text": "Real Gross Domestic Product increased by 370.91 Billions to $21.99 million Billions in 2021-10-01.",
+    "label": "positive",
+    "date": "2021-10-01",
+    "indicator": "Real Gross Domestic Product",
+    "series_id": "GDPC1",
+    "value": 21988.737,
+    "change": 370.9089999999997
+  },
+  {
+    "text": "Real Gross Domestic Product decreased by 56.03 Billions to $21.93 million Billions in 2022-01-01.",
+    "label": "negative",
+    "date": "2022-01-01",
+    "indicator": "Real Gross Domestic Product",
+    "series_id": "GDPC1",
+    "value": 21932.71,
+    "change": -56.02700000000186
+  },
+  {
+    "text": "Real Gross Domestic Product increased by 34.33 Billions to $21.97 million Billions in 2022-04-01.",
+    "label": "positive",
+    "date": "2022-04-01",
+    "indicator": "Real Gross Domestic Product",
+    "series_id": "GDPC1",
+    "value": 21967.045,
+    "change": 34.33499999999913
+  },
+  {
+    "text": "Real Gross Domestic Product increased by 158.58 Billions to $22.13 million Billions in 2022-07-01.",
+    "label": "positive",
+    "date": "2022-07-01",
+    "indicator": "Real Gross Domestic Product",
+    "series_id": "GDPC1",
+    "value": 22125.625,
+    "change": 158.58000000000175
+  },
+  {
+    "text": "Real Gross Domestic Product increased by 152.72 Billions to $22.28 million Billions in 2022-10-01.",
+    "label": "positive",
+    "date": "2022-10-01",
+    "indicator": "Real Gross Domestic Product",
+    "series_id": "GDPC1",
+    "value": 22278.345,
+    "change": 152.72000000000116
+  },
+  {
+    "text": "Real Gross Domestic Product increased by 161.26 Billions to $22.44 million Billions in 2023-01-01.",
+    "label": "positive",
+    "date": "2023-01-01",
+    "indicator": "Real Gross Domestic Product",
+    "series_id": "GDPC1",
+    "value": 22439.607,
+    "change": 161.2619999999988
+  },
+  {
+    "text": "Real Gross Domestic Product increased by 140.89 Billions to $22.58 million Billions in 2023-04-01.",
+    "label": "positive",
+    "date": "2023-04-01",
+    "indicator": "Real Gross Domestic Product",
+    "series_id": "GDPC1",
+    "value": 22580.499,
+    "change": 140.89199999999985
+  },
+  {
+    "text": "Real Gross Domestic Product increased by 260.49 Billions to $22.84 million Billions in 2023-07-01.",
+    "label": "positive",
+    "date": "2023-07-01",
+    "indicator": "Real Gross Domestic Product",
+    "series_id": "GDPC1",
+    "value": 22840.989,
+    "change": 260.4900000000016
+  },
+  {
+    "text": "Real Gross Domestic Product increased by 192.79 Billions to $23.03 million Billions in 2023-10-01.",
+    "label": "positive",
+    "date": "2023-10-01",
+    "indicator": "Real Gross Domestic Product",
+    "series_id": "GDPC1",
+    "value": 23033.78,
+    "change": 192.79099999999744
+  },
+  {
+    "text": "Real Gross Domestic Product increased by 48.34 Billions to $23.08 million Billions in 2024-01-01.",
+    "label": "positive",
+    "date": "2024-01-01",
+    "indicator": "Real Gross Domestic Product",
+    "series_id": "GDPC1",
+    "value": 23082.119,
+    "change": 48.33899999999994
+  },
+  {
+    "text": "Real Gross Domestic Product increased by 204.39 Billions to $23.29 million Billions in 2024-04-01.",
+    "label": "positive",
+    "date": "2024-04-01",
+    "indicator": "Real Gross Domestic Product",
+    "series_id": "GDPC1",
+    "value": 23286.508,
+    "change": 204.38900000000285
+  },
+  {
+    "text": "Real Gross Domestic Product increased by 192.06 Billions to $23.48 million Billions in 2024-07-01.",
+    "label": "positive",
+    "date": "2024-07-01",
+    "indicator": "Real Gross Domestic Product",
+    "series_id": "GDPC1",
+    "value": 23478.57,
+    "change": 192.06199999999808
+  },
+  {
+    "text": "Real Gross Domestic Product increased by 107.97 Billions to $23.59 million Billions in 2024-10-01.",
+    "label": "positive",
+    "date": "2024-10-01",
+    "indicator": "Real Gross Domestic Product",
+    "series_id": "GDPC1",
+    "value": 23586.542,
+    "change": 107.97200000000156
+  },
+  {
+    "text": "Real Gross Domestic Product decreased by 38.33 Billions to $23.55 million Billions in 2025-01-01.",
+    "label": "negative",
+    "date": "2025-01-01",
+    "indicator": "Real Gross Domestic Product",
+    "series_id": "GDPC1",
+    "value": 23548.21,
+    "change": -38.332000000002154
+  },
+  {
+    "text": "Real Gross Domestic Product increased by 222.77 Billions to $23.77 million Billions in 2025-04-01.",
+    "label": "positive",
+    "date": "2025-04-01",
+    "indicator": "Real Gross Domestic Product",
+    "series_id": "GDPC1",
+    "value": 23770.976,
+    "change": 222.7659999999996
+  },
+  {
+    "text": "Total Nonfarm Payrolls remained unchanged at $142.55 million Thousands in 2020-12-01.",
+    "label": "neutral",
+    "date": "2020-12-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 142548.0,
+    "change": 0.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 365.00 Thousands to $142.91 million Thousands in 2021-01-01.",
+    "label": "positive",
+    "date": "2021-01-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 142913.0,
+    "change": 365.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 509.00 Thousands to $143.42 million Thousands in 2021-02-01.",
+    "label": "positive",
+    "date": "2021-02-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 143422.0,
+    "change": 509.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 824.00 Thousands to $144.25 million Thousands in 2021-03-01.",
+    "label": "positive",
+    "date": "2021-03-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 144246.0,
+    "change": 824.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 365.00 Thousands to $144.61 million Thousands in 2021-04-01.",
+    "label": "positive",
+    "date": "2021-04-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 144611.0,
+    "change": 365.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 421.00 Thousands to $145.03 million Thousands in 2021-05-01.",
+    "label": "positive",
+    "date": "2021-05-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 145032.0,
+    "change": 421.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 796.00 Thousands to $145.83 million Thousands in 2021-06-01.",
+    "label": "positive",
+    "date": "2021-06-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 145828.0,
+    "change": 796.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 931.00 Thousands to $146.76 million Thousands in 2021-07-01.",
+    "label": "positive",
+    "date": "2021-07-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 146759.0,
+    "change": 931.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 487.00 Thousands to $147.25 million Thousands in 2021-08-01.",
+    "label": "positive",
+    "date": "2021-08-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 147246.0,
+    "change": 487.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 466.00 Thousands to $147.71 million Thousands in 2021-09-01.",
+    "label": "positive",
+    "date": "2021-09-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 147712.0,
+    "change": 466.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 857.00 Thousands to $148.57 million Thousands in 2021-10-01.",
+    "label": "positive",
+    "date": "2021-10-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 148569.0,
+    "change": 857.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 637.00 Thousands to $149.21 million Thousands in 2021-11-01.",
+    "label": "positive",
+    "date": "2021-11-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 149206.0,
+    "change": 637.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 575.00 Thousands to $149.78 million Thousands in 2021-12-01.",
+    "label": "positive",
+    "date": "2021-12-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 149781.0,
+    "change": 575.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 225.00 Thousands to $150.01 million Thousands in 2022-01-01.",
+    "label": "positive",
+    "date": "2022-01-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 150006.0,
+    "change": 225.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 869.00 Thousands to $150.88 million Thousands in 2022-02-01.",
+    "label": "positive",
+    "date": "2022-02-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 150875.0,
+    "change": 869.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 471.00 Thousands to $151.35 million Thousands in 2022-03-01.",
+    "label": "positive",
+    "date": "2022-03-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 151346.0,
+    "change": 471.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 305.00 Thousands to $151.65 million Thousands in 2022-04-01.",
+    "label": "positive",
+    "date": "2022-04-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 151651.0,
+    "change": 305.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 241.00 Thousands to $151.89 million Thousands in 2022-05-01.",
+    "label": "positive",
+    "date": "2022-05-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 151892.0,
+    "change": 241.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 461.00 Thousands to $152.35 million Thousands in 2022-06-01.",
+    "label": "positive",
+    "date": "2022-06-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 152353.0,
+    "change": 461.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 696.00 Thousands to $153.05 million Thousands in 2022-07-01.",
+    "label": "positive",
+    "date": "2022-07-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 153049.0,
+    "change": 696.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 237.00 Thousands to $153.29 million Thousands in 2022-08-01.",
+    "label": "positive",
+    "date": "2022-08-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 153286.0,
+    "change": 237.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 227.00 Thousands to $153.51 million Thousands in 2022-09-01.",
+    "label": "positive",
+    "date": "2022-09-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 153513.0,
+    "change": 227.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 400.00 Thousands to $153.91 million Thousands in 2022-10-01.",
+    "label": "positive",
+    "date": "2022-10-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 153913.0,
+    "change": 400.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 297.00 Thousands to $154.21 million Thousands in 2022-11-01.",
+    "label": "positive",
+    "date": "2022-11-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 154210.0,
+    "change": 297.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 126.00 Thousands to $154.34 million Thousands in 2022-12-01.",
+    "label": "neutral",
+    "date": "2022-12-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 154336.0,
+    "change": 126.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 444.00 Thousands to $154.78 million Thousands in 2023-01-01.",
+    "label": "positive",
+    "date": "2023-01-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 154780.0,
+    "change": 444.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 306.00 Thousands to $155.09 million Thousands in 2023-02-01.",
+    "label": "positive",
+    "date": "2023-02-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 155086.0,
+    "change": 306.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 85.00 Thousands to $155.17 million Thousands in 2023-03-01.",
+    "label": "neutral",
+    "date": "2023-03-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 155171.0,
+    "change": 85.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 216.00 Thousands to $155.39 million Thousands in 2023-04-01.",
+    "label": "positive",
+    "date": "2023-04-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 155387.0,
+    "change": 216.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 227.00 Thousands to $155.61 million Thousands in 2023-05-01.",
+    "label": "positive",
+    "date": "2023-05-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 155614.0,
+    "change": 227.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 257.00 Thousands to $155.87 million Thousands in 2023-06-01.",
+    "label": "positive",
+    "date": "2023-06-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 155871.0,
+    "change": 257.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 148.00 Thousands to $156.02 million Thousands in 2023-07-01.",
+    "label": "neutral",
+    "date": "2023-07-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 156019.0,
+    "change": 148.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 157.00 Thousands to $156.18 million Thousands in 2023-08-01.",
+    "label": "positive",
+    "date": "2023-08-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 156176.0,
+    "change": 157.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 158.00 Thousands to $156.33 million Thousands in 2023-09-01.",
+    "label": "positive",
+    "date": "2023-09-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 156334.0,
+    "change": 158.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 186.00 Thousands to $156.52 million Thousands in 2023-10-01.",
+    "label": "positive",
+    "date": "2023-10-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 156520.0,
+    "change": 186.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 141.00 Thousands to $156.66 million Thousands in 2023-11-01.",
+    "label": "neutral",
+    "date": "2023-11-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 156661.0,
+    "change": 141.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 269.00 Thousands to $156.93 million Thousands in 2023-12-01.",
+    "label": "positive",
+    "date": "2023-12-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 156930.0,
+    "change": 269.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 119.00 Thousands to $157.05 million Thousands in 2024-01-01.",
+    "label": "neutral",
+    "date": "2024-01-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 157049.0,
+    "change": 119.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 222.00 Thousands to $157.27 million Thousands in 2024-02-01.",
+    "label": "positive",
+    "date": "2024-02-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 157271.0,
+    "change": 222.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 246.00 Thousands to $157.52 million Thousands in 2024-03-01.",
+    "label": "positive",
+    "date": "2024-03-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 157517.0,
+    "change": 246.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 118.00 Thousands to $157.63 million Thousands in 2024-04-01.",
+    "label": "neutral",
+    "date": "2024-04-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 157635.0,
+    "change": 118.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 193.00 Thousands to $157.83 million Thousands in 2024-05-01.",
+    "label": "positive",
+    "date": "2024-05-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 157828.0,
+    "change": 193.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 87.00 Thousands to $157.91 million Thousands in 2024-06-01.",
+    "label": "neutral",
+    "date": "2024-06-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 157915.0,
+    "change": 87.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 88.00 Thousands to $158.00 million Thousands in 2024-07-01.",
+    "label": "neutral",
+    "date": "2024-07-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 158003.0,
+    "change": 88.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 71.00 Thousands to $158.07 million Thousands in 2024-08-01.",
+    "label": "neutral",
+    "date": "2024-08-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 158074.0,
+    "change": 71.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 240.00 Thousands to $158.31 million Thousands in 2024-09-01.",
+    "label": "positive",
+    "date": "2024-09-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 158314.0,
+    "change": 240.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 44.00 Thousands to $158.36 million Thousands in 2024-10-01.",
+    "label": "neutral",
+    "date": "2024-10-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 158358.0,
+    "change": 44.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 261.00 Thousands to $158.62 million Thousands in 2024-11-01.",
+    "label": "positive",
+    "date": "2024-11-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 158619.0,
+    "change": 261.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 323.00 Thousands to $158.94 million Thousands in 2024-12-01.",
+    "label": "positive",
+    "date": "2024-12-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 158942.0,
+    "change": 323.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 111.00 Thousands to $159.05 million Thousands in 2025-01-01.",
+    "label": "neutral",
+    "date": "2025-01-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 159053.0,
+    "change": 111.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 102.00 Thousands to $159.16 million Thousands in 2025-02-01.",
+    "label": "neutral",
+    "date": "2025-02-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 159155.0,
+    "change": 102.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 120.00 Thousands to $159.28 million Thousands in 2025-03-01.",
+    "label": "neutral",
+    "date": "2025-03-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 159275.0,
+    "change": 120.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 158.00 Thousands to $159.43 million Thousands in 2025-04-01.",
+    "label": "positive",
+    "date": "2025-04-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 159433.0,
+    "change": 158.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 19.00 Thousands to $159.45 million Thousands in 2025-05-01.",
+    "label": "neutral",
+    "date": "2025-05-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 159452.0,
+    "change": 19.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls decreased by 13.00 Thousands to $159.44 million Thousands in 2025-06-01.",
+    "label": "negative",
+    "date": "2025-06-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 159439.0,
+    "change": -13.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 72.00 Thousands to $159.51 million Thousands in 2025-07-01.",
+    "label": "neutral",
+    "date": "2025-07-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 159511.0,
+    "change": 72.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls decreased by 4.00 Thousands to $159.51 million Thousands in 2025-08-01.",
+    "label": "negative",
+    "date": "2025-08-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 159507.0,
+    "change": -4.0
+  },
+  {
+    "text": "Total Nonfarm Payrolls increased by 119.00 Thousands to $159.63 million Thousands in 2025-09-01.",
+    "label": "neutral",
+    "date": "2025-09-01",
+    "indicator": "Total Nonfarm Payrolls",
+    "series_id": "PAYEMS",
+    "value": 159626.0,
+    "change": 119.0
+  },
+  {
+    "text": "Unemployment Rate remained unchanged at 6.70 Percent in 2020-12-01.",
+    "label": "neutral",
+    "date": "2020-12-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 6.7,
+    "change": 0.0
+  },
+  {
+    "text": "Unemployment Rate decreased by 0.30 Percent to 6.40 Percent in 2021-01-01.",
+    "label": "positive",
+    "date": "2021-01-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 6.4,
+    "change": -0.2999999999999998
+  },
+  {
+    "text": "Unemployment Rate decreased by 0.20 Percent to 6.20 Percent in 2021-02-01.",
+    "label": "positive",
+    "date": "2021-02-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 6.2,
+    "change": -0.2000000000000001
+  },
+  {
+    "text": "Unemployment Rate decreased by 0.10 Percent to 6.10 Percent in 2021-03-01.",
+    "label": "neutral",
+    "date": "2021-03-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 6.1,
+    "change": -0.1000000000000005
+  },
+  {
+    "text": "Unemployment Rate remained unchanged at 6.10 Percent in 2021-04-01.",
+    "label": "neutral",
+    "date": "2021-04-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 6.1,
+    "change": 0.0
+  },
+  {
+    "text": "Unemployment Rate decreased by 0.30 Percent to 5.80 Percent in 2021-05-01.",
+    "label": "positive",
+    "date": "2021-05-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 5.8,
+    "change": -0.2999999999999998
+  },
+  {
+    "text": "Unemployment Rate increased by 0.10 Percent to 5.90 Percent in 2021-06-01.",
+    "label": "neutral",
+    "date": "2021-06-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 5.9,
+    "change": 0.1000000000000005
+  },
+  {
+    "text": "Unemployment Rate decreased by 0.50 Percent to 5.40 Percent in 2021-07-01.",
+    "label": "positive",
+    "date": "2021-07-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 5.4,
+    "change": -0.5
+  },
+  {
+    "text": "Unemployment Rate decreased by 0.30 Percent to 5.10 Percent in 2021-08-01.",
+    "label": "positive",
+    "date": "2021-08-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 5.1,
+    "change": -0.3000000000000007
+  },
+  {
+    "text": "Unemployment Rate decreased by 0.40 Percent to 4.70 Percent in 2021-09-01.",
+    "label": "positive",
+    "date": "2021-09-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 4.7,
+    "change": -0.3999999999999994
+  },
+  {
+    "text": "Unemployment Rate decreased by 0.20 Percent to 4.50 Percent in 2021-10-01.",
+    "label": "positive",
+    "date": "2021-10-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 4.5,
+    "change": -0.2000000000000001
+  },
+  {
+    "text": "Unemployment Rate decreased by 0.30 Percent to 4.20 Percent in 2021-11-01.",
+    "label": "positive",
+    "date": "2021-11-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 4.2,
+    "change": -0.2999999999999998
+  },
+  {
+    "text": "Unemployment Rate decreased by 0.30 Percent to 3.90 Percent in 2021-12-01.",
+    "label": "positive",
+    "date": "2021-12-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.9,
+    "change": -0.3000000000000002
+  },
+  {
+    "text": "Unemployment Rate increased by 0.10 Percent to 4.00 Percent in 2022-01-01.",
+    "label": "neutral",
+    "date": "2022-01-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 4.0,
+    "change": 0.1
+  },
+  {
+    "text": "Unemployment Rate decreased by 0.20 Percent to 3.80 Percent in 2022-02-01.",
+    "label": "positive",
+    "date": "2022-02-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.8,
+    "change": -0.2000000000000001
+  },
+  {
+    "text": "Unemployment Rate decreased by 0.10 Percent to 3.70 Percent in 2022-03-01.",
+    "label": "neutral",
+    "date": "2022-03-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.7,
+    "change": -0.0999999999999996
+  },
+  {
+    "text": "Unemployment Rate remained unchanged at 3.70 Percent in 2022-04-01.",
+    "label": "neutral",
+    "date": "2022-04-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.7,
+    "change": 0.0
+  },
+  {
+    "text": "Unemployment Rate decreased by 0.10 Percent to 3.60 Percent in 2022-05-01.",
+    "label": "neutral",
+    "date": "2022-05-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.6,
+    "change": -0.1
+  },
+  {
+    "text": "Unemployment Rate remained unchanged at 3.60 Percent in 2022-06-01.",
+    "label": "neutral",
+    "date": "2022-06-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.6,
+    "change": 0.0
+  },
+  {
+    "text": "Unemployment Rate decreased by 0.10 Percent to 3.50 Percent in 2022-07-01.",
+    "label": "neutral",
+    "date": "2022-07-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.5,
+    "change": -0.1
+  },
+  {
+    "text": "Unemployment Rate increased by 0.10 Percent to 3.60 Percent in 2022-08-01.",
+    "label": "neutral",
+    "date": "2022-08-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.6,
+    "change": 0.1
+  },
+  {
+    "text": "Unemployment Rate decreased by 0.10 Percent to 3.50 Percent in 2022-09-01.",
+    "label": "neutral",
+    "date": "2022-09-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.5,
+    "change": -0.1
+  },
+  {
+    "text": "Unemployment Rate increased by 0.10 Percent to 3.60 Percent in 2022-10-01.",
+    "label": "neutral",
+    "date": "2022-10-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.6,
+    "change": 0.1
+  },
+  {
+    "text": "Unemployment Rate remained unchanged at 3.60 Percent in 2022-11-01.",
+    "label": "neutral",
+    "date": "2022-11-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.6,
+    "change": 0.0
+  },
+  {
+    "text": "Unemployment Rate decreased by 0.10 Percent to 3.50 Percent in 2022-12-01.",
+    "label": "neutral",
+    "date": "2022-12-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.5,
+    "change": -0.1
+  },
+  {
+    "text": "Unemployment Rate remained unchanged at 3.50 Percent in 2023-01-01.",
+    "label": "neutral",
+    "date": "2023-01-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.5,
+    "change": 0.0
+  },
+  {
+    "text": "Unemployment Rate increased by 0.10 Percent to 3.60 Percent in 2023-02-01.",
+    "label": "neutral",
+    "date": "2023-02-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.6,
+    "change": 0.1
+  },
+  {
+    "text": "Unemployment Rate decreased by 0.10 Percent to 3.50 Percent in 2023-03-01.",
+    "label": "neutral",
+    "date": "2023-03-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.5,
+    "change": -0.1
+  },
+  {
+    "text": "Unemployment Rate decreased by 0.10 Percent to 3.40 Percent in 2023-04-01.",
+    "label": "neutral",
+    "date": "2023-04-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.4,
+    "change": -0.1
+  },
+  {
+    "text": "Unemployment Rate increased by 0.20 Percent to 3.60 Percent in 2023-05-01.",
+    "label": "negative",
+    "date": "2023-05-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.6,
+    "change": 0.2000000000000001
+  },
+  {
+    "text": "Unemployment Rate remained unchanged at 3.60 Percent in 2023-06-01.",
+    "label": "neutral",
+    "date": "2023-06-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.6,
+    "change": 0.0
+  },
+  {
+    "text": "Unemployment Rate decreased by 0.10 Percent to 3.50 Percent in 2023-07-01.",
+    "label": "neutral",
+    "date": "2023-07-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.5,
+    "change": -0.1
+  },
+  {
+    "text": "Unemployment Rate increased by 0.20 Percent to 3.70 Percent in 2023-08-01.",
+    "label": "negative",
+    "date": "2023-08-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.7,
+    "change": 0.2000000000000001
+  },
+  {
+    "text": "Unemployment Rate increased by 0.10 Percent to 3.80 Percent in 2023-09-01.",
+    "label": "neutral",
+    "date": "2023-09-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.8,
+    "change": 0.0999999999999996
+  },
+  {
+    "text": "Unemployment Rate increased by 0.10 Percent to 3.90 Percent in 2023-10-01.",
+    "label": "neutral",
+    "date": "2023-10-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.9,
+    "change": 0.1
+  },
+  {
+    "text": "Unemployment Rate decreased by 0.20 Percent to 3.70 Percent in 2023-11-01.",
+    "label": "neutral",
+    "date": "2023-11-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.7,
+    "change": -0.1999999999999997
+  },
+  {
+    "text": "Unemployment Rate increased by 0.10 Percent to 3.80 Percent in 2023-12-01.",
+    "label": "neutral",
+    "date": "2023-12-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.8,
+    "change": 0.0999999999999996
+  },
+  {
+    "text": "Unemployment Rate decreased by 0.10 Percent to 3.70 Percent in 2024-01-01.",
+    "label": "neutral",
+    "date": "2024-01-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.7,
+    "change": -0.0999999999999996
+  },
+  {
+    "text": "Unemployment Rate increased by 0.20 Percent to 3.90 Percent in 2024-02-01.",
+    "label": "neutral",
+    "date": "2024-02-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.9,
+    "change": 0.1999999999999997
+  },
+  {
+    "text": "Unemployment Rate remained unchanged at 3.90 Percent in 2024-03-01.",
+    "label": "neutral",
+    "date": "2024-03-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.9,
+    "change": 0.0
+  },
+  {
+    "text": "Unemployment Rate remained unchanged at 3.90 Percent in 2024-04-01.",
+    "label": "neutral",
+    "date": "2024-04-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 3.9,
+    "change": 0.0
+  },
+  {
+    "text": "Unemployment Rate increased by 0.10 Percent to 4.00 Percent in 2024-05-01.",
+    "label": "neutral",
+    "date": "2024-05-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 4.0,
+    "change": 0.1
+  },
+  {
+    "text": "Unemployment Rate increased by 0.10 Percent to 4.10 Percent in 2024-06-01.",
+    "label": "neutral",
+    "date": "2024-06-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 4.1,
+    "change": 0.0999999999999996
+  },
+  {
+    "text": "Unemployment Rate increased by 0.10 Percent to 4.20 Percent in 2024-07-01.",
+    "label": "neutral",
+    "date": "2024-07-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 4.2,
+    "change": 0.1000000000000005
+  },
+  {
+    "text": "Unemployment Rate remained unchanged at 4.20 Percent in 2024-08-01.",
+    "label": "neutral",
+    "date": "2024-08-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 4.2,
+    "change": 0.0
+  },
+  {
+    "text": "Unemployment Rate decreased by 0.10 Percent to 4.10 Percent in 2024-09-01.",
+    "label": "neutral",
+    "date": "2024-09-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 4.1,
+    "change": -0.1000000000000005
+  },
+  {
+    "text": "Unemployment Rate remained unchanged at 4.10 Percent in 2024-10-01.",
+    "label": "neutral",
+    "date": "2024-10-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 4.1,
+    "change": 0.0
+  },
+  {
+    "text": "Unemployment Rate increased by 0.10 Percent to 4.20 Percent in 2024-11-01.",
+    "label": "neutral",
+    "date": "2024-11-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 4.2,
+    "change": 0.1000000000000005
+  },
+  {
+    "text": "Unemployment Rate decreased by 0.10 Percent to 4.10 Percent in 2024-12-01.",
+    "label": "neutral",
+    "date": "2024-12-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 4.1,
+    "change": -0.1000000000000005
+  },
+  {
+    "text": "Unemployment Rate decreased by 0.10 Percent to 4.00 Percent in 2025-01-01.",
+    "label": "neutral",
+    "date": "2025-01-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 4.0,
+    "change": -0.0999999999999996
+  },
+  {
+    "text": "Unemployment Rate increased by 0.10 Percent to 4.10 Percent in 2025-02-01.",
+    "label": "neutral",
+    "date": "2025-02-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 4.1,
+    "change": 0.0999999999999996
+  },
+  {
+    "text": "Unemployment Rate increased by 0.10 Percent to 4.20 Percent in 2025-03-01.",
+    "label": "neutral",
+    "date": "2025-03-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 4.2,
+    "change": 0.1000000000000005
+  },
+  {
+    "text": "Unemployment Rate remained unchanged at 4.20 Percent in 2025-04-01.",
+    "label": "neutral",
+    "date": "2025-04-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 4.2,
+    "change": 0.0
+  },
+  {
+    "text": "Unemployment Rate remained unchanged at 4.20 Percent in 2025-05-01.",
+    "label": "neutral",
+    "date": "2025-05-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 4.2,
+    "change": 0.0
+  },
+  {
+    "text": "Unemployment Rate decreased by 0.10 Percent to 4.10 Percent in 2025-06-01.",
+    "label": "neutral",
+    "date": "2025-06-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 4.1,
+    "change": -0.1000000000000005
+  },
+  {
+    "text": "Unemployment Rate increased by 0.10 Percent to 4.20 Percent in 2025-07-01.",
+    "label": "neutral",
+    "date": "2025-07-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 4.2,
+    "change": 0.1000000000000005
+  },
+  {
+    "text": "Unemployment Rate increased by 0.10 Percent to 4.30 Percent in 2025-08-01.",
+    "label": "neutral",
+    "date": "2025-08-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 4.3,
+    "change": 0.0999999999999996
+  },
+  {
+    "text": "Unemployment Rate increased by 0.10 Percent to 4.40 Percent in 2025-09-01.",
+    "label": "neutral",
+    "date": "2025-09-01",
+    "indicator": "Unemployment Rate",
+    "series_id": "UNRATE",
+    "value": 4.4,
+    "change": 0.1000000000000005
+  },
+  {
+    "text": "Industrial Production Index remained unchanged at 98.36 Percent in 2020-12-01.",
+    "label": "neutral",
+    "date": "2020-12-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 98.363,
+    "change": 0.0
+  },
+  {
+    "text": "Industrial Production Index increased by 0.52 Percent to 98.88 Percent in 2021-01-01.",
+    "label": "neutral",
+    "date": "2021-01-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 98.8822,
+    "change": 0.5191999999999979
+  },
+  {
+    "text": "Industrial Production Index decreased by 3.27 Percent to 95.61 Percent in 2021-02-01.",
+    "label": "negative",
+    "date": "2021-02-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 95.6149,
+    "change": -3.2672999999999917
+  },
+  {
+    "text": "Industrial Production Index increased by 2.77 Percent to 98.39 Percent in 2021-03-01.",
+    "label": "positive",
+    "date": "2021-03-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 98.3856,
+    "change": 2.770699999999991
+  },
+  {
+    "text": "Industrial Production Index increased by 0.17 Percent to 98.56 Percent in 2021-04-01.",
+    "label": "neutral",
+    "date": "2021-04-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 98.5587,
+    "change": 0.1731000000000051
+  },
+  {
+    "text": "Industrial Production Index increased by 0.87 Percent to 99.43 Percent in 2021-05-01.",
+    "label": "positive",
+    "date": "2021-05-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 99.4333,
+    "change": 0.8746000000000009
+  },
+  {
+    "text": "Industrial Production Index increased by 0.37 Percent to 99.80 Percent in 2021-06-01.",
+    "label": "neutral",
+    "date": "2021-06-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 99.7987,
+    "change": 0.3653999999999939
+  },
+  {
+    "text": "Industrial Production Index increased by 0.45 Percent to 100.25 Percent in 2021-07-01.",
+    "label": "neutral",
+    "date": "2021-07-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 100.2519,
+    "change": 0.4532000000000096
+  },
+  {
+    "text": "Industrial Production Index decreased by 0.21 Percent to 100.04 Percent in 2021-08-01.",
+    "label": "negative",
+    "date": "2021-08-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 100.0437,
+    "change": -0.208200000000005
+  },
+  {
+    "text": "Industrial Production Index decreased by 1.19 Percent to 98.86 Percent in 2021-09-01.",
+    "label": "negative",
+    "date": "2021-09-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 98.8579,
+    "change": -1.1858000000000004
+  },
+  {
+    "text": "Industrial Production Index increased by 1.33 Percent to 100.19 Percent in 2021-10-01.",
+    "label": "positive",
+    "date": "2021-10-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 100.1861,
+    "change": 1.3281999999999954
+  },
+  {
+    "text": "Industrial Production Index increased by 0.68 Percent to 100.87 Percent in 2021-11-01.",
+    "label": "neutral",
+    "date": "2021-11-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 100.8654,
+    "change": 0.6792999999999978
+  },
+  {
+    "text": "Industrial Production Index decreased by 0.29 Percent to 100.57 Percent in 2021-12-01.",
+    "label": "negative",
+    "date": "2021-12-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 100.5726,
+    "change": -0.2927999999999997
+  },
+  {
+    "text": "Industrial Production Index decreased by 0.39 Percent to 100.19 Percent in 2022-01-01.",
+    "label": "negative",
+    "date": "2022-01-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 100.1856,
+    "change": -0.3870000000000004
+  },
+  {
+    "text": "Industrial Production Index increased by 0.62 Percent to 100.81 Percent in 2022-02-01.",
+    "label": "neutral",
+    "date": "2022-02-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 100.8064,
+    "change": 0.6208000000000027
+  },
+  {
+    "text": "Industrial Production Index increased by 0.58 Percent to 101.39 Percent in 2022-03-01.",
+    "label": "neutral",
+    "date": "2022-03-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 101.3907,
+    "change": 0.5842999999999989
+  },
+  {
+    "text": "Industrial Production Index increased by 0.05 Percent to 101.44 Percent in 2022-04-01.",
+    "label": "neutral",
+    "date": "2022-04-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 101.44,
+    "change": 0.0493000000000023
+  },
+  {
+    "text": "Industrial Production Index decreased by 0.11 Percent to 101.33 Percent in 2022-05-01.",
+    "label": "negative",
+    "date": "2022-05-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 101.3335,
+    "change": -0.1064999999999969
+  },
+  {
+    "text": "Industrial Production Index decreased by 0.32 Percent to 101.02 Percent in 2022-06-01.",
+    "label": "negative",
+    "date": "2022-06-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 101.018,
+    "change": -0.3155000000000001
+  },
+  {
+    "text": "Industrial Production Index increased by 0.20 Percent to 101.22 Percent in 2022-07-01.",
+    "label": "neutral",
+    "date": "2022-07-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 101.223,
+    "change": 0.2049999999999983
+  },
+  {
+    "text": "Industrial Production Index decreased by 0.13 Percent to 101.10 Percent in 2022-08-01.",
+    "label": "negative",
+    "date": "2022-08-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 101.0963,
+    "change": -0.1266999999999996
+  },
+  {
+    "text": "Industrial Production Index increased by 0.20 Percent to 101.29 Percent in 2022-09-01.",
+    "label": "neutral",
+    "date": "2022-09-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 101.2918,
+    "change": 0.1954999999999955
+  },
+  {
+    "text": "Industrial Production Index decreased by 0.04 Percent to 101.25 Percent in 2022-10-01.",
+    "label": "negative",
+    "date": "2022-10-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 101.2529,
+    "change": -0.0388999999999981
+  },
+  {
+    "text": "Industrial Production Index decreased by 0.30 Percent to 100.96 Percent in 2022-11-01.",
+    "label": "negative",
+    "date": "2022-11-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 100.9552,
+    "change": -0.2976999999999918
+  },
+  {
+    "text": "Industrial Production Index decreased by 1.19 Percent to 99.77 Percent in 2022-12-01.",
+    "label": "negative",
+    "date": "2022-12-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 99.7664,
+    "change": -1.1888000000000003
+  },
+  {
+    "text": "Industrial Production Index increased by 0.74 Percent to 100.50 Percent in 2023-01-01.",
+    "label": "neutral",
+    "date": "2023-01-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 100.505,
+    "change": 0.738599999999991
+  },
+  {
+    "text": "Industrial Production Index increased by 0.14 Percent to 100.64 Percent in 2023-02-01.",
+    "label": "neutral",
+    "date": "2023-02-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 100.6416,
+    "change": 0.1366000000000014
+  },
+  {
+    "text": "Industrial Production Index increased by 0.38 Percent to 101.02 Percent in 2023-03-01.",
+    "label": "neutral",
+    "date": "2023-03-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 101.0205,
+    "change": 0.3789000000000015
+  },
+  {
+    "text": "Industrial Production Index increased by 0.23 Percent to 101.25 Percent in 2023-04-01.",
+    "label": "neutral",
+    "date": "2023-04-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 101.253,
+    "change": 0.2325000000000017
+  },
+  {
+    "text": "Industrial Production Index decreased by 0.32 Percent to 100.93 Percent in 2023-05-01.",
+    "label": "negative",
+    "date": "2023-05-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 100.9286,
+    "change": -0.3243999999999971
+  },
+  {
+    "text": "Industrial Production Index decreased by 0.81 Percent to 100.12 Percent in 2023-06-01.",
+    "label": "negative",
+    "date": "2023-06-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 100.1196,
+    "change": -0.8089999999999975
+  },
+  {
+    "text": "Industrial Production Index increased by 0.79 Percent to 100.91 Percent in 2023-07-01.",
+    "label": "neutral",
+    "date": "2023-07-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 100.9067,
+    "change": 0.7870999999999952
+  },
+  {
+    "text": "Industrial Production Index decreased by 0.07 Percent to 100.84 Percent in 2023-08-01.",
+    "label": "negative",
+    "date": "2023-08-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 100.8393,
+    "change": -0.0674000000000063
+  },
+  {
+    "text": "Industrial Production Index increased by 0.18 Percent to 101.02 Percent in 2023-09-01.",
+    "label": "neutral",
+    "date": "2023-09-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 101.0211,
+    "change": 0.1818000000000097
+  },
+  {
+    "text": "Industrial Production Index decreased by 0.55 Percent to 100.47 Percent in 2023-10-01.",
+    "label": "negative",
+    "date": "2023-10-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 100.4689,
+    "change": -0.5521999999999991
+  },
+  {
+    "text": "Industrial Production Index increased by 0.39 Percent to 100.86 Percent in 2023-11-01.",
+    "label": "neutral",
+    "date": "2023-11-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 100.8639,
+    "change": 0.394999999999996
+  },
+  {
+    "text": "Industrial Production Index decreased by 0.26 Percent to 100.60 Percent in 2023-12-01.",
+    "label": "negative",
+    "date": "2023-12-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 100.6031,
+    "change": -0.2608000000000032
+  },
+  {
+    "text": "Industrial Production Index decreased by 1.38 Percent to 99.22 Percent in 2024-01-01.",
+    "label": "negative",
+    "date": "2024-01-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 99.2223,
+    "change": -1.3807999999999936
+  },
+  {
+    "text": "Industrial Production Index increased by 1.06 Percent to 100.28 Percent in 2024-02-01.",
+    "label": "positive",
+    "date": "2024-02-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 100.285,
+    "change": 1.0626999999999924
+  },
+  {
+    "text": "Industrial Production Index increased by 0.17 Percent to 100.46 Percent in 2024-03-01.",
+    "label": "neutral",
+    "date": "2024-03-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 100.4575,
+    "change": 0.1724999999999994
+  },
+  {
+    "text": "Industrial Production Index decreased by 0.21 Percent to 100.24 Percent in 2024-04-01.",
+    "label": "negative",
+    "date": "2024-04-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 100.2434,
+    "change": -0.2141000000000019
+  },
+  {
+    "text": "Industrial Production Index increased by 0.62 Percent to 100.86 Percent in 2024-05-01.",
+    "label": "neutral",
+    "date": "2024-05-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 100.863,
+    "change": 0.6196000000000055
+  },
+  {
+    "text": "Industrial Production Index increased by 0.03 Percent to 100.89 Percent in 2024-06-01.",
+    "label": "neutral",
+    "date": "2024-06-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 100.894,
+    "change": 0.0310000000000059
+  },
+  {
+    "text": "Industrial Production Index decreased by 0.92 Percent to 99.98 Percent in 2024-07-01.",
+    "label": "negative",
+    "date": "2024-07-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 99.9757,
+    "change": -0.918300000000002
+  },
+  {
+    "text": "Industrial Production Index increased by 0.46 Percent to 100.43 Percent in 2024-08-01.",
+    "label": "neutral",
+    "date": "2024-08-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 100.4309,
+    "change": 0.4551999999999907
+  },
+  {
+    "text": "Industrial Production Index decreased by 0.62 Percent to 99.81 Percent in 2024-09-01.",
+    "label": "negative",
+    "date": "2024-09-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 99.8084,
+    "change": -0.6224999999999881
+  },
+  {
+    "text": "Industrial Production Index decreased by 0.34 Percent to 99.47 Percent in 2024-10-01.",
+    "label": "negative",
+    "date": "2024-10-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 99.4695,
+    "change": -0.3389000000000095
+  },
+  {
+    "text": "Industrial Production Index decreased by 0.18 Percent to 99.29 Percent in 2024-11-01.",
+    "label": "negative",
+    "date": "2024-11-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 99.2925,
+    "change": -0.1769999999999925
+  },
+  {
+    "text": "Industrial Production Index increased by 1.03 Percent to 100.33 Percent in 2024-12-01.",
+    "label": "positive",
+    "date": "2024-12-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 100.3273,
+    "change": 1.03479999999999
+  },
+  {
+    "text": "Industrial Production Index decreased by 0.26 Percent to 100.06 Percent in 2025-01-01.",
+    "label": "negative",
+    "date": "2025-01-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 100.0647,
+    "change": -0.2625999999999919
+  },
+  {
+    "text": "Industrial Production Index increased by 1.03 Percent to 101.10 Percent in 2025-02-01.",
+    "label": "positive",
+    "date": "2025-02-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 101.0993,
+    "change": 1.0345999999999975
+  },
+  {
+    "text": "Industrial Production Index decreased by 0.06 Percent to 101.04 Percent in 2025-03-01.",
+    "label": "negative",
+    "date": "2025-03-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 101.0404,
+    "change": -0.0588999999999941
+  },
+  {
+    "text": "Industrial Production Index increased by 0.09 Percent to 101.13 Percent in 2025-04-01.",
+    "label": "neutral",
+    "date": "2025-04-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 101.1279,
+    "change": 0.0874999999999914
+  },
+  {
+    "text": "Industrial Production Index decreased by 0.15 Percent to 100.98 Percent in 2025-05-01.",
+    "label": "negative",
+    "date": "2025-05-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 100.9773,
+    "change": -0.1505999999999971
+  },
+  {
+    "text": "Industrial Production Index increased by 0.45 Percent to 101.43 Percent in 2025-06-01.",
+    "label": "neutral",
+    "date": "2025-06-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 101.428,
+    "change": 0.4506999999999976
+  },
+  {
+    "text": "Industrial Production Index increased by 0.16 Percent to 101.59 Percent in 2025-07-01.",
+    "label": "neutral",
+    "date": "2025-07-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 101.591,
+    "change": 0.1629999999999967
+  },
+  {
+    "text": "Industrial Production Index decreased by 0.26 Percent to 101.33 Percent in 2025-08-01.",
+    "label": "negative",
+    "date": "2025-08-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 101.33,
+    "change": -0.2609999999999957
+  },
+  {
+    "text": "Industrial Production Index increased by 0.10 Percent to 101.43 Percent in 2025-09-01.",
+    "label": "neutral",
+    "date": "2025-09-01",
+    "indicator": "Industrial Production Index",
+    "series_id": "INDPRO",
+    "value": 101.4279,
+    "change": 0.0978999999999956
+  },
+  {
+    "text": "Retail Sales remained unchanged at $538.55 million Millions in 2020-12-01.",
+    "label": "neutral",
+    "date": "2020-12-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 538548.0,
+    "change": 0.0
+  },
+  {
+    "text": "Retail Sales increased by 20682.00 Millions to $559.23 million Millions in 2021-01-01.",
+    "label": "positive",
+    "date": "2021-01-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 559230.0,
+    "change": 20682.0
+  },
+  {
+    "text": "Retail Sales decreased by 14339.00 Millions to $544.89 million Millions in 2021-02-01.",
+    "label": "negative",
+    "date": "2021-02-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 544891.0,
+    "change": -14339.0
+  },
+  {
+    "text": "Retail Sales increased by 58690.00 Millions to $603.58 million Millions in 2021-03-01.",
+    "label": "positive",
+    "date": "2021-03-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 603581.0,
+    "change": 58690.0
+  },
+  {
+    "text": "Retail Sales increased by 5380.00 Millions to $608.96 million Millions in 2021-04-01.",
+    "label": "positive",
+    "date": "2021-04-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 608961.0,
+    "change": 5380.0
+  },
+  {
+    "text": "Retail Sales decreased by 3679.00 Millions to $605.28 million Millions in 2021-05-01.",
+    "label": "negative",
+    "date": "2021-05-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 605282.0,
+    "change": -3679.0
+  },
+  {
+    "text": "Retail Sales increased by 6668.00 Millions to $611.95 million Millions in 2021-06-01.",
+    "label": "positive",
+    "date": "2021-06-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 611950.0,
+    "change": 6668.0
+  },
+  {
+    "text": "Retail Sales decreased by 10133.00 Millions to $601.82 million Millions in 2021-07-01.",
+    "label": "negative",
+    "date": "2021-07-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 601817.0,
+    "change": -10133.0
+  },
+  {
+    "text": "Retail Sales increased by 3716.00 Millions to $605.53 million Millions in 2021-08-01.",
+    "label": "positive",
+    "date": "2021-08-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 605533.0,
+    "change": 3716.0
+  },
+  {
+    "text": "Retail Sales increased by 4138.00 Millions to $609.67 million Millions in 2021-09-01.",
+    "label": "positive",
+    "date": "2021-09-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 609671.0,
+    "change": 4138.0
+  },
+  {
+    "text": "Retail Sales increased by 8902.00 Millions to $618.57 million Millions in 2021-10-01.",
+    "label": "positive",
+    "date": "2021-10-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 618573.0,
+    "change": 8902.0
+  },
+  {
+    "text": "Retail Sales increased by 6301.00 Millions to $624.87 million Millions in 2021-11-01.",
+    "label": "positive",
+    "date": "2021-11-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 624874.0,
+    "change": 6301.0
+  },
+  {
+    "text": "Retail Sales decreased by 4936.00 Millions to $619.94 million Millions in 2021-12-01.",
+    "label": "negative",
+    "date": "2021-12-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 619938.0,
+    "change": -4936.0
+  },
+  {
+    "text": "Retail Sales increased by 11571.00 Millions to $631.51 million Millions in 2022-01-01.",
+    "label": "positive",
+    "date": "2022-01-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 631509.0,
+    "change": 11571.0
+  },
+  {
+    "text": "Retail Sales increased by 6592.00 Millions to $638.10 million Millions in 2022-02-01.",
+    "label": "positive",
+    "date": "2022-02-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 638101.0,
+    "change": 6592.0
+  },
+  {
+    "text": "Retail Sales increased by 12926.00 Millions to $651.03 million Millions in 2022-03-01.",
+    "label": "positive",
+    "date": "2022-03-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 651027.0,
+    "change": 12926.0
+  },
+  {
+    "text": "Retail Sales increased by 9167.00 Millions to $660.19 million Millions in 2022-04-01.",
+    "label": "positive",
+    "date": "2022-04-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 660194.0,
+    "change": 9167.0
+  },
+  {
+    "text": "Retail Sales decreased by 347.00 Millions to $659.85 million Millions in 2022-05-01.",
+    "label": "negative",
+    "date": "2022-05-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 659847.0,
+    "change": -347.0
+  },
+  {
+    "text": "Retail Sales increased by 6266.00 Millions to $666.11 million Millions in 2022-06-01.",
+    "label": "positive",
+    "date": "2022-06-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 666113.0,
+    "change": 6266.0
+  },
+  {
+    "text": "Retail Sales decreased by 6563.00 Millions to $659.55 million Millions in 2022-07-01.",
+    "label": "negative",
+    "date": "2022-07-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 659550.0,
+    "change": -6563.0
+  },
+  {
+    "text": "Retail Sales increased by 4016.00 Millions to $663.57 million Millions in 2022-08-01.",
+    "label": "positive",
+    "date": "2022-08-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 663566.0,
+    "change": 4016.0
+  },
+  {
+    "text": "Retail Sales decreased by 1712.00 Millions to $661.85 million Millions in 2022-09-01.",
+    "label": "negative",
+    "date": "2022-09-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 661854.0,
+    "change": -1712.0
+  },
+  {
+    "text": "Retail Sales increased by 6817.00 Millions to $668.67 million Millions in 2022-10-01.",
+    "label": "positive",
+    "date": "2022-10-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 668671.0,
+    "change": 6817.0
+  },
+  {
+    "text": "Retail Sales decreased by 9213.00 Millions to $659.46 million Millions in 2022-11-01.",
+    "label": "negative",
+    "date": "2022-11-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 659458.0,
+    "change": -9213.0
+  },
+  {
+    "text": "Retail Sales decreased by 7695.00 Millions to $651.76 million Millions in 2022-12-01.",
+    "label": "negative",
+    "date": "2022-12-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 651763.0,
+    "change": -7695.0
+  },
+  {
+    "text": "Retail Sales increased by 28490.00 Millions to $680.25 million Millions in 2023-01-01.",
+    "label": "positive",
+    "date": "2023-01-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 680253.0,
+    "change": 28490.0
+  },
+  {
+    "text": "Retail Sales decreased by 8101.00 Millions to $672.15 million Millions in 2023-02-01.",
+    "label": "negative",
+    "date": "2023-02-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 672152.0,
+    "change": -8101.0
+  },
+  {
+    "text": "Retail Sales decreased by 7081.00 Millions to $665.07 million Millions in 2023-03-01.",
+    "label": "negative",
+    "date": "2023-03-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 665071.0,
+    "change": -7081.0
+  },
+  {
+    "text": "Retail Sales increased by 5423.00 Millions to $670.49 million Millions in 2023-04-01.",
+    "label": "positive",
+    "date": "2023-04-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 670494.0,
+    "change": 5423.0
+  },
+  {
+    "text": "Retail Sales increased by 3408.00 Millions to $673.90 million Millions in 2023-05-01.",
+    "label": "positive",
+    "date": "2023-05-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 673902.0,
+    "change": 3408.0
+  },
+  {
+    "text": "Retail Sales increased by 3215.00 Millions to $677.12 million Millions in 2023-06-01.",
+    "label": "positive",
+    "date": "2023-06-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 677117.0,
+    "change": 3215.0
+  },
+  {
+    "text": "Retail Sales increased by 1307.00 Millions to $678.42 million Millions in 2023-07-01.",
+    "label": "neutral",
+    "date": "2023-07-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 678424.0,
+    "change": 1307.0
+  },
+  {
+    "text": "Retail Sales increased by 6331.00 Millions to $684.75 million Millions in 2023-08-01.",
+    "label": "positive",
+    "date": "2023-08-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 684755.0,
+    "change": 6331.0
+  },
+  {
+    "text": "Retail Sales increased by 4648.00 Millions to $689.40 million Millions in 2023-09-01.",
+    "label": "positive",
+    "date": "2023-09-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 689403.0,
+    "change": 4648.0
+  },
+  {
+    "text": "Retail Sales decreased by 3255.00 Millions to $686.15 million Millions in 2023-10-01.",
+    "label": "negative",
+    "date": "2023-10-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 686148.0,
+    "change": -3255.0
+  },
+  {
+    "text": "Retail Sales decreased by 820.00 Millions to $685.33 million Millions in 2023-11-01.",
+    "label": "negative",
+    "date": "2023-11-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 685328.0,
+    "change": -820.0
+  },
+  {
+    "text": "Retail Sales increased by 949.00 Millions to $686.28 million Millions in 2023-12-01.",
+    "label": "neutral",
+    "date": "2023-12-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 686277.0,
+    "change": 949.0
+  },
+  {
+    "text": "Retail Sales decreased by 5821.00 Millions to $680.46 million Millions in 2024-01-01.",
+    "label": "negative",
+    "date": "2024-01-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 680456.0,
+    "change": -5821.0
+  },
+  {
+    "text": "Retail Sales increased by 4824.00 Millions to $685.28 million Millions in 2024-02-01.",
+    "label": "positive",
+    "date": "2024-02-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 685280.0,
+    "change": 4824.0
+  },
+  {
+    "text": "Retail Sales increased by 2361.00 Millions to $687.64 million Millions in 2024-03-01.",
+    "label": "positive",
+    "date": "2024-03-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 687641.0,
+    "change": 2361.0
+  },
+  {
+    "text": "Retail Sales decreased by 39.00 Millions to $687.60 million Millions in 2024-04-01.",
+    "label": "negative",
+    "date": "2024-04-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 687602.0,
+    "change": -39.0
+  },
+  {
+    "text": "Retail Sales increased by 5172.00 Millions to $692.77 million Millions in 2024-05-01.",
+    "label": "positive",
+    "date": "2024-05-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 692774.0,
+    "change": 5172.0
+  },
+  {
+    "text": "Retail Sales decreased by 325.00 Millions to $692.45 million Millions in 2024-06-01.",
+    "label": "negative",
+    "date": "2024-06-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 692449.0,
+    "change": -325.0
+  },
+  {
+    "text": "Retail Sales increased by 6386.00 Millions to $698.84 million Millions in 2024-07-01.",
+    "label": "positive",
+    "date": "2024-07-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 698835.0,
+    "change": 6386.0
+  },
+  {
+    "text": "Retail Sales decreased by 1796.00 Millions to $697.04 million Millions in 2024-08-01.",
+    "label": "negative",
+    "date": "2024-08-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 697039.0,
+    "change": -1796.0
+  },
+  {
+    "text": "Retail Sales increased by 6246.00 Millions to $703.28 million Millions in 2024-09-01.",
+    "label": "positive",
+    "date": "2024-09-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 703285.0,
+    "change": 6246.0
+  },
+  {
+    "text": "Retail Sales increased by 4328.00 Millions to $707.61 million Millions in 2024-10-01.",
+    "label": "positive",
+    "date": "2024-10-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 707613.0,
+    "change": 4328.0
+  },
+  {
+    "text": "Retail Sales increased by 4532.00 Millions to $712.14 million Millions in 2024-11-01.",
+    "label": "positive",
+    "date": "2024-11-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 712145.0,
+    "change": 4532.0
+  },
+  {
+    "text": "Retail Sales increased by 5517.00 Millions to $717.66 million Millions in 2024-12-01.",
+    "label": "positive",
+    "date": "2024-12-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 717662.0,
+    "change": 5517.0
+  },
+  {
+    "text": "Retail Sales decreased by 6201.00 Millions to $711.46 million Millions in 2025-01-01.",
+    "label": "negative",
+    "date": "2025-01-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 711461.0,
+    "change": -6201.0
+  },
+  {
+    "text": "Retail Sales increased by 296.00 Millions to $711.76 million Millions in 2025-02-01.",
+    "label": "neutral",
+    "date": "2025-02-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 711757.0,
+    "change": 296.0
+  },
+  {
+    "text": "Retail Sales increased by 10815.00 Millions to $722.57 million Millions in 2025-03-01.",
+    "label": "positive",
+    "date": "2025-03-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 722572.0,
+    "change": 10815.0
+  },
+  {
+    "text": "Retail Sales decreased by 783.00 Millions to $721.79 million Millions in 2025-04-01.",
+    "label": "negative",
+    "date": "2025-04-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 721789.0,
+    "change": -783.0
+  },
+  {
+    "text": "Retail Sales decreased by 5688.00 Millions to $716.10 million Millions in 2025-05-01.",
+    "label": "negative",
+    "date": "2025-05-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 716101.0,
+    "change": -5688.0
+  },
+  {
+    "text": "Retail Sales increased by 6932.00 Millions to $723.03 million Millions in 2025-06-01.",
+    "label": "positive",
+    "date": "2025-06-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 723033.0,
+    "change": 6932.0
+  },
+  {
+    "text": "Retail Sales increased by 4694.00 Millions to $727.73 million Millions in 2025-07-01.",
+    "label": "positive",
+    "date": "2025-07-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 727727.0,
+    "change": 4694.0
+  },
+  {
+    "text": "Retail Sales increased by 4332.00 Millions to $732.06 million Millions in 2025-08-01.",
+    "label": "positive",
+    "date": "2025-08-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 732059.0,
+    "change": 4332.0
+  },
+  {
+    "text": "Retail Sales increased by 1199.00 Millions to $733.26 million Millions in 2025-09-01.",
+    "label": "neutral",
+    "date": "2025-09-01",
+    "indicator": "Retail Sales",
+    "series_id": "RSAFS",
+    "value": 733258.0,
+    "change": 1199.0
+  },
+  {
+    "text": "Consumer Sentiment Index remained unchanged at 80.70 Index in 2020-12-01.",
+    "label": "neutral",
+    "date": "2020-12-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 80.7,
+    "change": 0.0
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 1.70 Index to 79.00 Index in 2021-01-01.",
+    "label": "neutral",
+    "date": "2021-01-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 79.0,
+    "change": -1.7000000000000028
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 2.20 Index to 76.80 Index in 2021-02-01.",
+    "label": "neutral",
+    "date": "2021-02-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 76.8,
+    "change": -2.200000000000003
+  },
+  {
+    "text": "Consumer Sentiment Index increased by 8.10 Index to 84.90 Index in 2021-03-01.",
+    "label": "positive",
+    "date": "2021-03-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 84.9,
+    "change": 8.100000000000009
+  },
+  {
+    "text": "Consumer Sentiment Index increased by 3.40 Index to 88.30 Index in 2021-04-01.",
+    "label": "positive",
+    "date": "2021-04-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 88.3,
+    "change": 3.3999999999999915
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 5.40 Index to 82.90 Index in 2021-05-01.",
+    "label": "negative",
+    "date": "2021-05-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 82.9,
+    "change": -5.3999999999999915
+  },
+  {
+    "text": "Consumer Sentiment Index increased by 2.60 Index to 85.50 Index in 2021-06-01.",
+    "label": "neutral",
+    "date": "2021-06-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 85.5,
+    "change": 2.5999999999999943
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 4.30 Index to 81.20 Index in 2021-07-01.",
+    "label": "negative",
+    "date": "2021-07-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 81.2,
+    "change": -4.299999999999997
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 10.90 Index to 70.30 Index in 2021-08-01.",
+    "label": "negative",
+    "date": "2021-08-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 70.3,
+    "change": -10.900000000000006
+  },
+  {
+    "text": "Consumer Sentiment Index increased by 2.50 Index to 72.80 Index in 2021-09-01.",
+    "label": "neutral",
+    "date": "2021-09-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 72.8,
+    "change": 2.5
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 1.10 Index to 71.70 Index in 2021-10-01.",
+    "label": "neutral",
+    "date": "2021-10-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 71.7,
+    "change": -1.0999999999999943
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 4.30 Index to 67.40 Index in 2021-11-01.",
+    "label": "negative",
+    "date": "2021-11-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 67.4,
+    "change": -4.299999999999997
+  },
+  {
+    "text": "Consumer Sentiment Index increased by 3.20 Index to 70.60 Index in 2021-12-01.",
+    "label": "positive",
+    "date": "2021-12-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 70.6,
+    "change": 3.1999999999999886
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 3.40 Index to 67.20 Index in 2022-01-01.",
+    "label": "negative",
+    "date": "2022-01-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 67.2,
+    "change": -3.3999999999999915
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 4.40 Index to 62.80 Index in 2022-02-01.",
+    "label": "negative",
+    "date": "2022-02-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 62.8,
+    "change": -4.400000000000006
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 3.40 Index to 59.40 Index in 2022-03-01.",
+    "label": "negative",
+    "date": "2022-03-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 59.4,
+    "change": -3.3999999999999986
+  },
+  {
+    "text": "Consumer Sentiment Index increased by 5.80 Index to 65.20 Index in 2022-04-01.",
+    "label": "positive",
+    "date": "2022-04-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 65.2,
+    "change": 5.800000000000004
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 6.80 Index to 58.40 Index in 2022-05-01.",
+    "label": "negative",
+    "date": "2022-05-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 58.4,
+    "change": -6.800000000000004
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 8.40 Index to 50.00 Index in 2022-06-01.",
+    "label": "negative",
+    "date": "2022-06-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 50.0,
+    "change": -8.399999999999999
+  },
+  {
+    "text": "Consumer Sentiment Index increased by 1.50 Index to 51.50 Index in 2022-07-01.",
+    "label": "neutral",
+    "date": "2022-07-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 51.5,
+    "change": 1.5
+  },
+  {
+    "text": "Consumer Sentiment Index increased by 6.70 Index to 58.20 Index in 2022-08-01.",
+    "label": "positive",
+    "date": "2022-08-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 58.2,
+    "change": 6.700000000000003
+  },
+  {
+    "text": "Consumer Sentiment Index increased by 0.40 Index to 58.60 Index in 2022-09-01.",
+    "label": "neutral",
+    "date": "2022-09-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 58.6,
+    "change": 0.3999999999999986
+  },
+  {
+    "text": "Consumer Sentiment Index increased by 1.30 Index to 59.90 Index in 2022-10-01.",
+    "label": "neutral",
+    "date": "2022-10-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 59.9,
+    "change": 1.2999999999999972
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 3.20 Index to 56.70 Index in 2022-11-01.",
+    "label": "negative",
+    "date": "2022-11-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 56.7,
+    "change": -3.1999999999999957
+  },
+  {
+    "text": "Consumer Sentiment Index increased by 3.10 Index to 59.80 Index in 2022-12-01.",
+    "label": "positive",
+    "date": "2022-12-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 59.8,
+    "change": 3.0999999999999943
+  },
+  {
+    "text": "Consumer Sentiment Index increased by 5.10 Index to 64.90 Index in 2023-01-01.",
+    "label": "positive",
+    "date": "2023-01-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 64.9,
+    "change": 5.1000000000000085
+  },
+  {
+    "text": "Consumer Sentiment Index increased by 2.00 Index to 66.90 Index in 2023-02-01.",
+    "label": "neutral",
+    "date": "2023-02-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 66.9,
+    "change": 2.0
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 4.90 Index to 62.00 Index in 2023-03-01.",
+    "label": "negative",
+    "date": "2023-03-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 62.0,
+    "change": -4.900000000000006
+  },
+  {
+    "text": "Consumer Sentiment Index increased by 1.70 Index to 63.70 Index in 2023-04-01.",
+    "label": "neutral",
+    "date": "2023-04-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 63.7,
+    "change": 1.7000000000000028
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 4.70 Index to 59.00 Index in 2023-05-01.",
+    "label": "negative",
+    "date": "2023-05-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 59.0,
+    "change": -4.700000000000003
+  },
+  {
+    "text": "Consumer Sentiment Index increased by 5.20 Index to 64.20 Index in 2023-06-01.",
+    "label": "positive",
+    "date": "2023-06-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 64.2,
+    "change": 5.200000000000003
+  },
+  {
+    "text": "Consumer Sentiment Index increased by 7.30 Index to 71.50 Index in 2023-07-01.",
+    "label": "positive",
+    "date": "2023-07-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 71.5,
+    "change": 7.299999999999997
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 2.10 Index to 69.40 Index in 2023-08-01.",
+    "label": "neutral",
+    "date": "2023-08-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 69.4,
+    "change": -2.0999999999999943
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 1.60 Index to 67.80 Index in 2023-09-01.",
+    "label": "neutral",
+    "date": "2023-09-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 67.8,
+    "change": -1.6000000000000083
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 4.00 Index to 63.80 Index in 2023-10-01.",
+    "label": "negative",
+    "date": "2023-10-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 63.8,
+    "change": -4.0
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 2.50 Index to 61.30 Index in 2023-11-01.",
+    "label": "neutral",
+    "date": "2023-11-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 61.3,
+    "change": -2.5
+  },
+  {
+    "text": "Consumer Sentiment Index increased by 8.40 Index to 69.70 Index in 2023-12-01.",
+    "label": "positive",
+    "date": "2023-12-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 69.7,
+    "change": 8.400000000000006
+  },
+  {
+    "text": "Consumer Sentiment Index increased by 9.30 Index to 79.00 Index in 2024-01-01.",
+    "label": "positive",
+    "date": "2024-01-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 79.0,
+    "change": 9.299999999999995
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 2.10 Index to 76.90 Index in 2024-02-01.",
+    "label": "neutral",
+    "date": "2024-02-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 76.9,
+    "change": -2.0999999999999943
+  },
+  {
+    "text": "Consumer Sentiment Index increased by 2.50 Index to 79.40 Index in 2024-03-01.",
+    "label": "neutral",
+    "date": "2024-03-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 79.4,
+    "change": 2.5
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 2.20 Index to 77.20 Index in 2024-04-01.",
+    "label": "neutral",
+    "date": "2024-04-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 77.2,
+    "change": -2.200000000000003
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 8.10 Index to 69.10 Index in 2024-05-01.",
+    "label": "negative",
+    "date": "2024-05-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 69.1,
+    "change": -8.100000000000009
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 0.90 Index to 68.20 Index in 2024-06-01.",
+    "label": "neutral",
+    "date": "2024-06-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 68.2,
+    "change": -0.8999999999999915
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 1.80 Index to 66.40 Index in 2024-07-01.",
+    "label": "neutral",
+    "date": "2024-07-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 66.4,
+    "change": -1.7999999999999972
+  },
+  {
+    "text": "Consumer Sentiment Index increased by 1.50 Index to 67.90 Index in 2024-08-01.",
+    "label": "neutral",
+    "date": "2024-08-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 67.9,
+    "change": 1.5
+  },
+  {
+    "text": "Consumer Sentiment Index increased by 2.20 Index to 70.10 Index in 2024-09-01.",
+    "label": "neutral",
+    "date": "2024-09-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 70.1,
+    "change": 2.1999999999999886
+  },
+  {
+    "text": "Consumer Sentiment Index increased by 0.40 Index to 70.50 Index in 2024-10-01.",
+    "label": "neutral",
+    "date": "2024-10-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 70.5,
+    "change": 0.4000000000000057
+  },
+  {
+    "text": "Consumer Sentiment Index increased by 1.30 Index to 71.80 Index in 2024-11-01.",
+    "label": "neutral",
+    "date": "2024-11-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 71.8,
+    "change": 1.2999999999999972
+  },
+  {
+    "text": "Consumer Sentiment Index increased by 2.20 Index to 74.00 Index in 2024-12-01.",
+    "label": "neutral",
+    "date": "2024-12-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 74.0,
+    "change": 2.200000000000003
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 2.30 Index to 71.70 Index in 2025-01-01.",
+    "label": "neutral",
+    "date": "2025-01-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 71.7,
+    "change": -2.299999999999997
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 7.00 Index to 64.70 Index in 2025-02-01.",
+    "label": "negative",
+    "date": "2025-02-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 64.7,
+    "change": -7.0
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 7.70 Index to 57.00 Index in 2025-03-01.",
+    "label": "negative",
+    "date": "2025-03-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 57.0,
+    "change": -7.700000000000003
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 4.80 Index to 52.20 Index in 2025-04-01.",
+    "label": "negative",
+    "date": "2025-04-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 52.2,
+    "change": -4.799999999999997
+  },
+  {
+    "text": "Consumer Sentiment Index remained unchanged at 52.20 Index in 2025-05-01.",
+    "label": "neutral",
+    "date": "2025-05-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 52.2,
+    "change": 0.0
+  },
+  {
+    "text": "Consumer Sentiment Index increased by 8.50 Index to 60.70 Index in 2025-06-01.",
+    "label": "positive",
+    "date": "2025-06-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 60.7,
+    "change": 8.5
+  },
+  {
+    "text": "Consumer Sentiment Index increased by 1.00 Index to 61.70 Index in 2025-07-01.",
+    "label": "neutral",
+    "date": "2025-07-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 61.7,
+    "change": 1.0
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 3.50 Index to 58.20 Index in 2025-08-01.",
+    "label": "negative",
+    "date": "2025-08-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 58.2,
+    "change": -3.5
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 3.10 Index to 55.10 Index in 2025-09-01.",
+    "label": "negative",
+    "date": "2025-09-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 55.1,
+    "change": -3.1000000000000014
+  },
+  {
+    "text": "Consumer Sentiment Index decreased by 1.50 Index to 53.60 Index in 2025-10-01.",
+    "label": "neutral",
+    "date": "2025-10-01",
+    "indicator": "Consumer Sentiment Index",
+    "series_id": "UMCSENT",
+    "value": 53.6,
+    "change": -1.5
+  },
+  {
+    "text": "Manufacturing Employment remained unchanged at $12.15 million Thousands in 2020-12-01.",
+    "label": "neutral",
+    "date": "2020-12-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12153.0,
+    "change": 0.0
+  },
+  {
+    "text": "Manufacturing Employment decreased by 8.00 Thousands to $12.14 million Thousands in 2021-01-01.",
+    "label": "negative",
+    "date": "2021-01-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12145.0,
+    "change": -8.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 34.00 Thousands to $12.18 million Thousands in 2021-02-01.",
+    "label": "positive",
+    "date": "2021-02-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12179.0,
+    "change": 34.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 53.00 Thousands to $12.23 million Thousands in 2021-03-01.",
+    "label": "positive",
+    "date": "2021-03-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12232.0,
+    "change": 53.0
+  },
+  {
+    "text": "Manufacturing Employment decreased by 41.00 Thousands to $12.19 million Thousands in 2021-04-01.",
+    "label": "negative",
+    "date": "2021-04-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12191.0,
+    "change": -41.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 28.00 Thousands to $12.22 million Thousands in 2021-05-01.",
+    "label": "positive",
+    "date": "2021-05-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12219.0,
+    "change": 28.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 30.00 Thousands to $12.25 million Thousands in 2021-06-01.",
+    "label": "positive",
+    "date": "2021-06-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12249.0,
+    "change": 30.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 54.00 Thousands to $12.30 million Thousands in 2021-07-01.",
+    "label": "positive",
+    "date": "2021-07-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12303.0,
+    "change": 54.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 46.00 Thousands to $12.35 million Thousands in 2021-08-01.",
+    "label": "positive",
+    "date": "2021-08-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12349.0,
+    "change": 46.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 42.00 Thousands to $12.39 million Thousands in 2021-09-01.",
+    "label": "positive",
+    "date": "2021-09-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12391.0,
+    "change": 42.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 63.00 Thousands to $12.45 million Thousands in 2021-10-01.",
+    "label": "positive",
+    "date": "2021-10-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12454.0,
+    "change": 63.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 44.00 Thousands to $12.50 million Thousands in 2021-11-01.",
+    "label": "positive",
+    "date": "2021-11-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12498.0,
+    "change": 44.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 34.00 Thousands to $12.53 million Thousands in 2021-12-01.",
+    "label": "positive",
+    "date": "2021-12-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12532.0,
+    "change": 34.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 28.00 Thousands to $12.56 million Thousands in 2022-01-01.",
+    "label": "positive",
+    "date": "2022-01-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12560.0,
+    "change": 28.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 48.00 Thousands to $12.61 million Thousands in 2022-02-01.",
+    "label": "positive",
+    "date": "2022-02-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12608.0,
+    "change": 48.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 68.00 Thousands to $12.68 million Thousands in 2022-03-01.",
+    "label": "positive",
+    "date": "2022-03-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12676.0,
+    "change": 68.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 49.00 Thousands to $12.72 million Thousands in 2022-04-01.",
+    "label": "positive",
+    "date": "2022-04-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12725.0,
+    "change": 49.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 14.00 Thousands to $12.74 million Thousands in 2022-05-01.",
+    "label": "neutral",
+    "date": "2022-05-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12739.0,
+    "change": 14.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 29.00 Thousands to $12.77 million Thousands in 2022-06-01.",
+    "label": "positive",
+    "date": "2022-06-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12768.0,
+    "change": 29.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 32.00 Thousands to $12.80 million Thousands in 2022-07-01.",
+    "label": "positive",
+    "date": "2022-07-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12800.0,
+    "change": 32.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 26.00 Thousands to $12.83 million Thousands in 2022-08-01.",
+    "label": "positive",
+    "date": "2022-08-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12826.0,
+    "change": 26.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 22.00 Thousands to $12.85 million Thousands in 2022-09-01.",
+    "label": "positive",
+    "date": "2022-09-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12848.0,
+    "change": 22.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 35.00 Thousands to $12.88 million Thousands in 2022-10-01.",
+    "label": "positive",
+    "date": "2022-10-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12883.0,
+    "change": 35.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 13.00 Thousands to $12.90 million Thousands in 2022-11-01.",
+    "label": "neutral",
+    "date": "2022-11-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12896.0,
+    "change": 13.0
+  },
+  {
+    "text": "Manufacturing Employment decreased by 7.00 Thousands to $12.89 million Thousands in 2022-12-01.",
+    "label": "negative",
+    "date": "2022-12-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12889.0,
+    "change": -7.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 8.00 Thousands to $12.90 million Thousands in 2023-01-01.",
+    "label": "neutral",
+    "date": "2023-01-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12897.0,
+    "change": 8.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 3.00 Thousands to $12.90 million Thousands in 2023-02-01.",
+    "label": "neutral",
+    "date": "2023-02-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12900.0,
+    "change": 3.0
+  },
+  {
+    "text": "Manufacturing Employment decreased by 10.00 Thousands to $12.89 million Thousands in 2023-03-01.",
+    "label": "negative",
+    "date": "2023-03-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12890.0,
+    "change": -10.0
+  },
+  {
+    "text": "Manufacturing Employment decreased by 1.00 Thousands to $12.89 million Thousands in 2023-04-01.",
+    "label": "negative",
+    "date": "2023-04-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12889.0,
+    "change": -1.0
+  },
+  {
+    "text": "Manufacturing Employment decreased by 15.00 Thousands to $12.87 million Thousands in 2023-05-01.",
+    "label": "negative",
+    "date": "2023-05-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12874.0,
+    "change": -15.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 3.00 Thousands to $12.88 million Thousands in 2023-06-01.",
+    "label": "neutral",
+    "date": "2023-06-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12877.0,
+    "change": 3.0
+  },
+  {
+    "text": "Manufacturing Employment decreased by 14.00 Thousands to $12.86 million Thousands in 2023-07-01.",
+    "label": "negative",
+    "date": "2023-07-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12863.0,
+    "change": -14.0
+  },
+  {
+    "text": "Manufacturing Employment decreased by 7.00 Thousands to $12.86 million Thousands in 2023-08-01.",
+    "label": "negative",
+    "date": "2023-08-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12856.0,
+    "change": -7.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 13.00 Thousands to $12.87 million Thousands in 2023-09-01.",
+    "label": "neutral",
+    "date": "2023-09-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12869.0,
+    "change": 13.0
+  },
+  {
+    "text": "Manufacturing Employment decreased by 33.00 Thousands to $12.84 million Thousands in 2023-10-01.",
+    "label": "negative",
+    "date": "2023-10-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12836.0,
+    "change": -33.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 22.00 Thousands to $12.86 million Thousands in 2023-11-01.",
+    "label": "positive",
+    "date": "2023-11-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12858.0,
+    "change": 22.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 7.00 Thousands to $12.87 million Thousands in 2023-12-01.",
+    "label": "neutral",
+    "date": "2023-12-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12865.0,
+    "change": 7.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 1.00 Thousands to $12.87 million Thousands in 2024-01-01.",
+    "label": "neutral",
+    "date": "2024-01-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12866.0,
+    "change": 1.0
+  },
+  {
+    "text": "Manufacturing Employment decreased by 13.00 Thousands to $12.85 million Thousands in 2024-02-01.",
+    "label": "negative",
+    "date": "2024-02-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12853.0,
+    "change": -13.0
+  },
+  {
+    "text": "Manufacturing Employment decreased by 15.00 Thousands to $12.84 million Thousands in 2024-03-01.",
+    "label": "negative",
+    "date": "2024-03-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12838.0,
+    "change": -15.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 9.00 Thousands to $12.85 million Thousands in 2024-04-01.",
+    "label": "neutral",
+    "date": "2024-04-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12847.0,
+    "change": 9.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 2.00 Thousands to $12.85 million Thousands in 2024-05-01.",
+    "label": "neutral",
+    "date": "2024-05-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12849.0,
+    "change": 2.0
+  },
+  {
+    "text": "Manufacturing Employment decreased by 10.00 Thousands to $12.84 million Thousands in 2024-06-01.",
+    "label": "negative",
+    "date": "2024-06-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12839.0,
+    "change": -10.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 1.00 Thousands to $12.84 million Thousands in 2024-07-01.",
+    "label": "neutral",
+    "date": "2024-07-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12840.0,
+    "change": 1.0
+  },
+  {
+    "text": "Manufacturing Employment decreased by 40.00 Thousands to $12.80 million Thousands in 2024-08-01.",
+    "label": "negative",
+    "date": "2024-08-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12800.0,
+    "change": -40.0
+  },
+  {
+    "text": "Manufacturing Employment remained unchanged at $12.80 million Thousands in 2024-09-01.",
+    "label": "neutral",
+    "date": "2024-09-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12800.0,
+    "change": 0.0
+  },
+  {
+    "text": "Manufacturing Employment decreased by 50.00 Thousands to $12.75 million Thousands in 2024-10-01.",
+    "label": "negative",
+    "date": "2024-10-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12750.0,
+    "change": -50.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 20.00 Thousands to $12.77 million Thousands in 2024-11-01.",
+    "label": "neutral",
+    "date": "2024-11-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12770.0,
+    "change": 20.0
+  },
+  {
+    "text": "Manufacturing Employment decreased by 10.00 Thousands to $12.76 million Thousands in 2024-12-01.",
+    "label": "negative",
+    "date": "2024-12-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12760.0,
+    "change": -10.0
+  },
+  {
+    "text": "Manufacturing Employment decreased by 5.00 Thousands to $12.76 million Thousands in 2025-01-01.",
+    "label": "negative",
+    "date": "2025-01-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12755.0,
+    "change": -5.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 8.00 Thousands to $12.76 million Thousands in 2025-02-01.",
+    "label": "neutral",
+    "date": "2025-02-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12763.0,
+    "change": 8.0
+  },
+  {
+    "text": "Manufacturing Employment increased by 1.00 Thousands to $12.76 million Thousands in 2025-03-01.",
+    "label": "neutral",
+    "date": "2025-03-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12764.0,
+    "change": 1.0
+  },
+  {
+    "text": "Manufacturing Employment remained unchanged at $12.76 million Thousands in 2025-04-01.",
+    "label": "neutral",
+    "date": "2025-04-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12764.0,
+    "change": 0.0
+  },
+  {
+    "text": "Manufacturing Employment decreased by 11.00 Thousands to $12.75 million Thousands in 2025-05-01.",
+    "label": "negative",
+    "date": "2025-05-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12753.0,
+    "change": -11.0
+  },
+  {
+    "text": "Manufacturing Employment decreased by 17.00 Thousands to $12.74 million Thousands in 2025-06-01.",
+    "label": "negative",
+    "date": "2025-06-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12736.0,
+    "change": -17.0
+  },
+  {
+    "text": "Manufacturing Employment decreased by 9.00 Thousands to $12.73 million Thousands in 2025-07-01.",
+    "label": "negative",
+    "date": "2025-07-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12727.0,
+    "change": -9.0
+  },
+  {
+    "text": "Manufacturing Employment decreased by 15.00 Thousands to $12.71 million Thousands in 2025-08-01.",
+    "label": "negative",
+    "date": "2025-08-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12712.0,
+    "change": -15.0
+  },
+  {
+    "text": "Manufacturing Employment decreased by 6.00 Thousands to $12.71 million Thousands in 2025-09-01.",
+    "label": "negative",
+    "date": "2025-09-01",
+    "indicator": "Manufacturing Employment",
+    "series_id": "MANEMP",
+    "value": 12706.0,
+    "change": -6.0
+  },
+  {
+    "text": "Housing Starts remained unchanged at $1.61 million Thousands in 2020-12-01.",
+    "label": "neutral",
+    "date": "2020-12-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1614.0,
+    "change": 0.0
+  },
+  {
+    "text": "Housing Starts increased by 16.00 Thousands to $1.63 million Thousands in 2021-01-01.",
+    "label": "positive",
+    "date": "2021-01-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1630.0,
+    "change": 16.0
+  },
+  {
+    "text": "Housing Starts decreased by 226.00 Thousands to $1.40 million Thousands in 2021-02-01.",
+    "label": "negative",
+    "date": "2021-02-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1404.0,
+    "change": -226.0
+  },
+  {
+    "text": "Housing Starts increased by 292.00 Thousands to $1.70 million Thousands in 2021-03-01.",
+    "label": "positive",
+    "date": "2021-03-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1696.0,
+    "change": 292.0
+  },
+  {
+    "text": "Housing Starts decreased by 201.00 Thousands to $1.50 million Thousands in 2021-04-01.",
+    "label": "negative",
+    "date": "2021-04-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1495.0,
+    "change": -201.0
+  },
+  {
+    "text": "Housing Starts increased by 94.00 Thousands to $1.59 million Thousands in 2021-05-01.",
+    "label": "positive",
+    "date": "2021-05-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1589.0,
+    "change": 94.0
+  },
+  {
+    "text": "Housing Starts increased by 61.00 Thousands to $1.65 million Thousands in 2021-06-01.",
+    "label": "positive",
+    "date": "2021-06-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1650.0,
+    "change": 61.0
+  },
+  {
+    "text": "Housing Starts decreased by 53.00 Thousands to $1.60 million Thousands in 2021-07-01.",
+    "label": "negative",
+    "date": "2021-07-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1597.0,
+    "change": -53.0
+  },
+  {
+    "text": "Housing Starts decreased by 3.00 Thousands to $1.59 million Thousands in 2021-08-01.",
+    "label": "negative",
+    "date": "2021-08-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1594.0,
+    "change": -3.0
+  },
+  {
+    "text": "Housing Starts decreased by 17.00 Thousands to $1.58 million Thousands in 2021-09-01.",
+    "label": "negative",
+    "date": "2021-09-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1577.0,
+    "change": -17.0
+  },
+  {
+    "text": "Housing Starts increased by 2.00 Thousands to $1.58 million Thousands in 2021-10-01.",
+    "label": "neutral",
+    "date": "2021-10-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1579.0,
+    "change": 2.0
+  },
+  {
+    "text": "Housing Starts increased by 126.00 Thousands to $1.71 million Thousands in 2021-11-01.",
+    "label": "positive",
+    "date": "2021-11-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1705.0,
+    "change": 126.0
+  },
+  {
+    "text": "Housing Starts increased by 17.00 Thousands to $1.72 million Thousands in 2021-12-01.",
+    "label": "positive",
+    "date": "2021-12-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1722.0,
+    "change": 17.0
+  },
+  {
+    "text": "Housing Starts decreased by 20.00 Thousands to $1.70 million Thousands in 2022-01-01.",
+    "label": "negative",
+    "date": "2022-01-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1702.0,
+    "change": -20.0
+  },
+  {
+    "text": "Housing Starts increased by 33.00 Thousands to $1.74 million Thousands in 2022-02-01.",
+    "label": "positive",
+    "date": "2022-02-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1735.0,
+    "change": 33.0
+  },
+  {
+    "text": "Housing Starts decreased by 23.00 Thousands to $1.71 million Thousands in 2022-03-01.",
+    "label": "negative",
+    "date": "2022-03-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1712.0,
+    "change": -23.0
+  },
+  {
+    "text": "Housing Starts increased by 108.00 Thousands to $1.82 million Thousands in 2022-04-01.",
+    "label": "positive",
+    "date": "2022-04-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1820.0,
+    "change": 108.0
+  },
+  {
+    "text": "Housing Starts decreased by 289.00 Thousands to $1.53 million Thousands in 2022-05-01.",
+    "label": "negative",
+    "date": "2022-05-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1531.0,
+    "change": -289.0
+  },
+  {
+    "text": "Housing Starts increased by 20.00 Thousands to $1.55 million Thousands in 2022-06-01.",
+    "label": "positive",
+    "date": "2022-06-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1551.0,
+    "change": 20.0
+  },
+  {
+    "text": "Housing Starts decreased by 170.00 Thousands to $1.38 million Thousands in 2022-07-01.",
+    "label": "negative",
+    "date": "2022-07-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1381.0,
+    "change": -170.0
+  },
+  {
+    "text": "Housing Starts increased by 150.00 Thousands to $1.53 million Thousands in 2022-08-01.",
+    "label": "positive",
+    "date": "2022-08-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1531.0,
+    "change": 150.0
+  },
+  {
+    "text": "Housing Starts decreased by 43.00 Thousands to $1.49 million Thousands in 2022-09-01.",
+    "label": "negative",
+    "date": "2022-09-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1488.0,
+    "change": -43.0
+  },
+  {
+    "text": "Housing Starts decreased by 53.00 Thousands to $1.44 million Thousands in 2022-10-01.",
+    "label": "negative",
+    "date": "2022-10-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1435.0,
+    "change": -53.0
+  },
+  {
+    "text": "Housing Starts decreased by 11.00 Thousands to $1.42 million Thousands in 2022-11-01.",
+    "label": "negative",
+    "date": "2022-11-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1424.0,
+    "change": -11.0
+  },
+  {
+    "text": "Housing Starts decreased by 116.00 Thousands to $1.31 million Thousands in 2022-12-01.",
+    "label": "negative",
+    "date": "2022-12-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1308.0,
+    "change": -116.0
+  },
+  {
+    "text": "Housing Starts increased by 53.00 Thousands to $1.36 million Thousands in 2023-01-01.",
+    "label": "positive",
+    "date": "2023-01-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1361.0,
+    "change": 53.0
+  },
+  {
+    "text": "Housing Starts increased by 38.00 Thousands to $1.40 million Thousands in 2023-02-01.",
+    "label": "positive",
+    "date": "2023-02-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1399.0,
+    "change": 38.0
+  },
+  {
+    "text": "Housing Starts decreased by 22.00 Thousands to $1.38 million Thousands in 2023-03-01.",
+    "label": "negative",
+    "date": "2023-03-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1377.0,
+    "change": -22.0
+  },
+  {
+    "text": "Housing Starts decreased by 23.00 Thousands to $1.35 million Thousands in 2023-04-01.",
+    "label": "negative",
+    "date": "2023-04-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1354.0,
+    "change": -23.0
+  },
+  {
+    "text": "Housing Starts increased by 230.00 Thousands to $1.58 million Thousands in 2023-05-01.",
+    "label": "positive",
+    "date": "2023-05-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1584.0,
+    "change": 230.0
+  },
+  {
+    "text": "Housing Starts decreased by 163.00 Thousands to $1.42 million Thousands in 2023-06-01.",
+    "label": "negative",
+    "date": "2023-06-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1421.0,
+    "change": -163.0
+  },
+  {
+    "text": "Housing Starts increased by 39.00 Thousands to $1.46 million Thousands in 2023-07-01.",
+    "label": "positive",
+    "date": "2023-07-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1460.0,
+    "change": 39.0
+  },
+  {
+    "text": "Housing Starts decreased by 143.00 Thousands to $1.32 million Thousands in 2023-08-01.",
+    "label": "negative",
+    "date": "2023-08-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1317.0,
+    "change": -143.0
+  },
+  {
+    "text": "Housing Starts increased by 54.00 Thousands to $1.37 million Thousands in 2023-09-01.",
+    "label": "positive",
+    "date": "2023-09-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1371.0,
+    "change": 54.0
+  },
+  {
+    "text": "Housing Starts decreased by 3.00 Thousands to $1.37 million Thousands in 2023-10-01.",
+    "label": "negative",
+    "date": "2023-10-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1368.0,
+    "change": -3.0
+  },
+  {
+    "text": "Housing Starts increased by 146.00 Thousands to $1.51 million Thousands in 2023-11-01.",
+    "label": "positive",
+    "date": "2023-11-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1514.0,
+    "change": 146.0
+  },
+  {
+    "text": "Housing Starts increased by 7.00 Thousands to $1.52 million Thousands in 2023-12-01.",
+    "label": "neutral",
+    "date": "2023-12-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1521.0,
+    "change": 7.0
+  },
+  {
+    "text": "Housing Starts decreased by 140.00 Thousands to $1.38 million Thousands in 2024-01-01.",
+    "label": "negative",
+    "date": "2024-01-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1381.0,
+    "change": -140.0
+  },
+  {
+    "text": "Housing Starts increased by 171.00 Thousands to $1.55 million Thousands in 2024-02-01.",
+    "label": "positive",
+    "date": "2024-02-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1552.0,
+    "change": 171.0
+  },
+  {
+    "text": "Housing Starts decreased by 240.00 Thousands to $1.31 million Thousands in 2024-03-01.",
+    "label": "negative",
+    "date": "2024-03-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1312.0,
+    "change": -240.0
+  },
+  {
+    "text": "Housing Starts increased by 73.00 Thousands to $1.39 million Thousands in 2024-04-01.",
+    "label": "positive",
+    "date": "2024-04-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1385.0,
+    "change": 73.0
+  },
+  {
+    "text": "Housing Starts decreased by 69.00 Thousands to $1.32 million Thousands in 2024-05-01.",
+    "label": "negative",
+    "date": "2024-05-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1316.0,
+    "change": -69.0
+  },
+  {
+    "text": "Housing Starts increased by 11.00 Thousands to $1.33 million Thousands in 2024-06-01.",
+    "label": "positive",
+    "date": "2024-06-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1327.0,
+    "change": 11.0
+  },
+  {
+    "text": "Housing Starts decreased by 62.00 Thousands to $1.26 million Thousands in 2024-07-01.",
+    "label": "negative",
+    "date": "2024-07-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1265.0,
+    "change": -62.0
+  },
+  {
+    "text": "Housing Starts increased by 126.00 Thousands to $1.39 million Thousands in 2024-08-01.",
+    "label": "positive",
+    "date": "2024-08-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1391.0,
+    "change": 126.0
+  },
+  {
+    "text": "Housing Starts decreased by 34.00 Thousands to $1.36 million Thousands in 2024-09-01.",
+    "label": "negative",
+    "date": "2024-09-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1357.0,
+    "change": -34.0
+  },
+  {
+    "text": "Housing Starts decreased by 5.00 Thousands to $1.35 million Thousands in 2024-10-01.",
+    "label": "negative",
+    "date": "2024-10-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1352.0,
+    "change": -5.0
+  },
+  {
+    "text": "Housing Starts decreased by 57.00 Thousands to $1.29 million Thousands in 2024-11-01.",
+    "label": "negative",
+    "date": "2024-11-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1295.0,
+    "change": -57.0
+  },
+  {
+    "text": "Housing Starts increased by 219.00 Thousands to $1.51 million Thousands in 2024-12-01.",
+    "label": "positive",
+    "date": "2024-12-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1514.0,
+    "change": 219.0
+  },
+  {
+    "text": "Housing Starts decreased by 156.00 Thousands to $1.36 million Thousands in 2025-01-01.",
+    "label": "negative",
+    "date": "2025-01-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1358.0,
+    "change": -156.0
+  },
+  {
+    "text": "Housing Starts increased by 132.00 Thousands to $1.49 million Thousands in 2025-02-01.",
+    "label": "positive",
+    "date": "2025-02-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1490.0,
+    "change": 132.0
+  },
+  {
+    "text": "Housing Starts decreased by 135.00 Thousands to $1.35 million Thousands in 2025-03-01.",
+    "label": "negative",
+    "date": "2025-03-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1355.0,
+    "change": -135.0
+  },
+  {
+    "text": "Housing Starts increased by 43.00 Thousands to $1.40 million Thousands in 2025-04-01.",
+    "label": "positive",
+    "date": "2025-04-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1398.0,
+    "change": 43.0
+  },
+  {
+    "text": "Housing Starts decreased by 116.00 Thousands to $1.28 million Thousands in 2025-05-01.",
+    "label": "negative",
+    "date": "2025-05-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1282.0,
+    "change": -116.0
+  },
+  {
+    "text": "Housing Starts increased by 100.00 Thousands to $1.38 million Thousands in 2025-06-01.",
+    "label": "positive",
+    "date": "2025-06-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1382.0,
+    "change": 100.0
+  },
+  {
+    "text": "Housing Starts increased by 47.00 Thousands to $1.43 million Thousands in 2025-07-01.",
+    "label": "positive",
+    "date": "2025-07-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1429.0,
+    "change": 47.0
+  },
+  {
+    "text": "Housing Starts decreased by 122.00 Thousands to $1.31 million Thousands in 2025-08-01.",
+    "label": "negative",
+    "date": "2025-08-01",
+    "indicator": "Housing Starts",
+    "series_id": "HOUST",
+    "value": 1307.0,
+    "change": -122.0
+  },
+  {
+    "text": "Corporate Profits After Tax remained unchanged at $2.77 million Billions in 2020-10-01.",
+    "label": "neutral",
+    "date": "2020-10-01",
+    "indicator": "Corporate Profits After Tax",
+    "series_id": "A053RC1Q027SBEA",
+    "value": 2771.498,
+    "change": 0.0
+  },
+  {
+    "text": "Corporate Profits After Tax increased by 286.24 Billions to $3.06 million Billions in 2021-01-01.",
+    "label": "positive",
+    "date": "2021-01-01",
+    "indicator": "Corporate Profits After Tax",
+    "series_id": "A053RC1Q027SBEA",
+    "value": 3057.735,
+    "change": 286.2370000000001
+  },
+  {
+    "text": "Corporate Profits After Tax increased by 379.19 Billions to $3.44 million Billions in 2021-04-01.",
+    "label": "positive",
+    "date": "2021-04-01",
+    "indicator": "Corporate Profits After Tax",
+    "series_id": "A053RC1Q027SBEA",
+    "value": 3436.928,
+    "change": 379.19299999999976
+  },
+  {
+    "text": "Corporate Profits After Tax increased by 22.32 Billions to $3.46 million Billions in 2021-07-01.",
+    "label": "neutral",
+    "date": "2021-07-01",
+    "indicator": "Corporate Profits After Tax",
+    "series_id": "A053RC1Q027SBEA",
+    "value": 3459.252,
+    "change": 22.32400000000007
+  },
+  {
+    "text": "Corporate Profits After Tax increased by 54.05 Billions to $3.51 million Billions in 2021-10-01.",
+    "label": "positive",
+    "date": "2021-10-01",
+    "indicator": "Corporate Profits After Tax",
+    "series_id": "A053RC1Q027SBEA",
+    "value": 3513.3,
+    "change": 54.04800000000023
+  },
+  {
+    "text": "Corporate Profits After Tax decreased by 2.43 Billions to $3.51 million Billions in 2022-01-01.",
+    "label": "negative",
+    "date": "2022-01-01",
+    "indicator": "Corporate Profits After Tax",
+    "series_id": "A053RC1Q027SBEA",
+    "value": 3510.866,
+    "change": -2.4340000000001965
+  },
+  {
+    "text": "Corporate Profits After Tax increased by 250.40 Billions to $3.76 million Billions in 2022-04-01.",
+    "label": "positive",
+    "date": "2022-04-01",
+    "indicator": "Corporate Profits After Tax",
+    "series_id": "A053RC1Q027SBEA",
+    "value": 3761.262,
+    "change": 250.3960000000002
+  },
+  {
+    "text": "Corporate Profits After Tax decreased by 108.25 Billions to $3.65 million Billions in 2022-07-01.",
+    "label": "negative",
+    "date": "2022-07-01",
+    "indicator": "Corporate Profits After Tax",
+    "series_id": "A053RC1Q027SBEA",
+    "value": 3653.009,
+    "change": -108.25300000000016
+  },
+  {
+    "text": "Corporate Profits After Tax decreased by 148.81 Billions to $3.50 million Billions in 2022-10-01.",
+    "label": "negative",
+    "date": "2022-10-01",
+    "indicator": "Corporate Profits After Tax",
+    "series_id": "A053RC1Q027SBEA",
+    "value": 3504.201,
+    "change": -148.808
+  },
+  {
+    "text": "Corporate Profits After Tax increased by 251.48 Billions to $3.76 million Billions in 2023-01-01.",
+    "label": "positive",
+    "date": "2023-01-01",
+    "indicator": "Corporate Profits After Tax",
+    "series_id": "A053RC1Q027SBEA",
+    "value": 3755.682,
+    "change": 251.48099999999977
+  },
+  {
+    "text": "Corporate Profits After Tax increased by 20.97 Billions to $3.78 million Billions in 2023-04-01.",
+    "label": "neutral",
+    "date": "2023-04-01",
+    "indicator": "Corporate Profits After Tax",
+    "series_id": "A053RC1Q027SBEA",
+    "value": 3776.656,
+    "change": 20.97400000000016
+  },
+  {
+    "text": "Corporate Profits After Tax increased by 126.72 Billions to $3.90 million Billions in 2023-07-01.",
+    "label": "positive",
+    "date": "2023-07-01",
+    "indicator": "Corporate Profits After Tax",
+    "series_id": "A053RC1Q027SBEA",
+    "value": 3903.375,
+    "change": 126.71900000000004
+  },
+  {
+    "text": "Corporate Profits After Tax increased by 81.86 Billions to $3.99 million Billions in 2023-10-01.",
+    "label": "positive",
+    "date": "2023-10-01",
+    "indicator": "Corporate Profits After Tax",
+    "series_id": "A053RC1Q027SBEA",
+    "value": 3985.235,
+    "change": 81.86000000000013
+  },
+  {
+    "text": "Corporate Profits After Tax increased by 69.47 Billions to $4.05 million Billions in 2024-01-01.",
+    "label": "positive",
+    "date": "2024-01-01",
+    "indicator": "Corporate Profits After Tax",
+    "series_id": "A053RC1Q027SBEA",
+    "value": 4054.707,
+    "change": 69.47199999999975
+  },
+  {
+    "text": "Corporate Profits After Tax increased by 96.53 Billions to $4.15 million Billions in 2024-04-01.",
+    "label": "positive",
+    "date": "2024-04-01",
+    "indicator": "Corporate Profits After Tax",
+    "series_id": "A053RC1Q027SBEA",
+    "value": 4151.237,
+    "change": 96.5300000000002
+  },
+  {
+    "text": "Corporate Profits After Tax decreased by 30.01 Billions to $4.12 million Billions in 2024-07-01.",
+    "label": "negative",
+    "date": "2024-07-01",
+    "indicator": "Corporate Profits After Tax",
+    "series_id": "A053RC1Q027SBEA",
+    "value": 4121.23,
+    "change": -30.007000000000517
+  },
+  {
+    "text": "Corporate Profits After Tax increased by 268.24 Billions to $4.39 million Billions in 2024-10-01.",
+    "label": "positive",
+    "date": "2024-10-01",
+    "indicator": "Corporate Profits After Tax",
+    "series_id": "A053RC1Q027SBEA",
+    "value": 4389.468,
+    "change": 268.2380000000003
+  },
+  {
+    "text": "Corporate Profits After Tax decreased by 383.26 Billions to $4.01 million Billions in 2025-01-01.",
+    "label": "negative",
+    "date": "2025-01-01",
+    "indicator": "Corporate Profits After Tax",
+    "series_id": "A053RC1Q027SBEA",
+    "value": 4006.211,
+    "change": -383.25700000000006
+  },
+  {
+    "text": "Corporate Profits After Tax increased by 19.94 Billions to $4.03 million Billions in 2025-04-01.",
+    "label": "neutral",
+    "date": "2025-04-01",
+    "indicator": "Corporate Profits After Tax",
+    "series_id": "A053RC1Q027SBEA",
+    "value": 4026.153,
+    "change": 19.942000000000007
+  }
+]

@@ -19,16 +19,15 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
 
 # Virtual environments
 venv/
 env/
 ENV/
 .venv
-
-# Environment variables
-.env
-.env.local
+env.bak/
+venv.bak/
 
 # IDE
 .vscode/
@@ -36,13 +35,127 @@ ENV/
 *.swp
 *.swo
 *~
-
-# OS
 .DS_Store
-Thumbs.db
-
-# Data files
-data/
+*.sublime-project
+*.sublime-workspace
 
 # Jupyter Notebook
 .ipynb_checkpoints
+*.ipynb
+
+# PyTorch / ML Models (large files)
+models/*/
+!models/.gitkeep
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Data files (large - keep structure but ignore data)
+data/processed/
+data/output/
+data/training_data/data/*.csv
+data/training_data/data/*.json
+data/raw/
+data/extracted_sections/
+*.csv
+*.json
+!data/training_data/ground_truth/*.json
+!data/training_data/ground_truth/*.csv
+!requirements.txt
+!package.json
+
+# Logs
+*.log
+logs/
+*.out
+wandb/
+*.wandb
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+.AppleDouble
+.LSOverride
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*~
+.cache/
+*.cache
+
+# Web
+web/__pycache__/
+web/static/.cache/
+web/*.pyc
+
+# Test coverage
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+test_results.json
+test_results_summary.txt
+
+# Documentation builds
+docs/_build/
+site/
+
+# Large files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.pdf
+
+# Images (except web assets)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+!web/static/images/*.webp
+!web/static/images/*.png
+!web/static/images/*.jpg
+
+# Flask
+instance/
+.webassets-cache
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Checkpoints and training artifacts
+checkpoint-*/
+*.checkpoint
+training_args.bin
+optimizer.pt
+scheduler.pt
+rng_state.pth
+
+# Windows
+$RECYCLE.BIN/
+*.lnk
+
+# MacOS
+.AppleDouble
+.LSOverride
