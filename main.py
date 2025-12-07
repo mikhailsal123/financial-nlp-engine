@@ -13,8 +13,11 @@ from src.parsing.section_extractor import SectionExtractor
 # Load model when script starts (prefer fine-tuned model)
 def load_sentiment_model():
     """Load FinBERT model, preferring fine-tuned version if available."""
+    # Get absolute path to fine-tuned model (works from any directory)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    finetuned_path = os.path.join(script_dir, 'models', 'finbert_finetuned')
+    
     # Check for fine-tuned model first
-    finetuned_path = 'models/finbert_finetuned'
     if os.path.exists(finetuned_path) and os.path.exists(os.path.join(finetuned_path, 'config.json')):
         print("📦 Loading fine-tuned FinBERT model...")
         tokenizer = BertTokenizer.from_pretrained(finetuned_path)

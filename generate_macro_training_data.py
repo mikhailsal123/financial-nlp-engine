@@ -53,9 +53,9 @@ MACRO_INDICATORS = {
         'unit': 'Thousands',
         'frequency': 'Monthly',
         'sentiment_mapping': {
-            'positive': lambda x: x > 150,  # Strong job growth (>150k/month is healthy)
+            'positive': lambda x: x > 90,  # Strong job growth (>90k/month is healthy)
             'negative': lambda x: x < 0,    # Job losses
-            'neutral': lambda x: 0 <= x <= 150  # Moderate growth
+            'neutral': lambda x: 0 <= x <= 90  # Moderate growth
         }
     },
     'UNRATE': {
@@ -140,6 +140,378 @@ MACRO_INDICATORS = {
             'negative': lambda x: x < 0,     # Profit decline
             'neutral': lambda x: 0 <= x <= 50  # Moderate growth
         }
+    },
+    # Interest Rates
+    'FEDFUNDS': {
+        'name': 'Federal Funds Rate',
+        'description': 'Effective Federal Funds Rate, Change from Previous Period',
+        'unit': 'Percent',
+        'frequency': 'Monthly',
+        'sentiment_mapping': {
+            'positive': lambda x: x < -0.25,  # Rate cut (stimulative, generally positive)
+            'negative': lambda x: x > 0.25,   # Rate hike (restrictive, can be negative)
+            'neutral': lambda x: -0.25 <= x <= 0.25  # Stable rates
+        }
+    },
+    'DGS10': {
+        'name': '10-Year Treasury Rate',
+        'description': '10-Year Treasury Constant Maturity Rate, Change',
+        'unit': 'Percent',
+        'frequency': 'Daily',
+        'sentiment_mapping': {
+            'positive': lambda x: x < -0.1,  # Falling yields (positive for bonds, can indicate economic concerns)
+            'negative': lambda x: x > 0.1,   # Rising yields (can indicate inflation concerns)
+            'neutral': lambda x: -0.1 <= x <= 0.1  # Stable
+        }
+    },
+    # Inflation Indicators
+    'CPIAUCSL': {
+        'name': 'Consumer Price Index',
+        'description': 'Consumer Price Index for All Urban Consumers, Percent Change',
+        'unit': 'Percent',
+        'frequency': 'Monthly',
+        'sentiment_mapping': {
+            'positive': lambda x: 1.5 <= x <= 2.5,  # Healthy inflation (target range)
+            'negative': lambda x: x > 3.0 or x < 0,  # High inflation or deflation (both bad)
+            'neutral': lambda x: (0 <= x < 1.5) or (2.5 < x <= 3.0)  # Low or slightly high
+        }
+    },
+    'PPIACO': {
+        'name': 'Producer Price Index',
+        'description': 'Producer Price Index for All Commodities, Percent Change',
+        'unit': 'Percent',
+        'frequency': 'Monthly',
+        'sentiment_mapping': {
+            'positive': lambda x: 0 <= x <= 2.0,  # Moderate producer price growth
+            'negative': lambda x: x > 3.0 or x < -0.5,  # High inflation or deflation
+            'neutral': lambda x: (2.0 < x <= 3.0) or (-0.5 <= x < 0)  # Borderline
+        }
+    },
+    # Stock Market Indicators
+    'SP500': {
+        'name': 'S&P 500 Index',
+        'description': 'S&P 500 Index, Percent Change from Previous Period',
+        'unit': 'Percent',
+        'frequency': 'Daily',
+        'sentiment_mapping': {
+            'positive': lambda x: x > 1.0,   # Strong gains (>1% daily)
+            'negative': lambda x: x < -1.0,  # Significant losses (<-1% daily)
+            'neutral': lambda x: -1.0 <= x <= 1.0  # Normal volatility
+        }
+    },
+    'VIXCLS': {
+        'name': 'VIX Volatility Index',
+        'description': 'CBOE Volatility Index, Change',
+        'unit': 'Index',
+        'frequency': 'Daily',
+        'sentiment_mapping': {
+            'positive': lambda x: x < -2.0,  # Falling volatility (calm markets, positive)
+            'negative': lambda x: x > 2.0,   # Rising volatility (fear, negative)
+            'neutral': lambda x: -2.0 <= x <= 2.0  # Stable volatility
+        }
+    },
+    # Trade Balance
+    'BOPGSTB': {
+        'name': 'Trade Balance',
+        'description': 'Trade Balance: Goods and Services, Change from Previous Period',
+        'unit': 'Millions',
+        'frequency': 'Monthly',
+        'sentiment_mapping': {
+            'positive': lambda x: x > 5000,  # Improving trade balance (less deficit or more surplus)
+            'negative': lambda x: x < -5000,  # Worsening trade balance (larger deficit)
+            'neutral': lambda x: -5000 <= x <= 5000  # Stable
+        }
+    },
+    # Personal Income and Spending
+    'PI': {
+        'name': 'Personal Income',
+        'description': 'Personal Income, Change from Previous Period',
+        'unit': 'Billions',
+        'frequency': 'Monthly',
+        'sentiment_mapping': {
+            'positive': lambda x: x > 50,    # Strong income growth (>$50B monthly)
+            'negative': lambda x: x < 0,     # Income decline
+            'neutral': lambda x: 0 <= x <= 50  # Moderate growth
+        }
+    },
+    'PCE': {
+        'name': 'Personal Consumption Expenditures',
+        'description': 'Personal Consumption Expenditures, Change from Previous Period',
+        'unit': 'Billions',
+        'frequency': 'Monthly',
+        'sentiment_mapping': {
+            'positive': lambda x: x > 30,    # Strong consumer spending (>$30B monthly)
+            'negative': lambda x: x < 0,     # Spending decline
+            'neutral': lambda x: 0 <= x <= 30  # Moderate growth
+        }
+    },
+    # Business Inventories
+    'BUSINV': {
+        'name': 'Total Business Inventories',
+        'description': 'Total Business Inventories, Change from Previous Period',
+        'unit': 'Millions',
+        'frequency': 'Monthly',
+        'sentiment_mapping': {
+            'positive': lambda x: 0 < x <= 10000,  # Moderate inventory growth (healthy demand)
+            'negative': lambda x: x < 0 or x > 20000,  # Declining or excessive inventory buildup
+            'neutral': lambda x: (x == 0) or (10000 < x <= 20000)  # Stable or high buildup
+        }
+    },
+    # Credit and Debt
+    'TOTALSL': {
+        'name': 'Total Consumer Credit',
+        'description': 'Total Consumer Credit Outstanding, Change from Previous Period',
+        'unit': 'Billions',
+        'frequency': 'Monthly',
+        'sentiment_mapping': {
+            'positive': lambda x: 5 <= x <= 20,  # Moderate credit growth (healthy borrowing)
+            'negative': lambda x: x < 0 or x > 30,  # Credit contraction or excessive growth
+            'neutral': lambda x: (0 <= x < 5) or (20 < x <= 30)  # Low or high growth
+        }
+    },
+    # Additional Economic Indicators
+    'DEXUSEU': {
+        'name': 'U.S. / Euro Foreign Exchange Rate',
+        'description': 'U.S. Dollars to Euro Spot Exchange Rate, Change',
+        'unit': 'Dollars',
+        'frequency': 'Daily',
+        'sentiment_mapping': {
+            'positive': lambda x: -0.05 <= x <= 0.05,  # Stable exchange rate
+            'negative': lambda x: abs(x) > 0.1,  # High volatility (uncertainty)
+            'neutral': lambda x: 0.05 < abs(x) <= 0.1  # Moderate movement
+        }
+    },
+    'DEXCHUS': {
+        'name': 'China / U.S. Foreign Exchange Rate',
+        'description': 'Chinese Yuan to U.S. Dollar Spot Exchange Rate, Change',
+        'unit': 'Yuan',
+        'frequency': 'Daily',
+        'sentiment_mapping': {
+            'positive': lambda x: -0.05 <= x <= 0.05,  # Stable exchange rate
+            'negative': lambda x: abs(x) > 0.1,  # High volatility
+            'neutral': lambda x: 0.05 < abs(x) <= 0.1  # Moderate movement
+        }
+    },
+    'DEXJPUS': {
+        'name': 'Japan / U.S. Foreign Exchange Rate',
+        'description': 'Japanese Yen to U.S. Dollar Spot Exchange Rate, Change',
+        'unit': 'Yen',
+        'frequency': 'Daily',
+        'sentiment_mapping': {
+            'positive': lambda x: -2.0 <= x <= 2.0,  # Stable exchange rate
+            'negative': lambda x: abs(x) > 5.0,  # High volatility
+            'neutral': lambda x: 2.0 < abs(x) <= 5.0  # Moderate movement
+        }
+    },
+    'GPDI': {
+        'name': 'Gross Private Domestic Investment',
+        'description': 'Gross Private Domestic Investment, Change from Previous Period',
+        'unit': 'Billions',
+        'frequency': 'Quarterly',
+        'sentiment_mapping': {
+            'positive': lambda x: x > 50,  # Strong investment growth (>$50B quarterly)
+            'negative': lambda x: x < 0,  # Investment decline
+            'neutral': lambda x: 0 <= x <= 50  # Moderate growth
+        }
+    },
+    'EXPGSC1': {
+        'name': 'Government Consumption Expenditures',
+        'description': 'Government Consumption Expenditures and Gross Investment, Change',
+        'unit': 'Billions',
+        'frequency': 'Quarterly',
+        'sentiment_mapping': {
+            'positive': lambda x: 10 <= x <= 100,  # Moderate government spending growth
+            'negative': lambda x: x < 0 or x > 150,  # Decline or excessive growth
+            'neutral': lambda x: (0 <= x < 10) or (100 < x <= 150)  # Low or high growth
+        }
+    },
+    'A191RO1Q156NBEA': {
+        'name': 'Real Gross Domestic Product per Capita',
+        'description': 'Real GDP per Capita, Percent Change from Preceding Period',
+        'unit': 'Percent',
+        'frequency': 'Quarterly',
+        'sentiment_mapping': {
+            'positive': lambda x: x > 1.5,  # Strong per capita growth (>1.5%)
+            'negative': lambda x: x < 0,  # Decline
+            'neutral': lambda x: 0 <= x <= 1.5  # Moderate growth
+        }
+    },
+    'PCEDG': {
+        'name': 'Personal Consumption Expenditures: Durable Goods',
+        'description': 'PCE: Durable Goods, Change from Previous Period',
+        'unit': 'Billions',
+        'frequency': 'Monthly',
+        'sentiment_mapping': {
+            'positive': lambda x: x > 5,  # Strong durable goods spending (>$5B monthly)
+            'negative': lambda x: x < 0,  # Decline
+            'neutral': lambda x: 0 <= x <= 5  # Moderate growth
+        }
+    },
+    'PCEND': {
+        'name': 'Personal Consumption Expenditures: Nondurable Goods',
+        'description': 'PCE: Nondurable Goods, Change from Previous Period',
+        'unit': 'Billions',
+        'frequency': 'Monthly',
+        'sentiment_mapping': {
+            'positive': lambda x: x > 3,  # Strong nondurable goods spending (>$3B monthly)
+            'negative': lambda x: x < 0,  # Decline
+            'neutral': lambda x: 0 <= x <= 3  # Moderate growth
+        }
+    },
+    'PCES': {
+        'name': 'Personal Consumption Expenditures: Services',
+        'description': 'PCE: Services, Change from Previous Period',
+        'unit': 'Billions',
+        'frequency': 'Monthly',
+        'sentiment_mapping': {
+            'positive': lambda x: x > 20,  # Strong services spending (>$20B monthly)
+            'negative': lambda x: x < 0,  # Decline
+            'neutral': lambda x: 0 <= x <= 20  # Moderate growth
+        }
+    },
+    'DEXUSUK': {
+        'name': 'U.S. / U.K. Foreign Exchange Rate',
+        'description': 'U.S. Dollars to U.K. Pound Spot Exchange Rate, Change',
+        'unit': 'Dollars',
+        'frequency': 'Daily',
+        'sentiment_mapping': {
+            'positive': lambda x: -0.05 <= x <= 0.05,  # Stable exchange rate
+            'negative': lambda x: abs(x) > 0.1,  # High volatility
+            'neutral': lambda x: 0.05 < abs(x) <= 0.1  # Moderate movement
+        }
+    },
+    # Additional Economic Indicators for More Training Data
+    'W875RX1': {
+        'name': 'Real Personal Income Excluding Current Transfer Receipts',
+        'description': 'Real Personal Income Excluding Current Transfer Receipts, Change',
+        'unit': 'Billions',
+        'frequency': 'Monthly',
+        'sentiment_mapping': {
+            'positive': lambda x: x > 30,  # Strong income growth (>$30B monthly)
+            'negative': lambda x: x < 0,  # Income decline
+            'neutral': lambda x: 0 <= x <= 30  # Moderate growth
+        }
+    },
+    'DSPIC96': {
+        'name': 'Real Disposable Personal Income',
+        'description': 'Real Disposable Personal Income, Change from Previous Period',
+        'unit': 'Billions',
+        'frequency': 'Monthly',
+        'sentiment_mapping': {
+            'positive': lambda x: x > 25,  # Strong disposable income growth (>$25B monthly)
+            'negative': lambda x: x < 0,  # Decline
+            'neutral': lambda x: 0 <= x <= 25  # Moderate growth
+        }
+    },
+    'A955RC1Q027SBEA': {
+        'name': 'Gross Domestic Product: Imports',
+        'description': 'GDP: Imports of Goods and Services, Change from Previous Period',
+        'unit': 'Billions',
+        'frequency': 'Quarterly',
+        'sentiment_mapping': {
+            'positive': lambda x: 0 <= x <= 50,  # Moderate import growth (healthy trade)
+            'negative': lambda x: x < -20 or x > 100,  # Sharp decline or excessive growth
+            'neutral': lambda x: (-20 <= x < 0) or (50 < x <= 100)  # Borderline
+        }
+    },
+    'A957RC1Q027SBEA': {
+        'name': 'Gross Domestic Product: Exports',
+        'description': 'GDP: Exports of Goods and Services, Change from Previous Period',
+        'unit': 'Billions',
+        'frequency': 'Quarterly',
+        'sentiment_mapping': {
+            'positive': lambda x: x > 30,  # Strong export growth (>$30B quarterly)
+            'negative': lambda x: x < 0,  # Export decline
+            'neutral': lambda x: 0 <= x <= 30  # Moderate growth
+        }
+    },
+    'A794RC0Q052SBEA': {
+        'name': 'Real Gross Private Domestic Investment',
+        'description': 'Real Gross Private Domestic Investment, Change from Previous Period',
+        'unit': 'Billions',
+        'frequency': 'Quarterly',
+        'sentiment_mapping': {
+            'positive': lambda x: x > 40,  # Strong investment growth (>$40B quarterly)
+            'negative': lambda x: x < 0,  # Investment decline
+            'neutral': lambda x: 0 <= x <= 40  # Moderate growth
+        }
+    },
+    'A955RX1Q020SBEA': {
+        'name': 'Real Gross Domestic Product: Imports of Goods',
+        'description': 'Real GDP: Imports of Goods, Change from Previous Period',
+        'unit': 'Billions',
+        'frequency': 'Quarterly',
+        'sentiment_mapping': {
+            'positive': lambda x: 0 <= x <= 40,  # Moderate import growth
+            'negative': lambda x: x < -15 or x > 80,  # Sharp decline or excessive growth
+            'neutral': lambda x: (-15 <= x < 0) or (40 < x <= 80)  # Borderline
+        }
+    },
+    'A957RX1Q020SBEA': {
+        'name': 'Real Gross Domestic Product: Exports of Goods',
+        'description': 'Real GDP: Exports of Goods, Change from Previous Period',
+        'unit': 'Billions',
+        'frequency': 'Quarterly',
+        'sentiment_mapping': {
+            'positive': lambda x: x > 25,  # Strong export growth (>$25B quarterly)
+            'negative': lambda x: x < 0,  # Export decline
+            'neutral': lambda x: 0 <= x <= 25  # Moderate growth
+        }
+    },
+    'A006RC1Q027SBEA': {
+        'name': 'Gross Domestic Product: Final Sales to Domestic Purchasers',
+        'description': 'GDP: Final Sales to Domestic Purchasers, Change from Previous Period',
+        'unit': 'Billions',
+        'frequency': 'Quarterly',
+        'sentiment_mapping': {
+            'positive': lambda x: x > 100,  # Strong domestic demand (>$100B quarterly)
+            'negative': lambda x: x < 0,  # Decline
+            'neutral': lambda x: 0 <= x <= 100  # Moderate growth
+        }
+    },
+    'A191RL1Q225SBEA': {
+        'name': 'Real Gross Domestic Product per Capita',
+        'description': 'Real GDP per Capita, Percent Change from Preceding Period',
+        'unit': 'Percent',
+        'frequency': 'Quarterly',
+        'sentiment_mapping': {
+            'positive': lambda x: x > 1.5,  # Strong per capita growth (>1.5%)
+            'negative': lambda x: x < 0,  # Decline
+            'neutral': lambda x: 0 <= x <= 1.5  # Moderate growth
+        }
+    },
+    'A939RC0Q052SBEA': {
+        'name': 'Real Gross Domestic Product: Government Consumption Expenditures',
+        'description': 'Real GDP: Government Consumption Expenditures, Change from Previous Period',
+        'unit': 'Billions',
+        'frequency': 'Quarterly',
+        'sentiment_mapping': {
+            'positive': lambda x: 5 <= x <= 50,  # Moderate government spending growth
+            'negative': lambda x: x < 0 or x > 80,  # Decline or excessive growth
+            'neutral': lambda x: (0 <= x < 5) or (50 < x <= 80)  # Low or high growth
+        }
+    },
+    'A955RX1Q027SBEA': {
+        'name': 'Real Gross Domestic Product: Imports of Services',
+        'description': 'Real GDP: Imports of Services, Change from Previous Period',
+        'unit': 'Billions',
+        'frequency': 'Quarterly',
+        'sentiment_mapping': {
+            'positive': lambda x: 0 <= x <= 15,  # Moderate service import growth
+            'negative': lambda x: x < -5 or x > 30,  # Sharp decline or excessive growth
+            'neutral': lambda x: (-5 <= x < 0) or (15 < x <= 30)  # Borderline
+        }
+    },
+    'A957RX1Q027SBEA': {
+        'name': 'Real Gross Domestic Product: Exports of Services',
+        'description': 'Real GDP: Exports of Services, Change from Previous Period',
+        'unit': 'Billions',
+        'frequency': 'Quarterly',
+        'sentiment_mapping': {
+            'positive': lambda x: x > 10,  # Strong service export growth (>$10B quarterly)
+            'negative': lambda x: x < 0,  # Export decline
+            'neutral': lambda x: 0 <= x <= 10  # Moderate growth
+        }
     }
 }
 
@@ -183,11 +555,11 @@ def fetch_macro_data(
         end_date: End date (YYYY-MM-DD), defaults to today
         output_dir: Output directory for training data
     """
-    # Set default dates
+    # Set default dates - extend to 20 years for maximum data
     if end_date is None:
         end_date = datetime.now().strftime('%Y-%m-%d')
     if start_date is None:
-        start_date = (datetime.now() - timedelta(days=5*365)).strftime('%Y-%m-%d')
+        start_date = (datetime.now() - timedelta(days=20*365)).strftime('%Y-%m-%d')
     
     # Create output directories
     base_dir = Path(output_dir)

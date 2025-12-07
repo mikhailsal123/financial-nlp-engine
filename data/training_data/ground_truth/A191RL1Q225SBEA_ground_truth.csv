@@ -1,20 +1,80 @@
 date,text,sentiment,value,change,series_id,indicator_name
-2020-10-01,Real GDP Growth Rate remained unchanged at 4.60 Percent in 2020-10-01.,neutral,4.6,0.0,A191RL1Q225SBEA,Real GDP Growth Rate
-2021-01-01,Real GDP Growth Rate increased by 1.10 Percent to 5.70 Percent in 2021-01-01.,neutral,5.7,1.1000000000000003,A191RL1Q225SBEA,Real GDP Growth Rate
-2021-04-01,Real GDP Growth Rate increased by 1.30 Percent to 7.00 Percent in 2021-04-01.,neutral,7.0,1.2999999999999998,A191RL1Q225SBEA,Real GDP Growth Rate
-2021-07-01,Real GDP Growth Rate decreased by 3.70 Percent to 3.30 Percent in 2021-07-01.,negative,3.3,-3.7,A191RL1Q225SBEA,Real GDP Growth Rate
-2021-10-01,Real GDP Growth Rate increased by 3.70 Percent to 7.00 Percent in 2021-10-01.,positive,7.0,3.7,A191RL1Q225SBEA,Real GDP Growth Rate
-2022-01-01,Real GDP Growth Rate decreased by 8.00 Percent to -1.00 Percent in 2022-01-01.,negative,-1.0,-8.0,A191RL1Q225SBEA,Real GDP Growth Rate
-2022-04-01,Real GDP Growth Rate increased by 1.60 Percent to 0.60 Percent in 2022-04-01.,neutral,0.6,1.6,A191RL1Q225SBEA,Real GDP Growth Rate
-2022-07-01,Real GDP Growth Rate increased by 2.30 Percent to 2.90 Percent in 2022-07-01.,neutral,2.9,2.3,A191RL1Q225SBEA,Real GDP Growth Rate
-2022-10-01,Real GDP Growth Rate decreased by 0.10 Percent to 2.80 Percent in 2022-10-01.,negative,2.8,-0.1,A191RL1Q225SBEA,Real GDP Growth Rate
-2023-01-01,Real GDP Growth Rate increased by 0.10 Percent to 2.90 Percent in 2023-01-01.,neutral,2.9,0.1,A191RL1Q225SBEA,Real GDP Growth Rate
-2023-04-01,Real GDP Growth Rate decreased by 0.40 Percent to 2.50 Percent in 2023-04-01.,negative,2.5,-0.3999999999999999,A191RL1Q225SBEA,Real GDP Growth Rate
-2023-07-01,Real GDP Growth Rate increased by 2.20 Percent to 4.70 Percent in 2023-07-01.,neutral,4.7,2.2,A191RL1Q225SBEA,Real GDP Growth Rate
-2023-10-01,Real GDP Growth Rate decreased by 1.30 Percent to 3.40 Percent in 2023-10-01.,negative,3.4,-1.3000000000000005,A191RL1Q225SBEA,Real GDP Growth Rate
-2024-01-01,Real GDP Growth Rate decreased by 2.60 Percent to 0.80 Percent in 2024-01-01.,negative,0.8,-2.5999999999999996,A191RL1Q225SBEA,Real GDP Growth Rate
-2024-04-01,Real GDP Growth Rate increased by 2.80 Percent to 3.60 Percent in 2024-04-01.,positive,3.6,2.8,A191RL1Q225SBEA,Real GDP Growth Rate
-2024-07-01,Real GDP Growth Rate decreased by 0.30 Percent to 3.30 Percent in 2024-07-01.,negative,3.3,-0.3000000000000002,A191RL1Q225SBEA,Real GDP Growth Rate
-2024-10-01,Real GDP Growth Rate decreased by 1.40 Percent to 1.90 Percent in 2024-10-01.,negative,1.9,-1.4,A191RL1Q225SBEA,Real GDP Growth Rate
-2025-01-01,Real GDP Growth Rate decreased by 2.50 Percent to -0.60 Percent in 2025-01-01.,negative,-0.6,-2.5,A191RL1Q225SBEA,Real GDP Growth Rate
-2025-04-01,Real GDP Growth Rate increased by 4.40 Percent to 3.80 Percent in 2025-04-01.,positive,3.8,4.3999999999999995,A191RL1Q225SBEA,Real GDP Growth Rate
+2005-10-01,Real Gross Domestic Product per Capita remained unchanged at 2.20 Percent in 2005-10-01.,neutral,2.2,0.0,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2006-01-01,Real Gross Domestic Product per Capita increased by 3.30 Percent to 5.50 Percent in 2006-01-01.,positive,5.5,3.3,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2006-04-01,Real Gross Domestic Product per Capita decreased by 4.50 Percent to 1.00 Percent in 2006-04-01.,negative,1.0,-4.5,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2006-07-01,Real Gross Domestic Product per Capita decreased by 0.40 Percent to 0.60 Percent in 2006-07-01.,negative,0.6,-0.4,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2006-10-01,Real Gross Domestic Product per Capita increased by 2.90 Percent to 3.50 Percent in 2006-10-01.,positive,3.5,2.9,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2007-01-01,Real Gross Domestic Product per Capita decreased by 2.30 Percent to 1.20 Percent in 2007-01-01.,negative,1.2,-2.3,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2007-04-01,Real Gross Domestic Product per Capita increased by 1.30 Percent to 2.50 Percent in 2007-04-01.,neutral,2.5,1.3,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2007-07-01,Real Gross Domestic Product per Capita decreased by 0.20 Percent to 2.30 Percent in 2007-07-01.,negative,2.3,-0.2000000000000001,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2007-10-01,Real Gross Domestic Product per Capita increased by 0.20 Percent to 2.50 Percent in 2007-10-01.,neutral,2.5,0.2000000000000001,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2008-01-01,Real Gross Domestic Product per Capita decreased by 4.20 Percent to -1.70 Percent in 2008-01-01.,negative,-1.7,-4.2,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2008-04-01,Real Gross Domestic Product per Capita increased by 4.10 Percent to 2.40 Percent in 2008-04-01.,positive,2.4,4.1,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2008-07-01,Real Gross Domestic Product per Capita decreased by 4.50 Percent to -2.10 Percent in 2008-07-01.,negative,-2.1,-4.5,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2008-10-01,Real Gross Domestic Product per Capita decreased by 6.40 Percent to -8.50 Percent in 2008-10-01.,negative,-8.5,-6.4,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2009-01-01,Real Gross Domestic Product per Capita increased by 4.00 Percent to -4.50 Percent in 2009-01-01.,positive,-4.5,4.0,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2009-04-01,Real Gross Domestic Product per Capita increased by 3.80 Percent to -0.70 Percent in 2009-04-01.,positive,-0.7,3.8,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2009-07-01,Real Gross Domestic Product per Capita increased by 2.10 Percent to 1.40 Percent in 2009-07-01.,positive,1.4,2.0999999999999996,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2009-10-01,Real Gross Domestic Product per Capita increased by 3.00 Percent to 4.40 Percent in 2009-10-01.,positive,4.4,3.0000000000000004,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2010-01-01,Real Gross Domestic Product per Capita decreased by 2.50 Percent to 1.90 Percent in 2010-01-01.,negative,1.9,-2.5000000000000004,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2010-04-01,Real Gross Domestic Product per Capita increased by 2.00 Percent to 3.90 Percent in 2010-04-01.,positive,3.9,2.0,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2010-07-01,Real Gross Domestic Product per Capita decreased by 0.80 Percent to 3.10 Percent in 2010-07-01.,negative,3.1,-0.7999999999999998,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2010-10-01,Real Gross Domestic Product per Capita decreased by 1.00 Percent to 2.10 Percent in 2010-10-01.,negative,2.1,-1.0,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2011-01-01,Real Gross Domestic Product per Capita decreased by 3.00 Percent to -0.90 Percent in 2011-01-01.,negative,-0.9,-3.0,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2011-04-01,Real Gross Domestic Product per Capita increased by 3.60 Percent to 2.70 Percent in 2011-04-01.,positive,2.7,3.6,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2011-07-01,Real Gross Domestic Product per Capita decreased by 2.80 Percent to -0.10 Percent in 2011-07-01.,negative,-0.1,-2.8000000000000003,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2011-10-01,Real Gross Domestic Product per Capita increased by 4.70 Percent to 4.60 Percent in 2011-10-01.,positive,4.6,4.699999999999999,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2012-01-01,Real Gross Domestic Product per Capita decreased by 1.20 Percent to 3.40 Percent in 2012-01-01.,negative,3.4,-1.1999999999999995,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2012-04-01,Real Gross Domestic Product per Capita decreased by 1.60 Percent to 1.80 Percent in 2012-04-01.,negative,1.8,-1.6,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2012-07-01,Real Gross Domestic Product per Capita decreased by 1.20 Percent to 0.60 Percent in 2012-07-01.,negative,0.6,-1.2000000000000002,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2012-10-01,Real Gross Domestic Product per Capita decreased by 0.10 Percent to 0.50 Percent in 2012-10-01.,negative,0.5,-0.0999999999999999,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2013-01-01,Real Gross Domestic Product per Capita increased by 3.50 Percent to 4.00 Percent in 2013-01-01.,positive,4.0,3.5,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2013-04-01,Real Gross Domestic Product per Capita decreased by 2.90 Percent to 1.10 Percent in 2013-04-01.,negative,1.1,-2.9,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2013-07-01,Real Gross Domestic Product per Capita increased by 2.40 Percent to 3.50 Percent in 2013-07-01.,positive,3.5,2.4,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2013-10-01,Real Gross Domestic Product per Capita remained unchanged at 3.50 Percent in 2013-10-01.,neutral,3.5,0.0,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2014-01-01,Real Gross Domestic Product per Capita decreased by 4.90 Percent to -1.40 Percent in 2014-01-01.,negative,-1.4,-4.9,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2014-04-01,Real Gross Domestic Product per Capita increased by 6.70 Percent to 5.30 Percent in 2014-04-01.,positive,5.3,6.699999999999999,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2014-07-01,Real Gross Domestic Product per Capita decreased by 0.30 Percent to 5.00 Percent in 2014-07-01.,negative,5.0,-0.2999999999999998,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2014-10-01,Real Gross Domestic Product per Capita decreased by 3.00 Percent to 2.00 Percent in 2014-10-01.,negative,2.0,-3.0,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2015-01-01,Real Gross Domestic Product per Capita increased by 1.60 Percent to 3.60 Percent in 2015-01-01.,positive,3.6,1.6,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2015-04-01,Real Gross Domestic Product per Capita decreased by 1.10 Percent to 2.50 Percent in 2015-04-01.,negative,2.5,-1.1,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2015-07-01,Real Gross Domestic Product per Capita decreased by 0.90 Percent to 1.60 Percent in 2015-07-01.,negative,1.6,-0.8999999999999999,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2015-10-01,Real Gross Domestic Product per Capita decreased by 0.90 Percent to 0.70 Percent in 2015-10-01.,negative,0.7,-0.9000000000000001,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2016-01-01,Real Gross Domestic Product per Capita increased by 1.60 Percent to 2.30 Percent in 2016-01-01.,positive,2.3,1.6,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2016-04-01,Real Gross Domestic Product per Capita decreased by 1.00 Percent to 1.30 Percent in 2016-04-01.,negative,1.3,-0.9999999999999998,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2016-07-01,Real Gross Domestic Product per Capita increased by 1.60 Percent to 2.90 Percent in 2016-07-01.,positive,2.9,1.6,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2016-10-01,Real Gross Domestic Product per Capita decreased by 0.70 Percent to 2.20 Percent in 2016-10-01.,negative,2.2,-0.6999999999999997,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2017-01-01,Real Gross Domestic Product per Capita decreased by 0.20 Percent to 2.00 Percent in 2017-01-01.,negative,2.0,-0.2000000000000001,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2017-04-01,Real Gross Domestic Product per Capita increased by 0.30 Percent to 2.30 Percent in 2017-04-01.,neutral,2.3,0.2999999999999998,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2017-07-01,Real Gross Domestic Product per Capita increased by 0.90 Percent to 3.20 Percent in 2017-07-01.,neutral,3.2,0.9000000000000004,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2017-10-01,Real Gross Domestic Product per Capita increased by 1.40 Percent to 4.60 Percent in 2017-10-01.,neutral,4.6,1.3999999999999997,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2018-01-01,Real Gross Domestic Product per Capita decreased by 1.30 Percent to 3.30 Percent in 2018-01-01.,negative,3.3,-1.2999999999999998,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2018-04-01,Real Gross Domestic Product per Capita decreased by 1.20 Percent to 2.10 Percent in 2018-04-01.,negative,2.1,-1.1999999999999995,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2018-07-01,Real Gross Domestic Product per Capita increased by 0.40 Percent to 2.50 Percent in 2018-07-01.,neutral,2.5,0.3999999999999999,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2018-10-01,Real Gross Domestic Product per Capita decreased by 1.90 Percent to 0.60 Percent in 2018-10-01.,negative,0.6,-1.9,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2019-01-01,Real Gross Domestic Product per Capita increased by 1.90 Percent to 2.50 Percent in 2019-01-01.,positive,2.5,1.9,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2019-04-01,Real Gross Domestic Product per Capita increased by 0.90 Percent to 3.40 Percent in 2019-04-01.,neutral,3.4,0.8999999999999999,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2019-07-01,Real Gross Domestic Product per Capita increased by 1.40 Percent to 4.80 Percent in 2019-07-01.,neutral,4.8,1.4,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2019-10-01,Real Gross Domestic Product per Capita decreased by 2.00 Percent to 2.80 Percent in 2019-10-01.,negative,2.8,-2.0,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2020-01-01,Real Gross Domestic Product per Capita decreased by 8.00 Percent to -5.20 Percent in 2020-01-01.,negative,-5.2,-8.0,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2020-04-01,Real Gross Domestic Product per Capita decreased by 22.80 Percent to -28.00 Percent in 2020-04-01.,negative,-28.0,-22.8,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2020-07-01,Real Gross Domestic Product per Capita increased by 62.90 Percent to 34.90 Percent in 2020-07-01.,positive,34.9,62.9,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2020-10-01,Real Gross Domestic Product per Capita decreased by 30.30 Percent to 4.60 Percent in 2020-10-01.,negative,4.6,-30.299999999999997,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2021-01-01,Real Gross Domestic Product per Capita increased by 1.10 Percent to 5.70 Percent in 2021-01-01.,neutral,5.7,1.1000000000000003,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2021-04-01,Real Gross Domestic Product per Capita increased by 1.30 Percent to 7.00 Percent in 2021-04-01.,neutral,7.0,1.2999999999999998,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2021-07-01,Real Gross Domestic Product per Capita decreased by 3.70 Percent to 3.30 Percent in 2021-07-01.,negative,3.3,-3.7,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2021-10-01,Real Gross Domestic Product per Capita increased by 3.70 Percent to 7.00 Percent in 2021-10-01.,positive,7.0,3.7,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2022-01-01,Real Gross Domestic Product per Capita decreased by 8.00 Percent to -1.00 Percent in 2022-01-01.,negative,-1.0,-8.0,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2022-04-01,Real Gross Domestic Product per Capita increased by 1.60 Percent to 0.60 Percent in 2022-04-01.,positive,0.6,1.6,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2022-07-01,Real Gross Domestic Product per Capita increased by 2.30 Percent to 2.90 Percent in 2022-07-01.,positive,2.9,2.3,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2022-10-01,Real Gross Domestic Product per Capita decreased by 0.10 Percent to 2.80 Percent in 2022-10-01.,negative,2.8,-0.1,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2023-01-01,Real Gross Domestic Product per Capita increased by 0.10 Percent to 2.90 Percent in 2023-01-01.,neutral,2.9,0.1,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2023-04-01,Real Gross Domestic Product per Capita decreased by 0.40 Percent to 2.50 Percent in 2023-04-01.,negative,2.5,-0.3999999999999999,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2023-07-01,Real Gross Domestic Product per Capita increased by 2.20 Percent to 4.70 Percent in 2023-07-01.,positive,4.7,2.2,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2023-10-01,Real Gross Domestic Product per Capita decreased by 1.30 Percent to 3.40 Percent in 2023-10-01.,negative,3.4,-1.3000000000000005,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2024-01-01,Real Gross Domestic Product per Capita decreased by 2.60 Percent to 0.80 Percent in 2024-01-01.,negative,0.8,-2.5999999999999996,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2024-04-01,Real Gross Domestic Product per Capita increased by 2.80 Percent to 3.60 Percent in 2024-04-01.,positive,3.6,2.8,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2024-07-01,Real Gross Domestic Product per Capita decreased by 0.30 Percent to 3.30 Percent in 2024-07-01.,negative,3.3,-0.3000000000000002,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2024-10-01,Real Gross Domestic Product per Capita decreased by 1.40 Percent to 1.90 Percent in 2024-10-01.,negative,1.9,-1.4,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2025-01-01,Real Gross Domestic Product per Capita decreased by 2.50 Percent to -0.60 Percent in 2025-01-01.,negative,-0.6,-2.5,A191RL1Q225SBEA,Real Gross Domestic Product per Capita
+2025-04-01,Real Gross Domestic Product per Capita increased by 4.40 Percent to 3.80 Percent in 2025-04-01.,positive,3.8,4.3999999999999995,A191RL1Q225SBEA,Real Gross Domestic Product per Capita

@@ -152,9 +152,16 @@ def fine_tune(
     print(f"   Train: {len(train_texts)}, Validation: {len(val_texts)}")
     
     # Load tokenizer and model
-    print("📦 Loading base model...")
-    tokenizer = BertTokenizer.from_pretrained(base_model)
-    model = BertForSequenceClassification.from_pretrained(base_model)
+    # Check if we should continue from existing fine-tuned model
+    if os.path.exists(output_dir) and os.path.exists(os.path.join(output_dir, 'config.json')):
+        print(f"📦 Loading existing fine-tuned model from {output_dir}...")
+        print("   Continuing training from previous checkpoint...")
+        tokenizer = BertTokenizer.from_pretrained(output_dir)
+        model = BertForSequenceClassification.from_pretrained(output_dir)
+    else:
+        print(f"📦 Loading base model: {base_model}...")
+        tokenizer = BertTokenizer.from_pretrained(base_model)
+        model = BertForSequenceClassification.from_pretrained(base_model)
     
     # Move to device with proper handling for MPS
     if device == 'mps':
@@ -179,10 +186,13 @@ def fine_tune(
     gradient_accumulation_steps = 1
     
     if device == 'mps':
-        # MPS has limited memory, use smaller batches with gradient accumulation
-        effective_batch_size = min(batch_size, 4)  # Max 4 for MPS
+        # MPS memory limits: 8GB unified memory can handle batch size 8-12 safely
+        # Batch size 8 is the sweet spot for 8GB systems
+        # For 16GB+ systems, can try 12-16
+        effective_batch_size = min(batch_size, 12)  # Can try up to 12, but 8 is safer
         gradient_accumulation_steps = max(1, batch_size // effective_batch_size)
         print(f"   Using batch size {effective_batch_size} with {gradient_accumulation_steps} gradient accumulation steps")
+        print(f"   Effective batch size: {effective_batch_size * gradient_accumulation_steps}")
     
     # Force device in training args for MPS
     training_args = TrainingArguments(
@@ -270,8 +280,8 @@ if __name__ == "__main__":
                        help='Output directory for fine-tuned model')
     parser.add_argument('--epochs', type=int, default=3,
                        help='Number of training epochs')
-    parser.add_argument('--batch-size', type=int, default=16,
-                       help='Training batch size')
+    parser.add_argument('--batch-size', type=int, default=32,
+                       help='Training batch size (default: 32)')
     parser.add_argument('--lr', type=float, default=2e-5,
                        help='Learning rate')
     parser.add_argument('--use-gpu', action='store_true', default=True,

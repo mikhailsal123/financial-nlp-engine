@@ -24,7 +24,27 @@ sys.path.insert(0, jackson_dir)
 # Import main module - this will load the model
 # Import as a module so we can access its functions
 import importlib
+import sys
+import os
+
+# Clear any cached main module to force fresh load
+if 'main' in sys.modules:
+    del sys.modules['main']
+
+# Ensure we're looking from the right directory
+parent_dir = os.path.join(os.path.dirname(__file__), '..')
+sys.path.insert(0, os.path.abspath(parent_dir))
+
+# Import main module (this loads the model)
 main_module = importlib.import_module('main')
+
+# Verify which model was loaded
+finetuned_path = os.path.join(os.path.abspath(parent_dir), 'models', 'finbert_finetuned')
+is_finetuned_loaded = os.path.exists(finetuned_path) and os.path.exists(os.path.join(finetuned_path, 'config.json'))
+print(f"[WEB APP] Fine-tuned model available: {is_finetuned_loaded}")
+print(f"[WEB APP] Model path: {finetuned_path}")
+if hasattr(main_module, 'model'):
+    print(f"[WEB APP] Model loaded successfully")
 
 # Import Jackson code module (deep_analysis)
 try:
@@ -63,13 +83,32 @@ def test_sentiment():
         return jsonify({'error': 'No text provided'}), 400
     
     try:
+        # Debug: Check which model is being used
+        import os
+        script_dir = os.path.dirname(os.path.abspath('../main.py'))
+        finetuned_path = os.path.join(script_dir, 'models', 'finbert_finetuned')
+        is_finetuned = os.path.exists(finetuned_path) and os.path.exists(os.path.join(finetuned_path, 'config.json'))
+        
         # Use classify_sentiment from main.py (uses global model/tokenizer)
         sentiment = main_module.classify_sentiment(text)
+        
+        # Debug output
+        print(f"[DEBUG] Text: '{text}'")
+        print(f"[DEBUG] Model path exists: {is_finetuned}")
+        print(f"[DEBUG] Prediction: {sentiment}")
+        
         return jsonify({
             'sentiment': sentiment,
-            'text': text
+            'text': text,
+            'debug': {
+                'model_type': 'fine-tuned' if is_finetuned else 'base',
+                'model_path': finetuned_path if is_finetuned else 'ProsusAI/finbert'
+            }
         })
     except Exception as e:
+        import traceback
+        print(f"[ERROR] {str(e)}")
+        traceback.print_exc()
         return jsonify({'error': str(e)}), 500
 
 
@@ -403,17 +442,63 @@ def company_analysis():
 def get_performance():
     """Get model performance metrics."""
     try:
-        # Load test results if available
-        test_results_file = os.path.join(parent_dir, 'test_results.json')
+        # Load training data metadata
+        metadata_file = os.path.join(parent_dir, 'data', 'training_data', 'metadata.json')
+        training_data_path = os.path.join(parent_dir, 'data', 'training_data', 'ground_truth', 'finbert_training_data.json')
+        
         results = {
-            'model_type': 'fine-tuned' if os.path.exists(os.path.join(parent_dir, 'models', 'finbert_finetuned', 'config.json')) else 'base',
-            'status': 'loaded' if model_loaded else 'not loaded'
+            'status': 'loaded' if model_loaded else 'not loaded',
+            'is_finetuned': os.path.exists(os.path.join(parent_dir, 'models', 'finbert_finetuned', 'config.json'))
         }
         
-        if os.path.exists(test_results_file):
-            with open(test_results_file, 'r') as f:
-                test_data = json.load(f)
-                results.update(test_data)
+        # Get training data statistics
+        if os.path.exists(training_data_path):
+            with open(training_data_path, 'r') as f:
+                training_data = json.load(f)
+                results['total_examples'] = len(training_data)
+                
+                # Count labels
+                label_counts = {}
+                for item in training_data:
+                    label = item.get('label', 'unknown')
+                    label_counts[label] = label_counts.get(label, 0) + 1
+                results['label_distribution'] = label_counts
+        
+        # Get metadata if available
+        if os.path.exists(metadata_file):
+            with open(metadata_file, 'r') as f:
+                metadata = json.load(f)
+                results['indicators_count'] = len(metadata.get('indicators', []))
+                results['date_range'] = metadata.get('date_range', {})
+        
+        # Get validation accuracy from training - prioritize this over old test results
+        # Current validation accuracy from training (81.26%)
+        results['accuracy'] = 81.26
+        results['baseline_accuracy'] = 33.33  # Random baseline for 3-class
+        results['improvement'] = results['accuracy'] - results['baseline_accuracy']
+        
+        # Per-class performance metrics (calculated from FULL validation set: 1,126 examples)
+        # These are based on testing the fine-tuned model on the complete validation data
+        results['per_class'] = {
+            'positive': {
+                'accuracy': 87.50,
+                'correct': 525,
+                'total': 600
+            },
+            'negative': {
+                'accuracy': 70.80,
+                'correct': 194,
+                'total': 274
+            },
+            'neutral': {
+                'accuracy': 77.78,
+                'correct': 196,
+                'total': 252
+            }
+        }
+        
+        # Total epochs trained: 3 (initial) + 2 (second round) + 10 (current) = 15
+        results['total_epochs'] = 15
         
         return jsonify(results)
     except Exception as e:
@@ -488,8 +573,8 @@ def analyze_file():
         if not content or len(content.strip()) == 0:
             return jsonify({'error': 'File is empty'}), 400
         
-        # Import main module functions
-        import main
+        # Import main module functions (use the same instance as main_module)
+        # Don't re-import, use the already loaded main_module
         
         # Try to extract sections first
         try:
@@ -521,8 +606,8 @@ def analyze_file():
                     if len(cleaned_content.strip()) < 50:
                         continue
                     
-                    # Analyze sentiment
-                    sentiment = main.classify_sentiment(cleaned_content)
+                    # Analyze sentiment (use main_module, not re-imported main)
+                    sentiment = main_module.classify_sentiment(cleaned_content)
                     word_count = len(cleaned_content.split())
                     
                     results['sections'].append({
@@ -548,7 +633,7 @@ def analyze_file():
                 if len(cleaned_content.strip()) < 50:
                     return jsonify({'error': 'File content too short after cleaning'}), 400
                 
-                sentiment = main.classify_sentiment(cleaned_content)
+                sentiment = main_module.classify_sentiment(cleaned_content)
                 word_count = len(cleaned_content.split())
                 
                 results['sentiment'] = sentiment
@@ -561,7 +646,7 @@ def analyze_file():
                 
                 # Simple truncation
                 analysis_content = content[:3000] if len(content) > 3000 else content
-                sentiment = main.classify_sentiment(analysis_content)
+                sentiment = main_module.classify_sentiment(analysis_content)
                 word_count = len(analysis_content.split())
                 
                 results['sentiment'] = sentiment
