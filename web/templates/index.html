@@ -42,6 +42,7 @@
             <button class="tab-btn" onclick="showTab('performance')">Performance</button>
             <button class="tab-btn" onclick="showTab('results')">Analysis Results</button>
             <button class="tab-btn" onclick="showTab('data')">Data Downloads</button>
+            <button class="tab-btn" onclick="showTab('company')">Company Analysis</button>
         </nav>
 
         <!-- Test Model Tab -->
@@ -126,6 +127,28 @@
                 </div>
                 <div id="file-analysis-loading" style="margin-top: 30px; text-align: center; display: none; color: var(--primary-color);">
                     <p>Analyzing file...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Company Analysis Tab -->
+        <div id="company-tab" class="tab-content">
+            <div class="card">
+                <h2>Company Analysis</h2>
+                <p style="color: #cbd5e1; margin-bottom: 20px;">Enter a stock ticker symbol to retrieve a comprehensive financial analysis report.</p>
+                <div class="input-group">
+                    <label for="ticker-input">Stock Ticker Symbol:</label>
+                    <input type="text" id="ticker-input" placeholder="e.g., AAPL, MSFT, NVDA" style="width: 100%; padding: 12px; border: 2px solid rgba(0, 217, 255, 0.3); border-radius: 8px; background: rgba(15, 23, 42, 0.6); color: #e2e8f0; font-size: 1em;" />
+                </div>
+                <div style="text-align: center; margin-top: 20px;">
+                    <button onclick="analyzeCompany()" class="btn btn-primary">Analyze Company</button>
+                </div>
+                <div id="company-result" class="result-box" style="display: none; margin-top: 30px;">
+                    <h3>Analysis Output:</h3>
+                    <div id="company-output" style="background: rgba(15, 23, 42, 0.8); padding: 20px; border-radius: 8px; font-family: 'Courier New', monospace; white-space: pre-wrap; word-break: break-word; color: #00d9ff; max-height: 600px; overflow-y: auto;"></div>
+                </div>
+                <div id="company-loading" style="margin-top: 20px; text-align: center; display: none;">
+                    <div class="loading">Analyzing company...</div>
                 </div>
             </div>
         </div>
