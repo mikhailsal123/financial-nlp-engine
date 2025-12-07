@@ -17,10 +17,24 @@ from pathlib import Path
 parent_dir = os.path.join(os.path.dirname(__file__), '..')
 sys.path.insert(0, parent_dir)
 
+# Add Jackson code folder to path
+jackson_dir = os.path.join(parent_dir, 'Jackson_code_test_test_final_finalfinal_1_test')
+sys.path.insert(0, jackson_dir)
+
 # Import main module - this will load the model
 # Import as a module so we can access its functions
 import importlib
 main_module = importlib.import_module('main')
+
+# Import Jackson code module (deep_analysis)
+try:
+    from src.analysis.comprehensive_aggregator import aggregate_company_data
+    from src.analysis.deep_analysis_engine import generate_deep_analysis_report
+    jackson_available = True
+    print("✓ Deep analysis module loaded successfully")
+except Exception as e:
+    jackson_available = False
+    print(f"✗ Deep analysis module not available: {e}")
 
 app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max file size
@@ -88,6 +102,301 @@ def batch_test():
             })
     
     return jsonify({'results': results})
+
+
+@app.route('/api/company-analysis', methods=['POST'])
+def company_analysis():
+    """Run comprehensive deep analysis on a company ticker."""
+    if not jackson_available:
+        return jsonify({'error': 'Analysis module not available'}), 500
+    
+    data = request.get_json()
+    ticker = data.get('ticker', '').strip().upper()
+    
+    if not ticker:
+        return jsonify({'error': 'No ticker provided'}), 400
+    
+    try:
+        import sys
+        import os
+        from datetime import datetime
+        
+        # Ensure Jackson directory is in path
+        sys.path.insert(0, jackson_dir)
+        
+        # Load environment variables
+        from dotenv import load_dotenv
+        load_dotenv(os.path.join(jackson_dir, '.env'))
+        
+        # Run the aggregation and analysis
+        print(f"[Company Analysis] Starting analysis for {ticker}...")
+        
+        aggregated_data = aggregate_company_data(ticker, lookback_days=90)
+        report = generate_deep_analysis_report(ticker, aggregated_data)
+        
+        # Format the report for display
+        lines = []
+        lines.append("=" * 100)
+        lines.append("COMPREHENSIVE FINANCIAL ANALYSIS REPORT")
+        lines.append("=" * 100)
+        lines.append("")
+        
+        # Header
+        generated_at = report.get("generated_at", "N/A")
+        lines.append(f"Ticker: {ticker}")
+        lines.append(f"Generated: {generated_at}")
+        lines.append("")
+        
+        sections = report.get("sections", {})
+        
+        # Executive Summary
+        exec_summary = sections.get("executive_summary", {})
+        lines.append("┌" + "─" * 98 + "┐")
+        lines.append("│ EXECUTIVE SUMMARY" + " " * 81 + "│")
+        lines.append("└" + "─" * 98 + "┘")
+        lines.append(f"Company: {exec_summary.get('company_name', 'N/A')}")
+        lines.append(f"Industry: {exec_summary.get('industry', 'N/A')}")
+        lines.append(f"Current Position: {exec_summary.get('current_position', 'N/A').upper()}")
+        lines.append(f"Assessment: {exec_summary.get('headline', 'N/A')}")
+        lines.append("")
+        
+        # Key Metrics
+        metrics = exec_summary.get("key_metrics", {})
+        if metrics:
+            lines.append("Key Financial Metrics:")
+            for key, value in metrics.items():
+                if value != "N/A":
+                    lines.append(f"  • {key.replace('_', ' ').title()}: {value}")
+            lines.append("")
+        
+        # Market Position
+        market = sections.get("market_position", {})
+        lines.append("┌" + "─" * 98 + "┐")
+        lines.append("│ MARKET POSITION & VALUATION" + " " * 68 + "│")
+        lines.append("└" + "─" * 98 + "┘")
+        if market.get("valuation"):
+            lines.append(f"Valuation: {market['valuation']}")
+        if market.get("momentum"):
+            lines.append(f"Price Momentum: {market['momentum']}")
+        if market.get("relative_strength"):
+            lines.append(f"Relative Strength: {market['relative_strength']}")
+        lines.append("")
+        
+        # Financial Health
+        health = sections.get("financial_health", {})
+        lines.append("┌" + "─" * 98 + "┐")
+        lines.append("│ FINANCIAL HEALTH & STABILITY" + " " * 68 + "│")
+        lines.append("└" + "─" * 98 + "┘")
+        if health.get("profitability"):
+            lines.append(f"Profitability: {health['profitability']}")
+        if health.get("leverage"):
+            lines.append(f"Leverage: {health['leverage']}")
+        if health.get("liquidity"):
+            lines.append(f"Liquidity: {health['liquidity']}")
+        lines.append("")
+
+        
+        # Growth Trajectory (from growth_trajectory section)
+        growth_traj = sections.get("growth_trajectory", {})
+        lines.append("┌" + "─" * 98 + "┐")
+        lines.append("│ GROWTH TRAJECTORY" + " " * 79 + "│")
+        lines.append("└" + "─" * 98 + "┘")
+        if growth_traj.get("eps_trend"):
+            lines.append(f"EPS Trend: {growth_traj['eps_trend']}")
+        lines.append("")
+        
+        # Risk Assessment
+        risks = sections.get("risk_assessment", {})
+        lines.append("┌" + "─" * 98 + "┐")
+        lines.append("│ RISK ASSESSMENT" + " " * 81 + "│")
+        lines.append("└" + "─" * 98 + "┘")
+        high_risks = risks.get("high_risk_factors", [])
+        med_risks = risks.get("medium_risk_factors", [])
+        
+        if high_risks:
+            lines.append("HIGH RISK FACTORS:")
+            for risk in high_risks:
+                lines.append(f"  [!] {risk}")
+        
+        if med_risks:
+            lines.append("MEDIUM RISK FACTORS:")
+            for risk in med_risks:
+                lines.append(f"  [*] {risk}")
+        
+        if not high_risks and not med_risks:
+            lines.append("No significant risk factors identified")
+        lines.append("")
+        
+        # News Sentiment Analysis
+        news_sentiment = sections.get("news_sentiment", {})
+        if news_sentiment:
+            lines.append("┌" + "─" * 98 + "┐")
+            lines.append("│ NEWS SENTIMENT ANALYSIS (FinBERT)" + " " * 64 + "│")
+            lines.append("└" + "─" * 98 + "┘")
+            if news_sentiment.get("finbert_sentiment"):
+                lines.append(f"Overall: {news_sentiment['finbert_sentiment']}")
+            
+            top_news = news_sentiment.get("top_news_items", [])
+            if top_news:
+                lines.append("\nRecent News Headlines:")
+                for i, news in enumerate(top_news[:5], 1):
+                    sentiment = news.get("finbert_sentiment", "N/A").upper()
+                    confidence = news.get("confidence", 0)
+                    headline = news.get("headline", "")[:70]
+                    lines.append(f"  {i}. [{sentiment} {confidence:.0%}] {headline}")
+            lines.append("")
+        
+        # Positives / Negatives / Neutral synthesis
+        pnn = sections.get("pos_neg_neutral", {})
+        if pnn:
+            lines.append("┌" + "─" * 98 + "┐")
+            lines.append("│ POSITIVES / NEGATIVES / NEUTRAL (SYNTHESIS)" + " " * 41 + "│")
+            lines.append("└" + "─" * 98 + "┘")
+            
+            pos = pnn.get("positives", [])
+            neg = pnn.get("negatives", [])
+            neu = pnn.get("neutral", [])
+            
+            if pos:
+                lines.append("Positives:")
+                for item in pos[:5]:
+                    text = item.get("text", "")[:180]
+                    source = item.get("source", "")
+                    conf = item.get("confidence", 0)
+                    lines.append(f"  • {text} ({source}, {conf:.0%})")
+                lines.append("")
+            
+            if neg:
+                lines.append("Negatives:")
+                for item in neg[:5]:
+                    text = item.get("text", "")[:180]
+                    source = item.get("source", "")
+                    conf = item.get("confidence", 0)
+                    lines.append(f"  • {text} ({source}, {conf:.0%})")
+                lines.append("")
+            
+            if neu:
+                lines.append("Neutral / Watchlist:")
+                for item in neu[:5]:
+                    text = item.get("text", "")[:180]
+                    source = item.get("source", "")
+                    conf = item.get("confidence", 0)
+                    lines.append(f"  • {text} ({source}, {conf:.0%})")
+                lines.append("")
+        
+        # Peer comparison
+        peer_comp = sections.get("peer_comparison", {})
+        if peer_comp:
+            lines.append("┌" + "─" * 98 + "┐")
+            lines.append("│ PEER COMPARISON" + " " * 84 + "│")
+            lines.append("└" + "─" * 98 + "┘")
+            
+            summary = peer_comp.get("summary", {})
+            if summary:
+                lines.append("Peer Summary:")
+                for k, v in summary.items():
+                    lines.append(f"  • {k.replace('_', ' ').title()}: {v}")
+                lines.append("")
+            
+            by_mc = peer_comp.get("by_market_cap", [])
+            if by_mc:
+                lines.append("Peers by Market Cap (top 5):")
+                for p in by_mc[:5]:
+                    mc = p.get('market_cap')
+                    def hr(x):
+                        try:
+                            if x is None:
+                                return 'N/A'
+                            x = float(x)
+                            if x >= 1e12:
+                                return f"${x/1e12:.2f}T"
+                            if x >= 1e9:
+                                return f"${x/1e9:.2f}B"
+                            if x >= 1e6:
+                                return f"${x/1e6:.2f}M"
+                            return f"${x:.2f}"
+                        except:
+                            return str(x)
+                    lines.append(f"  • {p.get('ticker')}: {hr(mc)}")
+                lines.append("")
+            
+            by_pe = peer_comp.get("by_pe", [])
+            if by_pe:
+                lines.append("Peers by P/E (low to high):")
+                for p in by_pe[:5]:
+                    lines.append(f"  • {p.get('ticker')}: {p.get('pe_ratio')}")
+                lines.append("")
+        
+        # Macroeconomic Impact
+        macro = sections.get("macro_impact", {})
+        lines.append("┌" + "─" * 98 + "┐")
+        lines.append("│ MACROECONOMIC CONTEXT" + " " * 76 + "│")
+        lines.append("└" + "─" * 98 + "┘")
+        if macro.get("economic_environment"):
+            lines.append(f"Environment: {macro['economic_environment']}")
+        
+        indicators = macro.get("relevant_indicators", {})
+        if indicators:
+            lines.append("Economic Indicators:")
+            for key, val in indicators.items():
+                if isinstance(val, dict) and "value" in val:
+                    lines.append(f"  • {key}: {val['value']}")
+        lines.append("")
+        
+        # Investment Thesis
+        thesis = sections.get("investment_thesis", {})
+        lines.append("┌" + "─" * 98 + "┐")
+        lines.append("│ INVESTMENT THESIS" + " " * 79 + "│")
+        lines.append("└" + "─" * 98 + "┘")
+        if thesis.get("bull_case"):
+            lines.append(f"BULL CASE: {thesis['bull_case']}")
+        if thesis.get("bear_case"):
+            lines.append(f"BEAR CASE: {thesis['bear_case']}")
+        if thesis.get("conviction_level"):
+            lines.append(f"Conviction Level: {thesis['conviction_level']}")
+        lines.append("")
+        
+        # Forward Outlook
+        outlook = sections.get("forward_outlook", {})
+        lines.append("┌" + "─" * 98 + "┐")
+        lines.append("│ FORWARD OUTLOOK" + " " * 81 + "│")
+        lines.append("└" + "─" * 98 + "┘")
+        if outlook.get("price_target_12m"):
+            lines.append(f"12-Month Price Target: {outlook['price_target_12m']}")
+        if outlook.get("upside_downside"):
+            lines.append(f"Upside/Downside: {outlook['upside_downside']}")
+        
+        catalysts = outlook.get("key_catalysts", [])
+        if catalysts:
+            lines.append("Key Catalysts:")
+            for cat in catalysts:
+                lines.append(f"  • {cat}")
+        lines.append("")
+        
+        # Data Quality
+        errors = aggregated_data.get("errors", [])
+        if errors:
+            lines.append("┌" + "─" * 98 + "┐")
+            lines.append("│ DATA QUALITY NOTES" + " " * 78 + "│")
+            lines.append("└" + "─" * 98 + "┘")
+            for error in errors:
+                lines.append(f"  • {error}")
+            lines.append("")
+        
+        lines.append("=" * 100)
+        
+        formatted_output = "\n".join(lines)
+        
+        return jsonify({
+            'ticker': ticker,
+            'text_output': formatted_output,
+            'status': 'success'
+        })
+    except Exception as e:
+        import traceback
+        print(f"[Company Analysis] Error: {str(e)}")
+        print(traceback.format_exc())
+        return jsonify({'error': str(e), 'ticker': ticker}), 500
 
 
 @app.route('/api/performance')

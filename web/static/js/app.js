@@ -412,6 +412,49 @@ async function analyzeUploadedFile() {
     }
 }
 
+// Company analysis
+async function analyzeCompany() {
+    const ticker = document.getElementById('ticker-input').value.trim().toUpperCase();
+    
+    if (!ticker) {
+        alert('Please enter a ticker symbol');
+        return;
+    }
+    
+    const loadingDiv = document.getElementById('company-loading');
+    const resultDiv = document.getElementById('company-result');
+    const outputDiv = document.getElementById('company-output');
+    
+    loadingDiv.style.display = 'block';
+    resultDiv.style.display = 'none';
+    
+    try {
+        const response = await fetch('/api/company-analysis', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ ticker: ticker })
+        });
+        
+        loadingDiv.style.display = 'none';
+        
+        const data = await response.json();
+        
+        if (response.ok && data.status === 'success') {
+            outputDiv.textContent = data.text_output;
+            resultDiv.style.display = 'block';
+        } else {
+            outputDiv.innerHTML = `<div class="error">Error: ${data.error || 'Unknown error occurred'}</div>`;
+            resultDiv.style.display = 'block';
+        }
+    } catch (error) {
+        loadingDiv.style.display = 'none';
+        outputDiv.innerHTML = `<div class="error">Error: ${error.message}</div>`;
+        resultDiv.style.display = 'block';
+    }
+}
+
 // Utility function
 function escapeHtml(text) {
     const div = document.createElement('div');
