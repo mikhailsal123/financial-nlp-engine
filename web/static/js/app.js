@@ -161,7 +161,7 @@ async function loadPerformance() {
             if (data.per_class) {
                 html += `
                     <div style="margin-top: 40px;">
-                        <h3 style="margin-bottom: 20px; color: var(--primary-light); font-size: 1.4em; position: relative; padding-bottom: 15px;">
+                        <h3 style="font-family: var(--font-gramatika); margin-bottom: 20px; color: var(--primary-light); font-size: 1.4em; position: relative; padding-bottom: 15px; font-weight: 600;">
                             Per-Class Performance
                             <span style="position: absolute; bottom: 0; left: 0; width: 60px; height: 2px; background: linear-gradient(90deg, var(--primary-color), transparent);"></span>
                         </h3>
@@ -192,7 +192,7 @@ async function loadPerformance() {
                 const trainingData = await trainingResponse.json();
                 html += `
                     <div style="margin-top: 40px; padding: 25px; background: rgba(15, 23, 42, 0.6); border-radius: 12px; border-left: 3px solid var(--primary-color);">
-                        <h3 style="margin-bottom: 15px; color: var(--primary-light); font-size: 1.3em; position: relative; padding-bottom: 10px;">
+                        <h3 style="font-family: var(--font-gramatika); margin-bottom: 15px; color: var(--primary-light); font-size: 1.3em; position: relative; padding-bottom: 10px; font-weight: 600;">
                             Training Dataset Information
                             <span style="position: absolute; bottom: 0; left: 0; width: 60px; height: 2px; background: linear-gradient(90deg, var(--primary-color), transparent);"></span>
                         </h3>
@@ -332,6 +332,16 @@ document.addEventListener('click', function(e) {
         }
     }
 });
+
+// Update file input display
+function updateFileName(input) {
+    const fileText = document.getElementById('file-upload-text');
+    if (input.files && input.files[0]) {
+        fileText.textContent = input.files[0].name;
+    } else {
+        fileText.textContent = 'Choose File';
+    }
+}
 
 // Analyze uploaded file
 async function analyzeUploadedFile() {
