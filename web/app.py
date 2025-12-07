@@ -14,15 +14,11 @@ import pandas as pd
 from pathlib import Path
 
 # Add parent directory to path
-parent_dir = os.path.join(os.path.dirname(__file__), '..')
+parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.insert(0, parent_dir)
 
-# Add Jackson code folder to path
-jackson_dir = os.path.join(parent_dir, 'Jackson_code_test_test_final_finalfinal_1_test')
-sys.path.insert(0, jackson_dir)
-
-# Import main module - this will load the model
-# Import as a module so we can access its functions
+# CRITICAL: Import main module FIRST to load fine-tuned model
+# Then import Jackson code (which won't interfere with main's model)
 import importlib
 import sys
 import os
@@ -31,30 +27,65 @@ import os
 if 'main' in sys.modules:
     del sys.modules['main']
 
-# Ensure we're looking from the right directory
-parent_dir = os.path.join(os.path.dirname(__file__), '..')
-sys.path.insert(0, os.path.abspath(parent_dir))
-
-# Import main module (this loads the model)
+# Import main module FIRST (this loads the fine-tuned model)
 main_module = importlib.import_module('main')
+
+# Verify fine-tuned model loaded
+if hasattr(main_module, 'model'):
+    model_path = main_module.model.config._name_or_path if hasattr(main_module.model, 'config') else 'unknown'
+    if 'finbert_finetuned' not in str(model_path):
+        raise RuntimeError(f"Fine-tuned model not loaded! Got: {model_path}")
+
+# Import Jackson code modules from main codebase (now integrated)
+jackson_available = False
+try:
+    from src.analysis.comprehensive_aggregator import aggregate_company_data
+    from src.analysis.deep_analysis_engine import generate_deep_analysis_report
+    jackson_available = True
+    print("✓ Deep analysis module loaded successfully (from main codebase)")
+except Exception as e:
+    jackson_available = False
+    print(f"✗ Deep analysis module not available: {e}")
+    import traceback
+    traceback.print_exc()
+
+# Verify model loaded correctly BEFORE importing Jackson code
+if hasattr(main_module, 'model'):
+    model_path = main_module.model.config._name_or_path if hasattr(main_module.model, 'config') else 'unknown'
+    print(f"[WEB APP] Main model loaded: {model_path}")
+    if 'finbert_finetuned' not in str(model_path):
+        print("⚠️  ERROR: Main module did not load fine-tuned model!")
+        raise RuntimeError("Fine-tuned model not loaded in main module")
+else:
+    print("⚠️  ERROR: Model not found in main_module!")
+
+# Jackson directory already added above (before main import)
 
 # Verify which model was loaded
 finetuned_path = os.path.join(os.path.abspath(parent_dir), 'models', 'finbert_finetuned')
 is_finetuned_loaded = os.path.exists(finetuned_path) and os.path.exists(os.path.join(finetuned_path, 'config.json'))
 print(f"[WEB APP] Fine-tuned model available: {is_finetuned_loaded}")
 print(f"[WEB APP] Model path: {finetuned_path}")
-if hasattr(main_module, 'model'):
-    print(f"[WEB APP] Model loaded successfully")
 
-# Import Jackson code module (deep_analysis)
-try:
-    from src.analysis.comprehensive_aggregator import aggregate_company_data
-    from src.analysis.deep_analysis_engine import generate_deep_analysis_report
-    jackson_available = True
-    print("✓ Deep analysis module loaded successfully")
-except Exception as e:
-    jackson_available = False
-    print(f"✗ Deep analysis module not available: {e}")
+# CRITICAL: Verify the actual model being used
+if hasattr(main_module, 'model'):
+    model_path = main_module.model.config._name_or_path if hasattr(main_module.model, 'config') else 'unknown'
+    is_actually_finetuned = 'finbert_finetuned' in str(model_path) or 'finbert_finetuned' in str(finetuned_path)
+    print(f"[WEB APP] Model loaded successfully")
+    print(f"[WEB APP] Actual model path: {model_path}")
+    print(f"[WEB APP] Using fine-tuned model: {is_actually_finetuned}")
+    
+    if not is_actually_finetuned and is_finetuned_loaded:
+        print("⚠️  WARNING: Fine-tuned model exists but base model is loaded!")
+        print("⚠️  Forcing reload of main module...")
+        importlib.reload(main_module)
+        if hasattr(main_module, 'model'):
+            model_path = main_module.model.config._name_or_path if hasattr(main_module.model, 'config') else 'unknown'
+            print(f"[WEB APP] After reload - Model path: {model_path}")
+else:
+    print("⚠️  ERROR: Model not found in main_module!")
+
+# Jackson code already imported above (before main module)
 
 app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max file size
@@ -83,33 +114,47 @@ def test_sentiment():
         return jsonify({'error': 'No text provided'}), 400
     
     try:
-        # Debug: Check which model is being used
-        import os
-        script_dir = os.path.dirname(os.path.abspath('../main.py'))
-        finetuned_path = os.path.join(script_dir, 'models', 'finbert_finetuned')
-        is_finetuned = os.path.exists(finetuned_path) and os.path.exists(os.path.join(finetuned_path, 'config.json'))
+        # CRITICAL: Verify model before using
+        if not hasattr(main_module, 'model'):
+            return jsonify({'error': 'Model not found in main_module'}), 500
+        
+        actual_model_path = main_module.model.config._name_or_path if hasattr(main_module.model, 'config') else 'unknown'
+        using_finetuned = 'finbert_finetuned' in str(actual_model_path)
+        
+        if not using_finetuned:
+            print("⚠️  CRITICAL ERROR: Not using fine-tuned model!")
+            print(f"⚠️  Model path: {actual_model_path}")
+            return jsonify({
+                'error': 'Fine-tuned model not loaded',
+                'debug': {
+                    'model_path': actual_model_path,
+                    'using_finetuned': False
+                }
+            }), 500
         
         # Use classify_sentiment from main.py (uses global model/tokenizer)
         sentiment = main_module.classify_sentiment(text)
         
         # Debug output
         print(f"[DEBUG] Text: '{text}'")
-        print(f"[DEBUG] Model path exists: {is_finetuned}")
+        print(f"[DEBUG] Using fine-tuned model: {using_finetuned}")
+        print(f"[DEBUG] Actual model path: {actual_model_path}")
         print(f"[DEBUG] Prediction: {sentiment}")
         
         return jsonify({
             'sentiment': sentiment,
             'text': text,
             'debug': {
-                'model_type': 'fine-tuned' if is_finetuned else 'base',
-                'model_path': finetuned_path if is_finetuned else 'ProsusAI/finbert'
+                'model_type': 'fine-tuned',
+                'model_path': actual_model_path,
+                'using_finetuned': using_finetuned
             }
         })
     except Exception as e:
         import traceback
         print(f"[ERROR] {str(e)}")
         traceback.print_exc()
-        return jsonify({'error': str(e)}), 500
+        return jsonify({'error': str(e), 'traceback': traceback.format_exc()}), 500
 
 
 @app.route('/api/batch-test', methods=['POST'])
@@ -160,18 +205,44 @@ def company_analysis():
         import os
         from datetime import datetime
         
-        # Ensure Jackson directory is in path
-        sys.path.insert(0, jackson_dir)
-        
-        # Load environment variables
+        # Load environment variables (if .env exists in parent directory)
         from dotenv import load_dotenv
-        load_dotenv(os.path.join(jackson_dir, '.env'))
+        env_path = os.path.join(parent_dir, '.env')
+        if os.path.exists(env_path):
+            load_dotenv(env_path)
+        else:
+            # Try loading from current directory
+            load_dotenv()
         
         # Run the aggregation and analysis
         print(f"[Company Analysis] Starting analysis for {ticker}...")
         
-        aggregated_data = aggregate_company_data(ticker, lookback_days=90)
-        report = generate_deep_analysis_report(ticker, aggregated_data)
+        try:
+            aggregated_data = aggregate_company_data(ticker, lookback_days=90)
+        except Exception as agg_error:
+            error_msg = f"Failed to aggregate company data: {str(agg_error)}"
+            print(f"[Company Analysis] {error_msg}")
+            import traceback
+            traceback.print_exc()
+            return jsonify({
+                'error': error_msg,
+                'ticker': ticker,
+                'details': str(agg_error)
+            }), 500
+        
+        # CRITICAL: ALWAYS pass fine-tuned model from main_module to Jackson code
+        if not hasattr(main_module, 'model') or not hasattr(main_module, 'tokenizer'):
+            return jsonify({'error': 'Fine-tuned model not available in main module'}), 500
+        
+        # Verify it's actually the fine-tuned model
+        model_path = main_module.model.config._name_or_path if hasattr(main_module.model, 'config') else 'unknown'
+        if 'finbert_finetuned' not in str(model_path):
+            return jsonify({'error': f'Wrong model loaded: {model_path}. Expected fine-tuned model.'}), 500
+        
+        print(f"[Company Analysis] Using fine-tuned model: {model_path}")
+        report = generate_deep_analysis_report(ticker, aggregated_data, 
+                                               model=main_module.model, 
+                                               tokenizer=main_module.tokenizer)
         
         # Format the report for display
         lines = []
@@ -433,9 +504,16 @@ def company_analysis():
         })
     except Exception as e:
         import traceback
-        print(f"[Company Analysis] Error: {str(e)}")
-        print(traceback.format_exc())
-        return jsonify({'error': str(e), 'ticker': ticker}), 500
+        error_msg = str(e)
+        error_traceback = traceback.format_exc()
+        print(f"[Company Analysis] Error: {error_msg}")
+        print(error_traceback)
+        # Return detailed error for debugging
+        return jsonify({
+            'error': error_msg,
+            'ticker': ticker,
+            'traceback': error_traceback if app.debug else None
+        }), 500
 
 
 @app.route('/api/performance')

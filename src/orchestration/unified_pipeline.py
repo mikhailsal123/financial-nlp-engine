@@ -15,18 +15,18 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
-# Add src to path
-sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))
+# All imports are now from main codebase
 
 # Core analysis modules
 from transformers import BertTokenizer, BertForSequenceClassification
 import torch
 
-# Project imports
+# Project imports - use main codebase for duplicates
 from src.ingestion.company_lookup import get_cik_by_name_or_ticker
 from src.ingestion.sec_scraper import SECScraper
 from src.parsing.section_extractor import SectionExtractor
 from src.parsing.report_cleaner import ReportCleaner
+# Jackson-specific modules (keep in Jackson code)
 from src.extraction.financial_metric_extractor import FinancialMetricExtractor, get_metrics_summary
 from src.analysis.signal_generator import SignalGenerator
 from src.integration.data_integrator import DataIntegrator

@@ -7,6 +7,7 @@ to generate in-depth company outlook reports
 import re
 import statistics
 import logging
+import contextlib
 from typing import Dict, List, Any, Optional
 from datetime import datetime
 try:
@@ -29,19 +30,54 @@ class DeepAnalysisEngine:
     by combining all aggregated data sources with FinBERT NLP analysis
     """
 
-    def __init__(self):
-        """Initialize FinBERT model"""
-        self.model_name = "ProsusAI/finbert"
-        try:
-            self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
-            self.model = AutoModelForSequenceClassification.from_pretrained(self.model_name)
-            self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-            self.model.to(self.device)
-            logger.info("FinBERT model loaded successfully")
-        except Exception as e:
-            logger.error(f"Failed to load FinBERT: {e}")
-            self.tokenizer = None
-            self.model = None
+    def __init__(self, model=None, tokenizer=None):
+        """
+        Initialize FinBERT model.
+        If model and tokenizer are provided, use them (prefer fine-tuned model from main.py).
+        Otherwise, fall back to loading base model.
+        """
+        if model is not None and tokenizer is not None:
+            # Use provided model (fine-tuned from main.py)
+            self.model = model
+            self.tokenizer = tokenizer
+            self.model_name = "fine-tuned-finbert"
+            if torch is not None:
+                # Detect device from the model or use default
+                if hasattr(model, 'device'):
+                    self.device = model.device
+                elif torch.backends.mps.is_available():
+                    self.device = torch.device("mps")
+                elif torch.cuda.is_available():
+                    self.device = torch.device("cuda")
+                else:
+                    self.device = torch.device("cpu")
+                # Ensure model is on the correct device
+                self.model.to(self.device)
+            else:
+                self.device = None
+            logger.info(f"Using provided FinBERT model (fine-tuned) on device: {self.device}")
+        else:
+            # Fall back to base model
+            self.model_name = "ProsusAI/finbert"
+            try:
+                self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
+                self.model = AutoModelForSequenceClassification.from_pretrained(self.model_name)
+                if torch is not None:
+                    if torch.backends.mps.is_available():
+                        self.device = torch.device("mps")
+                    elif torch.cuda.is_available():
+                        self.device = torch.device("cuda")
+                    else:
+                        self.device = torch.device("cpu")
+                    self.model.to(self.device)
+                else:
+                    self.device = None
+                logger.info(f"FinBERT base model loaded successfully on device: {self.device}")
+            except Exception as e:
+                logger.error(f"Failed to load FinBERT: {e}")
+                self.tokenizer = None
+                self.model = None
+                self.device = None
 
     def generate_deep_analysis(self, ticker: str, aggregated_data: Dict[str, Any]) -> Dict[str, Any]:
         """
@@ -985,13 +1021,22 @@ class DeepAnalysisEngine:
             
             try:
                 inputs = self.tokenizer(headline, return_tensors="pt", truncation=True, max_length=512)
-                inputs = {k: v.to(self.device) for k, v in inputs.items()}
-                with torch.no_grad():
-                    outputs = self.model(**inputs)
-                    probs = torch.softmax(outputs.logits, dim=1)
+                if self.device is not None and torch is not None:
+                    inputs = {k: v.to(self.device) for k, v in inputs.items()}
                 
-                sentiment_idx = torch.argmax(probs, dim=1).item()
-                confidence = probs[0, sentiment_idx].item()
+                if torch is not None:
+                    with torch.no_grad():
+                        outputs = self.model(**inputs)
+                        probs = torch.softmax(outputs.logits, dim=1)
+                        sentiment_idx = torch.argmax(probs, dim=1).item()
+                        confidence = probs[0, sentiment_idx].item()
+                else:
+                    # Fallback if torch is not available
+                    outputs = self.model(**inputs)
+                    probs = outputs.logits.softmax(dim=1) if hasattr(outputs.logits, 'softmax') else outputs.logits
+                    sentiment_idx = probs.argmax(dim=1).item()
+                    confidence = float(probs[0, sentiment_idx]) if hasattr(probs, '__getitem__') else 0.5
+                
                 sentiment_map = {0: "negative", 1: "neutral", 2: "positive"}
                 sentiment = sentiment_map.get(sentiment_idx, "neutral")
                 
@@ -1021,7 +1066,10 @@ class DeepAnalysisEngine:
         return analysis
 
 
-def generate_deep_analysis_report(ticker: str, aggregated_data: Dict[str, Any]) -> Dict[str, Any]:
-    """Generate full deep analysis report"""
-    engine = DeepAnalysisEngine()
+def generate_deep_analysis_report(ticker: str, aggregated_data: Dict[str, Any], model=None, tokenizer=None) -> Dict[str, Any]:
+    """
+    Generate full deep analysis report.
+    If model and tokenizer are provided, use them (prefer fine-tuned model from main.py).
+    """
+    engine = DeepAnalysisEngine(model=model, tokenizer=tokenizer)
     return engine.generate_deep_analysis(ticker, aggregated_data)

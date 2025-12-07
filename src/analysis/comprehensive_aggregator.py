@@ -10,6 +10,7 @@ from typing import Dict, List, Optional, Any
 from datetime import datetime, timedelta
 import logging
 from concurrent.futures import ThreadPoolExecutor, as_completed
+# Import from main codebase
 from src.parsing.section_extractor import SectionExtractor
 from src.ingestion.sec_scraper import SECScraper
 from src.ingestion.company_lookup import get_cik_by_name_or_ticker
@@ -30,34 +31,54 @@ class ComprehensiveDataAggregator:
         self.finnhub = None
         self.fred = None
         self.yahoo = None
-        self.article_downloader = NewsArticleDownloader()
+        self.article_downloader = None
         self._init_clients()
+        
+        # Initialize article downloader if available
+        try:
+            self.article_downloader = NewsArticleDownloader()
+        except Exception as e:
+            logger.debug(f"NewsArticleDownloader not available: {e}")
 
     def _init_clients(self):
         """Initialize API clients safely"""
+        # Alpha Vantage - optional (may not exist)
         try:
+            # Try importing from root directory
+            import sys
+            import os
+            root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+            if root_dir not in sys.path:
+                sys.path.insert(0, root_dir)
             from alpha_vantage_client import AlphaVantageClient
             self.alpha_vantage = AlphaVantageClient()
-        except Exception as e:
-            logger.warning(f"Alpha Vantage client init failed: {e}")
+        except (ImportError, ModuleNotFoundError) as e:
+            logger.warning(f"Alpha Vantage client not available: {e}")
+            self.alpha_vantage = None
 
+        # Finnhub - optional (may not exist)
         try:
             from finnhub_client import FinnhubClient
             self.finnhub = FinnhubClient()
-        except Exception as e:
-            logger.warning(f"Finnhub client init failed: {e}")
+        except (ImportError, ModuleNotFoundError) as e:
+            logger.warning(f"Finnhub client not available: {e}")
+            self.finnhub = None
 
+        # FRED - should exist in main codebase
         try:
             from src.fred_client import download_series
             self.fred = download_series
         except Exception as e:
             logger.warning(f"FRED client init failed: {e}")
+            self.fred = None
 
+        # Yahoo Finance - should be installed
         try:
             import yfinance as yf
             self.yahoo = yf
-        except Exception as e:
-            logger.warning(f"Yahoo Finance init failed: {e}")
+        except ImportError as e:
+            logger.warning(f"Yahoo Finance (yfinance) not installed: {e}")
+            self.yahoo = None
 
     def aggregate_comprehensive_data(self, ticker: str, lookback_days: int = 90) -> Dict[str, Any]:
         """
@@ -250,36 +271,36 @@ class ComprehensiveDataAggregator:
         if self.finnhub:
             try:
                 quote = self.finnhub.fetch_quote(ticker)
-                market_data["realtime_quote"] = {
-                    "current_price": quote.get("c"),
-                    "open": quote.get("o"),
-                    "high": quote.get("h"),
-                    "low": quote.get("l"),
-                    "close": quote.get("pc"),
-                    "timestamp": quote.get("t"),
-                    "bid": quote.get("b"),
-                    "ask": quote.get("a"),
-                    "bid_volume": quote.get("bv"),
-                    "ask_volume": quote.get("av"),
-                }
+                if quote:
+                    market_data["realtime_quote"] = {
+                        "current_price": quote.get("price"),
+                        "open": quote.get("open"),
+                        "high": quote.get("high"),
+                        "low": quote.get("low"),
+                        "close": quote.get("previous_close"),
+                        "timestamp": quote.get("timestamp"),
+                        "change": quote.get("change"),
+                        "change_percent": quote.get("change_percent"),
+                    }
             except Exception as e:
                 logger.warning(f"Finnhub quote fetch failed: {e}")
 
         # Try Alpha Vantage for time series data
         if self.alpha_vantage:
             try:
-                overview = self.alpha_vantage.fetch_company_overview(ticker)
-                market_data["company_overview"] = {
-                    "market_cap": overview.get("MarketCapitalization"),
-                    "pe_ratio": overview.get("PERatio"),
-                    "dividend_yield": overview.get("DividendYield"),
-                    "eps": overview.get("EPS"),
-                    "revenue": overview.get("RevenueTTM"),
-                    "profit_margin": overview.get("ProfitMargin"),
-                    "beta": overview.get("Beta"),
-                    "fifty_two_week_high": overview.get("52WeekHigh"),
-                    "fifty_two_week_low": overview.get("52WeekLow"),
-                }
+                overview = self.alpha_vantage.fetch_overview(ticker)
+                if overview:
+                    market_data["company_overview"] = {
+                        "market_cap": overview.get("market_cap"),
+                        "pe_ratio": overview.get("pe_ratio"),
+                        "dividend_yield": overview.get("dividend_yield"),
+                        "eps": overview.get("eps"),
+                        "name": overview.get("name"),
+                        "sector": overview.get("sector"),
+                        "industry": overview.get("industry"),
+                        "fifty_two_week_high": overview.get("52_week_high"),
+                        "fifty_two_week_low": overview.get("52_week_low"),
+                    }
             except Exception as e:
                 logger.warning(f"Alpha Vantage overview fetch failed: {e}")
 
@@ -310,41 +331,12 @@ class ComprehensiveDataAggregator:
         # Try Finnhub first
         if self.finnhub:
             try:
-                # Income statement
-                ic = self.finnhub.fetch_financials(ticker, "ic", "annual")
-                if ic and "financials" in ic:
-                    latest = ic["financials"][0] if ic["financials"] else {}
-                    fundamentals["income_statement"] = {
-                        "revenue": latest.get("revenue"),
-                        "gross_profit": latest.get("grossProfit"),
-                        "operating_income": latest.get("operatingIncome"),
-                        "net_income": latest.get("netIncome"),
-                        "period": latest.get("period"),
-                    }
+                # Financial metrics
+                financials = self.finnhub.fetch_financials(ticker)
+                if financials:
+                    fundamentals["financial_metrics"] = financials
             except Exception as e:
-                logger.debug(f"Finnhub income statement fetch failed: {e}")
-
-            try:
-                # Balance sheet
-                bs = self.finnhub.fetch_financials(ticker, "bs", "annual")
-                if bs and "financials" in bs:
-                    latest = bs["financials"][0] if bs["financials"] else {}
-                    fundamentals["balance_sheet"] = {
-                        "total_assets": latest.get("totalAssets"),
-                        "total_liabilities": latest.get("totalLiabilities"),
-                        "total_equity": latest.get("totalEquity"),
-                        "cash": latest.get("cashAndCashEquivalents"),
-                        "period": latest.get("period"),
-                    }
-            except Exception as e:
-                logger.debug(f"Finnhub balance sheet fetch failed: {e}")
-
-            try:
-                # Earnings calendar for trend
-                earnings = self.finnhub.fetch_earnings_calendar(ticker, limit=10)
-                fundamentals["earnings_history"] = earnings
-            except Exception as e:
-                logger.debug(f"Finnhub earnings calendar fetch failed: {e}")
+                logger.debug(f"Finnhub financials fetch failed: {e}")
 
         # Fallback to yfinance if Finnhub didn't provide income statement
         if not fundamentals.get("income_statement") and self.yahoo:
@@ -385,18 +377,17 @@ class ComprehensiveDataAggregator:
         if self.finnhub:
             try:
                 company_profile = self.finnhub.fetch_company_profile(ticker)
-                profile = {
-                    "name": company_profile.get("name"),
-                    "country": company_profile.get("country"),
-                    "currency": company_profile.get("currency"),
-                    "exchange": company_profile.get("exchange"),
-                    "industry": company_profile.get("finnhubIndustry"),
-                    "ipo_date": company_profile.get("ipoDate"),
-                    "market_cap": company_profile.get("marketCapitalization"),
-                    "shares_outstanding": company_profile.get("shareOutstanding"),
-                    "website": company_profile.get("weburl"),
-                    "description": company_profile.get("description"),
-                }
+                if company_profile:
+                    profile = {
+                        "name": company_profile.get("name"),
+                        "ticker": company_profile.get("ticker"),
+                        "exchange": company_profile.get("exchange"),
+                        "industry": company_profile.get("industry"),
+                        "sector": company_profile.get("sector"),
+                        "market_cap": company_profile.get("market_cap"),
+                        "website": company_profile.get("weburl"),
+                        "logo": company_profile.get("logo"),
+                    }
             except Exception as e:
                 logger.warning(f"Company profile fetch failed: {e}")
 
@@ -408,22 +399,20 @@ class ComprehensiveDataAggregator:
 
         if self.finnhub:
             try:
-                end_date = datetime.now().date().isoformat()
-                start_date = (datetime.now() - timedelta(days=lookback_days)).date().isoformat()
-                
-                news = self.finnhub.fetch_company_news(ticker, start_date, end_date)
+                news = self.finnhub.fetch_news(ticker, days=lookback_days)
                 news_data["items"] = news[:20]  # Keep last 20 news items
                 
                 # Download full articles for verification
                 try:
-                    download_summary = self.article_downloader.download_articles(ticker, news[:20])
-                    news_data["article_download_summary"] = download_summary
-                    logger.info(f"Downloaded {download_summary['successful']} articles for {ticker}")
+                    if hasattr(self, 'article_downloader') and self.article_downloader:
+                        download_summary = self.article_downloader.download_articles(ticker, news[:20])
+                        news_data["article_download_summary"] = download_summary
+                        logger.info(f"Downloaded {download_summary.get('successful', 0)} articles for {ticker}")
                 except Exception as e:
                     logger.warning(f"Article download failed for {ticker}: {e}")
                     news_data["article_download_summary"] = {"error": str(e)}
                 
-                # Basic sentiment analysis
+                # Basic sentiment analysis (if sentiment field exists)
                 positive = sum(1 for n in news if n.get("sentiment", 0) > 0.5)
                 negative = sum(1 for n in news if n.get("sentiment", 0) < -0.5)
                 neutral = len(news) - positive - negative
@@ -444,28 +433,16 @@ class ComprehensiveDataAggregator:
         """Fetch earnings history and estimates"""
         earnings = {}
 
-        if self.finnhub:
+        # Earnings data would come from Finnhub earnings calendar endpoint
+        # For now, we'll use yfinance as fallback
+        if self.yahoo:
             try:
-                earnings_calendar = self.finnhub.fetch_earnings_calendar(ticker, limit=20)
-                
-                earnings["calendar"] = earnings_calendar
-                
-                # Calculate earnings trends
-                if earnings_calendar:
-                    eps_actual = [float(e.get("epsActual", 0) or 0) for e in earnings_calendar if e.get("epsActual")]
-                    eps_estimate = [float(e.get("epsEstimate", 0) or 0) for e in earnings_calendar if e.get("epsEstimate")]
-                    
-                    if eps_actual and eps_estimate:
-                        avg_actual = sum(eps_actual) / len(eps_actual)
-                        avg_estimate = sum(eps_estimate) / len(eps_estimate)
-                        earnings["eps_trend"] = {
-                            "avg_actual": avg_actual,
-                            "avg_estimate": avg_estimate,
-                            "beat_rate": sum(1 for a, e in zip(eps_actual, eps_estimate) if a > e) / len(eps_estimate),
-                            "last_surprise": (eps_actual[0] - eps_estimate[0]) / eps_estimate[0] if eps_estimate[0] else 0
-                        }
+                yf_ticker = self.yahoo.Ticker(ticker)
+                earnings_history = yf_ticker.earnings_history if hasattr(yf_ticker, 'earnings_history') else []
+                if earnings_history:
+                    earnings["calendar"] = earnings_history[:20]
             except Exception as e:
-                logger.warning(f"Earnings analysis fetch failed: {e}")
+                logger.debug(f"Earnings analysis fetch failed: {e}")
 
         return earnings
 
@@ -518,11 +495,12 @@ class ComprehensiveDataAggregator:
 
         if self.finnhub:
             try:
-                peer_list = self.finnhub.fetch_symbol_peers(ticker)
-                peers["peer_tickers"] = list(peer_list)[:5]  # Top 5 peers
+                peer_list = self.finnhub.fetch_peers(ticker)
+                peers["peer_tickers"] = list(peer_list)[:5] if peer_list else []  # Top 5 peers
                 
                 # Fetch basic metrics for peers
-                peers["peer_metrics"] = self._fetch_peer_metrics(peers["peer_tickers"])
+                if peers["peer_tickers"]:
+                    peers["peer_metrics"] = self._fetch_peer_metrics(peers["peer_tickers"])
             except Exception as e:
                 logger.warning(f"Peer analysis fetch failed: {e}")
 
@@ -537,11 +515,11 @@ class ComprehensiveDataAggregator:
             # Try Alpha Vantage overview first
             if self.alpha_vantage:
                 try:
-                    overview = self.alpha_vantage.fetch_company_overview(peer)
-                    metrics["market_cap"] = overview.get("MarketCapitalization")
-                    metrics["pe_ratio"] = overview.get("PERatio")
-                    metrics["eps"] = overview.get("EPS")
-                    metrics["revenue"] = overview.get("RevenueTTM")
+                    overview = self.alpha_vantage.fetch_overview(peer)
+                    if overview:
+                        metrics["market_cap"] = overview.get("market_cap")
+                        metrics["pe_ratio"] = overview.get("pe_ratio")
+                        metrics["eps"] = overview.get("eps")
                 except Exception as e:
                     logger.debug(f"AlphaVantage peer overview failed for {peer}: {e}")
 
@@ -549,11 +527,9 @@ class ComprehensiveDataAggregator:
             if self.finnhub:
                 try:
                     profile = self.finnhub.fetch_company_profile(peer)
-                    # Finhub uses different field names; use what exists
-                    if not metrics.get("market_cap") and profile.get("marketCapitalization"):
-                        metrics["market_cap"] = profile.get("marketCapitalization")
-                    if not metrics.get("pe_ratio") and profile.get("peRatio"):
-                        metrics["pe_ratio"] = profile.get("peRatio")
+                    if profile:
+                        if not metrics.get("market_cap") and profile.get("market_cap"):
+                            metrics["market_cap"] = profile.get("market_cap")
                 except Exception as e:
                     logger.debug(f"Finnhub peer profile failed for {peer}: {e}")
 
